@@ -1,0 +1,77 @@
+/*color declarations*/
+$colBackground:#CCC;
+$bodyBackground:#BBB;
+$hoverBorder:#C9C9C9;
+
+/*clean slate*/
+h1, h2, h3, h4, h5 {padding:0; margin:0}
+#wrapper{margin:0 5% 0 5%;}
+body{background:$bodyBackground; margin:0;}
+
+h3{font-size:1.2em;}
+
+/*temporary background colors */
+.col{background:$colBackground;}
+/*==============================*/
+
+/*header*/
+header{display:block;
+       #logo{font-size:2em;}
+       #logo img{max-width:100%;}
+}
+
+
+#mainNav{
+    #mainNav ul {
+        list-style-type:none;
+        margin:0;
+        padding:0;
+        #mainNav li {display:inline; float:left;}
+        #mainNav a{display:block;}
+    } 
+}
+
+
+/*output column stuff*/
+#outputColumn input{display:block; width: 99%;}
+#outputColumn h3{margin:10px 0 0 0;}
+
+.warning{background:#fdaeae; font-style:italic;}
+.warning img{float:right; margin-right:10px; margin-top:2px;}
+
+/*history column*/
+.historyColumnWrapper{
+    padding:1.6%;
+}
+/*footer*/
+.footerColumnWrapper{padding:5%;}
+
+
+/*input boxes */
+input, textarea { 
+    padding: 2px;
+    border: solid 1px #E5E5E5;
+    outline: 0;
+    font: normal 13px/100% Verdana, Tahoma, sans-serif;
+    background: #FFFFFF;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus { 
+    border-color: $hoverBorder; 
+}
+
+.submit input {
+    width: auto;
+    padding: 9px 15px;
+    background: #617798;
+    border: 0;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+input, textarea {
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+}
