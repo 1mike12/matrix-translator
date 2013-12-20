@@ -22,6 +22,7 @@ header{display:block;
 
 
 #mainNav{
+
     ul {
         list-style-type:none;
         margin:0;
@@ -36,7 +37,8 @@ header{display:block;
 
 #outputColumn {
     h3{margin:10px 0 0 0;}
-    input{display:block; width: 99%;}
+    input{display:block; width: 100%;}
+    .ellipsisContainer{width:5px;}
 }
 
 .warning{background:#fdaeae; font-style:italic;

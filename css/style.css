@@ -16,7 +16,7 @@ h3 {
 
 /*temporary background colors */
 .col {
-  background: #cccccc; }
+  background: #D3D3D3; }
 
 /*==============================*/
 /*header*/
@@ -42,7 +42,9 @@ header {
   margin: 10px 0 0 0; }
 #outputColumn input {
   display: block;
-  width: 99%; }
+  width: 100%; }
+#outputColumn .ellipsisContainer {
+  width: 5px; }
 
 .warning {
   background: #fdaeae;

@@ -22,7 +22,7 @@
                 <div id="mainNav" class="col span_2_of_3">
                     <ul>
                         <li><a href="">menu 1</a></li>
-                        <li><a href="">menu 1</a></li>
+                        <li><a href="">menu 2</a></li>
                         <li><a href="">menu 1</a></li>
                         <li><a href="">menu 1</a></li>
                     </ul>
@@ -81,7 +81,11 @@
                     <div style="padding:5%;">
                         <h3>WolframAlpha</h3>
                         <div class="warning">not valid format yet<img src="images/info.png" alt="explanation"/></div>
-                        <input type="text" value="{{1, 2}, {3, 4}, {5, 6}}">
+                        
+                        <div class="outputFieldWrapper">
+                            <input type="text" value="{{1, 2}, {3, 4}, {5, 6}}">
+                            <div class="ellipsisContainer">...</div>
+                        </div>
 
                         <h3>MAT Lab</h3>
                         <div class="warning"></div>
