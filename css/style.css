@@ -27,32 +27,30 @@ header {
   header #logo img {
     max-width: 100%; }
 
-#mainNav #mainNav ul {
+#mainNav ul {
   list-style-type: none;
   margin: 0;
   padding: 0; }
-  #mainNav #mainNav ul #mainNav li {
+  #mainNav ul li {
     display: inline;
     float: left; }
-  #mainNav #mainNav ul #mainNav a {
+  #mainNav ul a {
     display: block; }
 
 /*output column stuff*/
+#outputColumn h3 {
+  margin: 10px 0 0 0; }
 #outputColumn input {
   display: block;
   width: 99%; }
 
-#outputColumn h3 {
-  margin: 10px 0 0 0; }
-
 .warning {
   background: #fdaeae;
   font-style: italic; }
-
-.warning img {
-  float: right;
-  margin-right: 10px;
-  margin-top: 2px; }
+  .warning img {
+    float: right;
+    margin-right: 10px;
+    margin-top: 2px; }
 
 /*history column*/
 .historyColumnWrapper {

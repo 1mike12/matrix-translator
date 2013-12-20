@@ -22,22 +22,27 @@ header{display:block;
 
 
 #mainNav{
-    #mainNav ul {
+    ul {
         list-style-type:none;
         margin:0;
         padding:0;
-        #mainNav li {display:inline; float:left;}
-        #mainNav a{display:block;}
+        li {display:inline; float:left;}
+        a{display:block;}
     } 
 }
 
 
 /*output column stuff*/
-#outputColumn input{display:block; width: 99%;}
-#outputColumn h3{margin:10px 0 0 0;}
 
-.warning{background:#fdaeae; font-style:italic;}
-.warning img{float:right; margin-right:10px; margin-top:2px;}
+#outputColumn {
+    h3{margin:10px 0 0 0;}
+    input{display:block; width: 99%;}
+}
+
+.warning{background:#fdaeae; font-style:italic;
+         img{float:right; margin-right:10px; margin-top:2px;}
+}
+
 
 /*history column*/
 .historyColumnWrapper{
