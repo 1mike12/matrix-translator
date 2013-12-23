@@ -64,12 +64,14 @@ header{
         margin:0;
         margin-right:5%;
         padding:0;
-        li {display:inline; 
+        li {
+            display:inline; 
             float:left;
             padding: 0 5px 0 5px;
             border-right:#FFE0B2 solid 1px; 
 
         }
+        li:last-child{border-right:none;}
         a, a:visited{
             color:#fdfdfd;
             text-shadow: $textShadow;
@@ -98,13 +100,17 @@ header{
 
 #outputColumn {
     h3{margin:10px 0 0 0;}
+    .warning{
+        background:$orange; 
+        font-style:italic;
+        padding:2px;
+        img{float:right; margin-right:10px; margin-top:2px;}
+    }
     input{display:block; width: 100%;}
     .ellipsisContainer{width:5px;}
 }
 
-.warning{background:#fdaeae; font-style:italic;
-         img{float:right; margin-right:10px; margin-top:2px;}
-}
+
 
 
 /*history column*/
