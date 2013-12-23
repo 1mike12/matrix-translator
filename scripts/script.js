@@ -19,7 +19,5 @@ $(document).ready(function() {
     //autogrow matrix input fields
     var matrixFields= $('#matrix input:text');
     
-    matrixFields.
-    
 
 });
