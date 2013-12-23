@@ -3,8 +3,7 @@
   #matrix tr td div.inputWrapper input[type="text"] {
     border: none;
     outline-width: 0;
-    width: 100px;
-    height: 10px; }
+    width: 10px; }
 
 /*input boxes */
 .inputWrapper {

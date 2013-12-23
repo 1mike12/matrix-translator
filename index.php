@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/matrix.css" />
         <link rel="stylesheet" href="css/responsive.css" />
-        
+
         <link href='http://fonts.googleapis.com/css?family=Helvetica' rel='stylesheet' type='text/css'>
 
         <script src="scripts/jquery-1.9.1.js"></script>
@@ -15,69 +15,45 @@
     </head>
     <body>
         <header class="">
-            <div>
-                <img id="logo" src="images/shitty%20logo.png" alt="logo"/>
-                <ul>
-                    <li><a href="">Matrix</a></li>
-                    <li><a href="">About</a></li>
-                </ul>
-                <div style="clear:both"></div>
+            <img id="logo" src="images/shitty%20logo.png" alt="logo"/>
+            <div id="logoText">
+                Matrix Translator
+                <div id="logoSubTitle">making matrices a little less shitty</div>
             </div>
+            <ul>
+                <li><a href="">Matrix</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+            <div style="clear:both"></div>
         </header>
         <div id="wrapper">
             <div class="section group">
                 <div class="col span_2_of_3">
-                    <table width="" border="0" cellspacing="0" cellpadding="0" style="margin:auto;">
-                        <tr>
-                            <td>
-                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                    <tr class="">
-                                        <td class="">&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td class="">&nbsp;</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <td class="">&nbsp;</td>
-                                        <td id="matrixCore">
+                    <div id="matrixWrapper">
+                        
+                        <div id="matrixOptions" class="dropShadow">
+                            rows: <input type="text" /> columns: <input type="text" /> 
+                        </div>
 
-                                            <table id="matrix" width="100%">
-                                                <tr id="row1">
-                                                    <td id="m11"><input type="text" class=""></td>
-                                                    <td id="m12"><input type="text" class=""></td>
-                                                </tr>
-                                                <tr id="row2">
-                                                    <td id="m21"><input type="text" class=""></td>
-                                                    <td id="m22"><input type="text" class=""></td>
-                                                </tr>
-                                            </table>
+                        <div id="matrixCanvas" class="dropShadow">
+                            <table id="matrix" width="100%">
+                                <tr id="row1">
+                                    <td id="m11"><input type="text" class=""/></td>
+                                    <td id="m12"><input type="text" class=""/></td>
+                                </tr>
+                                <tr id="row2">
+                                    <td id="m21"><input type="text" class=""/></td>
+                                    <td id="m22"><input type="text" class=""/></td>
+                                </tr>
+                            </table>
+                        </div>
 
-                                        </td>
-                                        <td class="">&nbsp;</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="">
-                                    <tr>
-                                        <td class="">&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td class="">&nbsp;</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
+                    </div>
+
+
                 </div>
                 <div id="outputColumn" class="col span_1_of_3">
-                    <div style="padding:5%;">
+                    <div class="dropShadow">
                         <h3>WolframAlpha</h3>
                         <div class="warning">not valid format yet<img src="images/info.png" alt="explanation"/></div>
 
@@ -101,23 +77,13 @@
                 </div>
             </div>
 
-            <div class="section group"><!--begin matrix history -->
-                <div class="col span_3_of_3">
-                    <div class="historyColumnWrapper">
-                        <h2>History</h2>
-                        http://docs.mathjax.org/en/latest/start.html#installing-your-own-copy-of-mathjax
-                    </div>
-                </div>
-            </div><!--end matrix history-->
-
             <div class="section group"><!--begin footer-->
-                <footer>
-                    <div class="col span_3_of_3">
-                        <div class="footerColumnWrapper">
-                            <h2>footer</h2>
-                        </div>
-                    </div>
-                </footer>
+                <div class="col span_3_of_3">
+                    <footer class="dropShadow">
+                        <h2>footer</h2>
+                    </footer>
+
+                </div>
             </div>
         </div>
     </body>
