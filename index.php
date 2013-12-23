@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/matrix.css" />
         <link rel="stylesheet" href="css/responsive.css" />
@@ -9,36 +9,33 @@
         <script src="scripts/jquery-1.9.1.js"></script>
         <script src="scripts/script.js"></script>
 
-
         <meta charset="UTF-8">
         <title></title>
     </head>
     <body>
+        <header class="section group">
+            <div>
+                <ul>
+                    <li><img src="images/logo.jpg" alt="logo"/></li>
+                    <li><a href="">Matrix</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </div>
+        </header>
         <div id="wrapper">
-            <header class="section group">
-                <div id="logo" class="col span_1_of_3">
-                    <img src="images/logo.jpg" alt="logo"/>
-                </div>
-                <div id="mainNav" class="col span_2_of_3">
-                    <ul>
-                        <li><a href="">menu 1</a></li>
-                        <li><a href="">menu 2</a></li>
-                        <li><a href="">menu 1</a></li>
-                        <li><a href="">menu 1</a></li>
-                    </ul>
-                </div>
-            </header>
             <div class="section group">
                 <div class="col span_2_of_3">
                     <table width="" border="0" cellspacing="0" cellpadding="0" style="margin:auto;">
                         <tr>
-                            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <td>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                     <tr class="">
                                         <td class="">&nbsp;</td>
                                         <td>&nbsp;</td>
                                         <td class="">&nbsp;</td>
                                     </tr>
-                                </table></td>
+                                </table>
+                            </td>
                         </tr>
                         <tr>
                             <td>
@@ -81,7 +78,7 @@
                     <div style="padding:5%;">
                         <h3>WolframAlpha</h3>
                         <div class="warning">not valid format yet<img src="images/info.png" alt="explanation"/></div>
-                        
+
                         <div class="outputFieldWrapper">
                             <input type="text" value="{{1, 2}, {3, 4}, {5, 6}}">
                             <div class="ellipsisContainer">...</div>

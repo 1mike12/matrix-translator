@@ -2,12 +2,12 @@
 $colBackground:#CCC;
 $bodyBackground:#BBB;
 $hoverBorder:#C9C9C9;
+$orange:#fcc822;
 
 /*clean slate*/
 h1, h2, h3, h4, h5 {padding:0; margin:0}
 #wrapper{margin:0 5% 0 5%;}
 body{background:$bodyBackground; margin:0;}
-
 h3{font-size:1.2em;}
 
 /*temporary background colors */
@@ -15,14 +15,10 @@ h3{font-size:1.2em;}
 /*==============================*/
 
 /*header*/
-header{display:block;
-       #logo{font-size:2em;}
-       #logo img{max-width:100%;}
-}
-
-
-#mainNav{
-
+header{
+    display:block;
+    background: $orange;
+    img{max-width:100%;}
     ul {
         list-style-type:none;
         margin:0;

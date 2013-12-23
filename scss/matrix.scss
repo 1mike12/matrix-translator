@@ -1,1 +1,38 @@
-#matrix input{width:3em;}
+$orange:#faa71a;
+
+#matrix {
+    tr{
+        td{
+            div.inputWrapper{
+                background:#FFF;
+                input[type="text"] {
+                    border:none;
+                    outline-width:0;
+                    width:100px;
+                    height:10px;
+                }
+                span {
+
+                }
+            }
+        }
+    }
+}
+
+/*input boxes */
+.inputWrapper {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    
+    outline: 0;
+    background: #FFF;
+}
+
+.inputWrapper:hover, .inputWrapper:focus {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    border: $orange 1px solid; 
+}
+

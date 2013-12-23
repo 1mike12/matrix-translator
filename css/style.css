@@ -16,26 +16,24 @@ h3 {
 
 /*temporary background colors */
 .col {
-  background: #D3D3D3; }
+  background: #cccccc; }
 
 /*==============================*/
 /*header*/
 header {
-  display: block; }
-  header #logo {
-    font-size: 2em; }
-  header #logo img {
+  display: block;
+  background: #fcc822; }
+  header img {
     max-width: 100%; }
-
-#mainNav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-  #mainNav ul li {
-    display: inline;
-    float: left; }
-  #mainNav ul a {
-    display: block; }
+  header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    header ul li {
+      display: inline;
+      float: left; }
+    header ul a {
+      display: block; }
 
 /*output column stuff*/
 #outputColumn h3 {
