@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="css/matrix.css" />
         <link rel="stylesheet" href="css/responsive.css" />
         
-        <link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Helvetica' rel='stylesheet' type='text/css'>
 
         <script src="scripts/jquery-1.9.1.js"></script>
         <script src="scripts/script.js"></script>
