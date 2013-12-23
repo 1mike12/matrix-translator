@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/matrix.css" />
         <link rel="stylesheet" href="css/responsive.css" />
+        
+        <link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
 
         <script src="scripts/jquery-1.9.1.js"></script>
         <script src="scripts/script.js"></script>
@@ -13,13 +14,14 @@
         <title></title>
     </head>
     <body>
-        <header class="section group">
+        <header class="">
             <div>
+                <img id="logo" src="images/shitty%20logo.png" alt="logo"/>
                 <ul>
-                    <li><img src="images/logo.jpg" alt="logo"/></li>
                     <li><a href="">Matrix</a></li>
                     <li><a href="">About</a></li>
                 </ul>
+                <div style="clear:both"></div>
             </div>
         </header>
         <div id="wrapper">
@@ -102,7 +104,7 @@
             <div class="section group"><!--begin matrix history -->
                 <div class="col span_3_of_3">
                     <div class="historyColumnWrapper">
-                        <h2>Matrix History</h2>
+                        <h2>History</h2>
                         http://docs.mathjax.org/en/latest/start.html#installing-your-own-copy-of-mathjax
                     </div>
                 </div>
@@ -110,19 +112,9 @@
 
             <div class="section group"><!--begin footer-->
                 <footer>
-                    <div class="col span_1_of_3">
+                    <div class="col span_3_of_3">
                         <div class="footerColumnWrapper">
-                            <h2>about me</h2>
-                        </div>
-                    </div>
-                    <div class="col span_1_of_3">
-                        <div class="footerColumnWrapper">
-                            <h2>about me</h2>
-                        </div>
-                    </div>
-                    <div class="col span_1_of_3">
-                        <div class="footerColumnWrapper">
-                            <h2>about me</h2>
+                            <h2>footer</h2>
                         </div>
                     </div>
                 </footer>

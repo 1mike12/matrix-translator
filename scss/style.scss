@@ -7,8 +7,12 @@ $orange:#fcc822;
 /*clean slate*/
 h1, h2, h3, h4, h5 {padding:0; margin:0}
 #wrapper{margin:0 5% 0 5%;}
-body{background:$bodyBackground; margin:0;}
-h3{font-size:1.2em;}
+body{background:$bodyBackground; 
+     margin:0;
+     font-family: 'Squada One', cursive;
+     font-size:1.6em;
+}
+h3{font-size:1em;}
 
 /*temporary background colors */
 .col{background:$colBackground;}
@@ -18,13 +22,23 @@ h3{font-size:1.2em;}
 header{
     display:block;
     background: $orange;
-    img{max-width:100%;}
+    #logo{float:left; margin-left:5%;}
     ul {
+        float:right;
         list-style-type:none;
-        margin:0;
+        margin-right:5%;
         padding:0;
-        li {display:inline; float:left;}
-        a{display:block;}
+        li {display:inline; 
+            float:left;
+            padding: 0 5px 0 5px;
+            border-right: 1px solid grey;
+        }
+        a, a:visited{
+            color:#fdfdfd;
+            text-shadow: 0px 1px #1a1a1a;
+            display:block;
+            text-decoration:none;
+        }
     } 
 }
 
@@ -44,7 +58,7 @@ header{
 
 /*history column*/
 .historyColumnWrapper{
-    padding:1.6%;
+    padding:.6%;
 }
 /*footer*/
 .footerColumnWrapper{padding:5%;}
