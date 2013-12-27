@@ -1,9 +1,7 @@
-#matrix tr td div.inputWrapper {
-  background: #FFF; }
-  #matrix tr td div.inputWrapper input[type="text"] {
-    border: none;
-    outline-width: 0;
-    width: 10px; }
+#matrix tr td input[type="text"] {
+  border: none;
+  outline-width: 0;
+  width: 3em; }
 
 /*input boxes */
 .inputWrapper {

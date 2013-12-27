@@ -5,7 +5,6 @@
         <link rel="stylesheet" href="css/matrix.css" />
         <link rel="stylesheet" href="css/responsive.css" />
 
-        <link href='http://fonts.googleapis.com/css?family=Helvetica' rel='stylesheet' type='text/css'>
 
         <script src="scripts/jquery-1.9.1.js"></script>
         <script src="scripts/script.js"></script>
@@ -30,20 +29,26 @@
             <div class="section group">
                 <div class="col span_2_of_3">
                     <div id="matrixWrapper">
-                        
+
                         <div id="matrixOptions" class="dropShadow">
-                            rows: <input type="text" /> columns: <input type="text" /> 
+                            rows: <input type="text" /> columns: <input type="text" />
+                            <input id="colPlus" type="button" value="increase columns"/>
+                            <input id="colMinus" type="button" value="decrease columns"/>
+                            <input id="rowPlus" type="button" value="increase rows"/>
+                            <input id="rowMinus" type="button" value="decrease rows"/>
                         </div>
 
                         <div id="matrixCanvas" class="dropShadow">
-                            <table id="matrix" width="100%">
-                                <tr id="row1">
-                                    <td id="m11"><input type="text" class=""/></td>
-                                    <td id="m12"><input type="text" class=""/></td>
+                            <table id="matrix">
+                                <tr id="r1">
+                                    <td><input id="r1c1" type="text" class=""/></td>
+                                    <td><input id="r1c2" type="text" class=""/></td>
+                                    <td><input id="r1c3" type="text" class=""/></td>
                                 </tr>
-                                <tr id="row2">
-                                    <td id="m21"><input type="text" class=""/></td>
-                                    <td id="m22"><input type="text" class=""/></td>
+                                <tr id="r2">
+                                    <td><input id="r2c1" type="text" class=""/></td>
+                                    <td><input id="r2c2" type="text" class=""/></td>
+                                    <td><input id="r1c3" type="text" class=""/></td>
                                 </tr>
                             </table>
                         </div>
@@ -76,15 +81,9 @@
                     </div>
                 </div>
             </div>
-
-            <div class="section group"><!--begin footer-->
-                <div class="col span_3_of_3">
-                    <footer class="dropShadow">
-                        <h2>footer</h2>
-                    </footer>
-
-                </div>
-            </div>
         </div>
+        <footer class="dropShadow">
+            <span>copyright Mike Qin and Brian Gioia</span>
+        </footer>
     </body>
 </html>

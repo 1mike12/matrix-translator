@@ -1,13 +1,7 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 $(document).ready(function() {
     //auto highlight fields when focused
     var autoHighlight = $('#outputColumn input:text, #matrix input:text');
-    
+
     autoHighlight
             .focus(function() {
                 $(this).select();
@@ -16,8 +10,39 @@ $(document).ready(function() {
                 return false;
             });
 
-    //autogrow matrix input fields
-    var matrixFields= $('#matrix input:text');
+    //get matrix rows
+    function getRows($table) {
+        var rows = $table.find("tr").length;
+        return rows;
+    }
+    //get matrix columns
+    function getCols($table) {
+        var firstRow = $table.find("tr").slice(0,1);
+        var columns = firstRow.find("td").length;
+        return columns;
+    }
+
+    function printTD(row, column) {
+        var idName = "r" + row + "c" + column;
+        var completedTD = '<td><input id="' + idName + '" type="text" class=""/></td>';
+        return completedTD;
+    }
+
+    function colPlus($table) {
+        var rows= getRows($table);
+        var columns = getCols($table);
+
+        var $rowSet = $table.find("tr");
+        for (var i = 0; i < $rowSet.length; i++) {
+            $rowSet.eq(i).append(printTD(i+1, columns+1));
+        }
+
+    }
+    
+    $("#colPlus").click(function() {
+        colPlus($("#matrix"));
+    });
+    
     
 
 });
