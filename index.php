@@ -32,10 +32,10 @@
 
                         <div id="matrixOptions" class="dropShadow">
                             rows: <input type="text" /> columns: <input type="text" />
-                            <input id="colPlus" type="button" value="increase columns"/>
-                            <input id="colMinus" type="button" value="decrease columns"/>
-                            <input id="rowPlus" type="button" value="increase rows"/>
-                            <input id="rowMinus" type="button" value="decrease rows"/>
+                            <input id="colPlus" type="button" value="col+"/>
+                            <input id="colMinus" type="button" value="col-"/>
+                            <input id="rowPlus" type="button" value="row+"/>
+                            <input id="rowMinus" type="button" value="row-"/>
                         </div>
 
                         <div id="matrixCanvas" class="dropShadow">

@@ -74,7 +74,9 @@ header {
 #matrixWrapper #matrixOptions {
   margin-bottom: 2%; }
   #matrixWrapper #matrixOptions input[type="text"] {
-    width: 2em; }
+    width: 3em; }
+  #matrixWrapper #matrixOptions input[type="button"] {
+    background: #fcc822; }
 #matrixWrapper #matrixCanvas {
   /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/ }
 

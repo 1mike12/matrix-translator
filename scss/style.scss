@@ -86,7 +86,8 @@ header{
 #matrixWrapper{
     #matrixOptions{
         margin-bottom:2%;
-        input[type="text"]{width:2em;}
+        input[type="text"]{width:3em;}
+        input[type="button"]{background:$orange;}
 
     }
     #matrixCanvas{
