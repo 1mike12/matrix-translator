@@ -74,7 +74,7 @@
                             <span id="wolframWarning" class="warning"></span>
                         </div>
                         <div class="outputFieldWrapper">
-                            <input type="text" value="">
+                            <input id="wolframOutput" type="text" value="">
                         </div>
 
                         <h3>MAT Lab</h3>
