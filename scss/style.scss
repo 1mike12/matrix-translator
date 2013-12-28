@@ -99,13 +99,15 @@ header{
 /*output column stuff*/
 
 #outputColumn {
-    h3{margin:10px 0 0 0;}
-    .warning{
-        background:$orange; 
-        font-style:italic;
-        padding:2px;
-        img{float:right; margin-right:10px; margin-top:2px;}
+    .outputHeaderWrapper{
+        h3{margin:0px 0 0 0; display:inline;}
+        .warning{
+            background:$orange; 
+            font-style:italic;
+            padding:2px;
+        }
     }
+
     input{display:block; width: 100%;}
     .ellipsisContainer{width:5px;}
 }

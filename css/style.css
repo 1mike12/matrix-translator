@@ -81,16 +81,13 @@ header {
   /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/ }
 
 /*output column stuff*/
-#outputColumn h3 {
-  margin: 10px 0 0 0; }
-#outputColumn .warning {
+#outputColumn .outputHeaderWrapper h3 {
+  margin: 0px 0 0 0;
+  display: inline; }
+#outputColumn .outputHeaderWrapper .warning {
   background: #fcc822;
   font-style: italic;
   padding: 2px; }
-  #outputColumn .warning img {
-    float: right;
-    margin-right: 10px;
-    margin-top: 2px; }
 #outputColumn input {
   display: block;
   width: 100%; }

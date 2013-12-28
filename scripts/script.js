@@ -5,12 +5,12 @@ $(document).ready(function() {
     var autoHighlight = $('#outputColumn input:text, #matrix input:text');
 
     autoHighlight
-            .focus(function() {
-                $(this).select();
-            })
-            .mouseup(function(e) {
-                return false;
-            });
+        .focus(function() {
+            $(this).select();
+        })
+        .mouseup(function(e) {
+            return false;
+        });
 
     //get matrix rows
     function getRows($table) {
@@ -134,12 +134,22 @@ $(document).ready(function() {
     });
 
     //autoexpand matrix field
-    var matrixFieldWidth=$("#matrix input:text").outerWidth();
+    var matrixFieldWidth = $("#matrix input:text").outerWidth();
     $("#matrix input:text")
-            .focus(function() {
-                $(this).animate({width: "300px"}, 300);
-            })
-            .focusout(function() {
-                $(this).animate({width: matrixFieldWidth+"px"}, 300);
-            });
+        .focus(function() {
+            var coordinates = $(this).offset();
+            $(this)
+                .css({position: "absolute"})
+                .css("z-index", "5")
+                .offset(coordinates)
+                .animate({width: "150px"}, 150);
+        })
+        .focusout(function() {
+            $(this)
+                .animate({width: matrixFieldWidth + "px"}, 150, function() {
+                    $(this)
+                        .css({position: "static"})
+                        .css("z-index", "0");
+                });
+        });
 });
