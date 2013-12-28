@@ -6,6 +6,7 @@ $orange:#faa71a;
 }
 
 #matrix {
+    position:relative; /*to keep input boxes with table when popped out*/
     tr{
         td{
             input[type="text"] {

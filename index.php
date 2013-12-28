@@ -84,7 +84,7 @@
                         <input type="text">
 
                         <h3>LateX</h3>
-                        <input type="text" value="begin{array}{ccc} a & b & c">
+                        <input id="latexOutput" type="text" value="">
                     </div>
                 </div>
             </div>

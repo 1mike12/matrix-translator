@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var matrix = $("#matrix");
+    var matrixTable = $("#matrix");
     var $matrixFields = $("#matrix input:text");
     //auto highlight fields when focused
     var autoHighlight = $('#outputColumn input:text, #matrix input:text');
@@ -64,13 +64,13 @@ $(document).ready(function() {
         tr.remove();
     }
     function updateFields() {
-        var rows = getRows(matrix);
-        var cols = getCols(matrix);
+        var rows = getRows(matrixTable);
+        var cols = getCols(matrixTable);
         $("#rowField").val(rows);
         $("#colField").val(cols);
     }
 
-    function generateMatrixArray($table) {
+    function tableToArray($table) {
         var matrix = new Array();
         var rows = getRows($table);
         var cols = getCols($table);
@@ -101,23 +101,93 @@ $(document).ready(function() {
         out += " ]";
         return out;
     }
+    function generateWolfram(array) {
+        var rows = array.length;
+        var cols = array[0].length;
+        var out = "{ ";
+        for (var r = 0; r < rows; r++) {
+            out += "{";
+            for (var c = 0; c < cols; c++) {
+                out += array[r][c];
+                if (c + 1 < cols) {
+                    out += ",";
+                }
+            }
+            out += "}";
+            //add comma unless it's the last row
+            if ((r + 1) < rows) {
+                out += ",";
+            }
+        }
+        out += " }";
+        return out;
+
+    }
+    function generateLatex(array, bracketType) {
+        var rows = array.length;
+        var cols = array[0].length;
+        var delimiter = "";
+        switch (bracketType) {
+            case "{":
+                delimiter = "Bmatrix";
+                break;
+            case "[":
+                delimiter = "bmatrix";
+                break;
+            case "(":
+                delimiter = "pmatrix";
+                break;
+            case "|":
+                delimiter = "vmatrix";
+                break;
+            case "||":
+                delimiter = "Vmatrix";
+                break;
+            default:
+                alert("something messed up within switch statement of generateLatex()");
+        }
+        var opening = "\\begin{" + delimiter + "} ";
+        var closing = " \\end{" + delimiter + "}";
+        var out="";
+        for (var r = 0; r < rows; r++) {
+            for (var c = 0; c < cols; c++) {
+                out += array[r][c];
+                if(c+1<cols){
+                    out+=" & ";
+                }
+            }
+            //add semicolon unless it's the last row
+            if ((r + 1) < rows) {
+                out += " \\\\ ";
+            }
+        }
+        out= opening+out+closing;
+        return out;
+    }
+    function generateOutput(table) {
+        var array = tableToArray(table);
+        $("#matLabOutput").val(generateMatlab(array));
+        $("#wolframOutput").val(generateWolfram(array));
+        //NEED to get latex bracket-type settings
+        $("#latexOutput").val(generateLatex(array,"|"));
+    }
 
     $("#colPlus").click(function() {
-        colPlus(matrix);
+        colPlus(matrixTable);
         updateFields();
     });
 
     $("#colMinus").click(function() {
-        colMinus(matrix);
+        colMinus(matrixTable);
         updateFields();
     });
 
     $("#rowPlus").click(function() {
-        rowPlus(matrix);
+        rowPlus(matrixTable);
         updateFields();
     });
     $("#rowMinus").click(function() {
-        rowMinus(matrix);
+        rowMinus(matrixTable);
         updateFields();
     });
 
@@ -126,14 +196,12 @@ $(document).ready(function() {
     });
 
     //generate matrix array for each focus out when inside a matrix field
-    $("#matrix input:text").focusout(function() {
-        var g = generateMatrixArray(matrix);
-        $("#matLabOutput").val(generateMatlab(g));
-        //wolfram
-        //latex
-    });
 
-    //autoexpand matrix field
+
+    //focus: autoexpand matrix field
+    //focusout:
+    //  unexpand matrix field
+    //  generate output
     var matrixFieldWidth = $("#matrix input:text").outerWidth();
     $("#matrix input:text")
         .focus(function() {
@@ -145,6 +213,7 @@ $(document).ready(function() {
                 .animate({width: "150px"}, 150);
         })
         .focusout(function() {
+            generateOutput(matrixTable);
             $(this)
                 .animate({width: matrixFieldWidth + "px"}, 150, function() {
                     $(this)

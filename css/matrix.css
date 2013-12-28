@@ -1,11 +1,14 @@
-#matrix tr td input[type="text"] {
-  border: none;
-  outline-width: 0;
-  width: 3em; }
-#matrix tr td input[type="text"]:focus {
-  -webkit-box-shadow: 0px 0px 6px black;
-  -moz-box-shadow: 0px 0px 6px black;
-  box-shadow: 0px 0px 6px black; }
+#matrix {
+  position: relative;
+  /*to keep input boxes with table when popped out*/ }
+  #matrix tr td input[type="text"] {
+    border: none;
+    outline-width: 0;
+    width: 3em; }
+  #matrix tr td input[type="text"]:focus {
+    -webkit-box-shadow: 0px 0px 6px black;
+    -moz-box-shadow: 0px 0px 6px black;
+    box-shadow: 0px 0px 6px black; }
 
 /*input boxes */
 .inputWrapper {
