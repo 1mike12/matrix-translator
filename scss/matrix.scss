@@ -1,4 +1,9 @@
 $orange:#faa71a;
+@mixin focusShadow(){
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+    -moz-box-shadow:    0px 0px 6px rgba(0, 0, 0, 1);
+    box-shadow:         0px 0px 6px rgba(0, 0, 0, 1);
+}
 
 #matrix {
     tr{
@@ -7,6 +12,9 @@ $orange:#faa71a;
                 border:none;
                 outline-width:0;
                 width:3em;
+            }
+            input[type="text"]:focus{
+                @include focusShadow;
             }
         }
     }
