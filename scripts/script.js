@@ -38,7 +38,6 @@ $(document).ready(function() {
             var $td = $(printTD(i + 1, cols + 1));
             $rowSet.eq(i).append($td);
         }
-
     }
     function colMinus($table) {
         var $TDSet = $table.find("tr").find("td:last");
@@ -148,12 +147,12 @@ $(document).ready(function() {
         }
         var opening = "\\begin{" + delimiter + "} ";
         var closing = " \\end{" + delimiter + "}";
-        var out="";
+        var out = "";
         for (var r = 0; r < rows; r++) {
             for (var c = 0; c < cols; c++) {
                 out += array[r][c];
-                if(c+1<cols){
-                    out+=" & ";
+                if (c + 1 < cols) {
+                    out += " & ";
                 }
             }
             //add semicolon unless it's the last row
@@ -161,7 +160,7 @@ $(document).ready(function() {
                 out += " \\\\ ";
             }
         }
-        out= opening+out+closing;
+        out = opening + out + closing;
         return out;
     }
     function generateOutput(table) {
@@ -169,30 +168,39 @@ $(document).ready(function() {
         $("#matLabOutput").val(generateMatlab(array));
         $("#wolframOutput").val(generateWolfram(array));
         //NEED to get latex bracket-type settings
-        $("#latexOutput").val(generateLatex(array,"|"));
+        $("#latexOutput").val(generateLatex(array, "|"));
     }
 
     $("#colPlus").click(function() {
         colPlus(matrixTable);
         updateFields();
+        enableMatrixFieldEffects();
+        generateOutput(matrixTable);
     });
 
     $("#colMinus").click(function() {
         colMinus(matrixTable);
         updateFields();
+        enableMatrixFieldEffects();
+        generateOutput(matrixTable);
     });
 
     $("#rowPlus").click(function() {
         rowPlus(matrixTable);
         updateFields();
+        enableMatrixFieldEffects();
+        generateOutput(matrixTable);
     });
     $("#rowMinus").click(function() {
         rowMinus(matrixTable);
         updateFields();
+        enableMatrixFieldEffects();
+        generateOutput(matrixTable);
     });
 
     $("#clearAll").click(function() {
         $matrixFields.val("");
+        generateOutput(matrixTable);
     });
 
     //generate matrix array for each focus out when inside a matrix field
@@ -202,23 +210,26 @@ $(document).ready(function() {
     //focusout:
     //  unexpand matrix field
     //  generate output
-    var matrixFieldWidth = $("#matrix input:text").outerWidth();
-    $("#matrix input:text")
-        .focus(function() {
-            var coordinates = $(this).offset();
-            $(this)
-                .css({position: "absolute"})
-                .css("z-index", "5")
-                .offset(coordinates)
-                .animate({width: "150px"}, 150);
-        })
-        .focusout(function() {
-            generateOutput(matrixTable);
-            $(this)
-                .animate({width: matrixFieldWidth + "px"}, 150, function() {
-                    $(this)
-                        .css({position: "static"})
-                        .css("z-index", "0");
-                });
-        });
+    function enableMatrixFieldEffects() {
+        var matrixFieldWidth = $("#matrix input:text").outerWidth();
+        $("#matrix input:text")
+            .focus(function() {
+                var coordinates = $(this).offset();
+                $(this)
+                    .css({position: "absolute"})
+                    .css("z-index", "5")
+                    .offset(coordinates)
+                    .animate({width: "150px"}, 150);
+            })
+            .focusout(function() {
+                generateOutput(matrixTable);
+                $(this)
+                    .animate({width: matrixFieldWidth + "px"}, 150, function() {
+                        $(this)
+                            .css({position: "static"})
+                            .css("z-index", "0");
+                    });
+            });
+    }
+    enableMatrixFieldEffects(); //run once when document starts
 });
