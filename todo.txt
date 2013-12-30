@@ -1,0 +1,25 @@
+functionality
+    copyryight wolfram/matlab
+    Links go in the headings
+    drop down to 1-10, type something in
+    bug expanding fields
+    add expand until needed
+    
+
+
+styling:
+    Drop Footer
+    Get rid of col and row buttons
+    Add drop downs for row and column tabs
+    Drop page buttons (Matrix/ About)
+    Drop Logo/ Website name
+    Make input box orange
+    ADD NEW FONT!
+    Change drop shadow intensity
+    Change font to matt black
+    Change box color
+    Separate input and output boxes
+    Make clear all button
+    Make logo
+    Think of overall colors
+    Output heading spacing
