@@ -1,34 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/matrix.css" />
-        <link rel="stylesheet" href="css/responsive.css" />
-
-
-        <script src="scripts/jquery-1.9.1.js"></script>
-        <script src="scripts/script.js"></script>
-
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
+    <?php include 'head.php'?>
     <body>
-        <header class="">
-            <a href="index.php">
-                <img id="logo" src="images/shitty%20logo.png" alt="logo"/>
-                <div id="logoText">
-                    Matrix Translator
-                    <div id="logoSubTitle">making matrices a little less shitty</div>
-                </div>
-            </a>
-
-
-            <ul>
-                <li><a href="">Matrix</a></li>
-                <li><a href="">About</a></li>
-            </ul>
-            <div style="clear:both"></div>
-        </header>
+        <?php include 'header.php'?>
         <div id="wrapper">
             <div class="section group">
                 <div class="col span_2_of_3">
@@ -71,7 +45,7 @@
                     <div class="dropShadow">
                         <div class="outputHeaderWrapper">
                             <h3>WolframAlpha</h3>
-                            <span id="wolframWarning" class="warning"></span>
+                            <span id="wolframWarning" class="warning">!!</span>
                         </div>
                         <div class="outputFieldWrapper">
                             <input id="wolframOutput" type="text" value="">
@@ -89,8 +63,6 @@
                 </div>
             </div>
         </div>
-        <footer class="dropShadow">
-            <span>copyright Mike Qin and Brian Gioia</span>
-        </footer>
+        <?php include 'footer.php'?>
     </body>
 </html>

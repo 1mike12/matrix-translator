@@ -122,6 +122,21 @@ $(document).ready(function() {
         return out;
 
     }
+    function invalidWolfram(array){
+        var rows = array.length;
+        var cols = array[0].length;
+        var invalid=false;
+        
+        for (var r = 0; r < rows; r++) {
+            for (var c = 0; c < cols; c++) {
+                var current= array[r][c];
+                if (current==="") {
+                    invalid=true;
+                }
+            }
+        }
+        return invalid;
+    }
     function generateLatex(array, bracketType) {
         var rows = array.length;
         var cols = array[0].length;
@@ -167,9 +182,44 @@ $(document).ready(function() {
         var array = tableToArray(table);
         $("#matLabOutput").val(generateMatlab(array));
         $("#wolframOutput").val(generateWolfram(array));
-        //NEED to get latex bracket-type settings
+        
+        if(invalidWolfram(array)){
+            $("#wolframWarning").show();
+            $("#wolframOutput").addClass("warning");
+        }else{
+            $("#wolframWarning").hide();
+            $("#wolframOutput").removeClass("warning");
+        }
+        //!!!!!!!!!!!!!!NEED to get latex bracket-type settings
         $("#latexOutput").val(generateLatex(array, "|"));
     }
+    //generate matrix array for each focus out when inside a matrix field
+    //focus: autoexpand matrix field
+    //focusout:
+    //  unexpand matrix field
+    //  generate output
+    function enableMatrixFieldEffects() {
+        var matrixFieldWidth = $("#matrix input:text").outerWidth();
+        $("#matrix input:text")
+            .focus(function() {
+                var coordinates = $(this).offset();
+                $(this)
+                    .css({position: "absolute"})
+                    .css("z-index", "5")
+                    .offset(coordinates)
+                    .animate({width: "150px"}, 150);
+            })
+            .focusout(function() {
+                generateOutput(matrixTable);
+                $(this)
+                    .animate({width: matrixFieldWidth + "px"}, 150, function() {
+                        $(this)
+                            .css({position: "static"})
+                            .css("z-index", "0");
+                    });
+            });
+    }
+    enableMatrixFieldEffects(); //run once when document starts
 
     $("#colPlus").click(function() {
         colPlus(matrixTable);
@@ -203,33 +253,4 @@ $(document).ready(function() {
         generateOutput(matrixTable);
     });
 
-    //generate matrix array for each focus out when inside a matrix field
-
-
-    //focus: autoexpand matrix field
-    //focusout:
-    //  unexpand matrix field
-    //  generate output
-    function enableMatrixFieldEffects() {
-        var matrixFieldWidth = $("#matrix input:text").outerWidth();
-        $("#matrix input:text")
-            .focus(function() {
-                var coordinates = $(this).offset();
-                $(this)
-                    .css({position: "absolute"})
-                    .css("z-index", "5")
-                    .offset(coordinates)
-                    .animate({width: "150px"}, 150);
-            })
-            .focusout(function() {
-                generateOutput(matrixTable);
-                $(this)
-                    .animate({width: matrixFieldWidth + "px"}, 150, function() {
-                        $(this)
-                            .css({position: "static"})
-                            .css("z-index", "0");
-                    });
-            });
-    }
-    enableMatrixFieldEffects(); //run once when document starts
 });

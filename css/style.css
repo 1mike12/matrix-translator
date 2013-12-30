@@ -19,7 +19,7 @@ h2 {
   font-size: 1.8em; }
 
 h3 {
-  font-size: 1.4em; }
+  font-size: 1.2em; }
 
 /*temporary background colors */
 .dropShadow {
@@ -78,21 +78,27 @@ header {
   #matrixWrapper #matrixOptions input[type="button"] {
     background: #fcc822; }
 #matrixWrapper #matrixCanvas {
-  /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/ }
+  /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/
+  overflow: auto; }
 
 /*output column stuff*/
-#outputColumn .outputHeaderWrapper h3 {
-  margin: 0px 0 0 0;
-  display: inline; }
-#outputColumn .outputHeaderWrapper .warning {
-  background: #fcc822;
-  font-style: italic;
-  padding: 2px; }
+#outputColumn .outputHeaderWrapper {
+  position: relative; }
+  #outputColumn .outputHeaderWrapper h3 {
+    margin: 0 0 0 0;
+    display: inline; }
+  #outputColumn .outputHeaderWrapper span.warning {
+    background: #ffd0d0;
+    font-style: italic;
+    padding: 2px;
+    display: none;
+    position: absolute;
+    right: 0; }
+#outputColumn .outputFieldWrapper input.warning {
+  background: #ffd0d0; }
 #outputColumn input {
   display: block;
   width: 100%; }
-#outputColumn .ellipsisContainer {
-  width: 5px; }
 
 /*history column*/
 .historyColumnWrapper {

@@ -3,6 +3,7 @@ $colBackground:#f1f1f1;
 $bodyBackground:#fafafa;
 $hoverBorder:#C9C9C9;
 $orange:#fcc822;
+$warningBackground:#ffd0d0;
 
 @mixin boxSizing() {
     box-sizing:border-box;
@@ -27,7 +28,7 @@ body{background:$bodyBackground;
 h1, h2, h3, h4, h5 {padding:0; margin:0;}
 h1{font-size:2em;}
 h2{font-size:1.8em;}
-h3{font-size:1.4em;}
+h3{font-size:1.2em;}
 
 /*temporary background colors */
 .dropShadow{
@@ -91,25 +92,33 @@ header{
 
     }
     #matrixCanvas{
-        /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/ 
+        /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/
+        overflow: auto;
     }
 }
-
 
 /*output column stuff*/
 
 #outputColumn {
     .outputHeaderWrapper{
-        h3{margin:0px 0 0 0; display:inline;}
-        .warning{
-            background:$orange; 
+        position:relative;
+        h3{margin:0 0 0 0; display:inline;}
+        span.warning{
+            background:$warningBackground; 
             font-style:italic;
             padding:2px;
+            display:none;
+            position:absolute;
+            right:0;
         }
     }
-
+    .outputFieldWrapper{
+        input.warning{
+            background:$warningBackground;
+        }
+    }
     input{display:block; width: 100%;}
-    .ellipsisContainer{width:5px;}
+
 }
 
 
