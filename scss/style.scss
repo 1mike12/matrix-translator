@@ -1,11 +1,39 @@
 /*color declarations*/
-$colBackground:#f1f1f1;
+$colBackground:#F7F7F7;
 $bodyBackground:#fafafa;
 $hoverBorder:#C9C9C9;
 $orange:#fcc822;
-$warningBackground:#ffd0d0;
+$warningBackground:#EFC2C2;
+$fontcolor:#090909;
+
+@font-face {
+            font-family: "mainFont";
+            src: url('..//Fonts/OpenSans-Bold.ttf') format('truetype');
+}
+@font-face {
+            font-family: "footerFont";
+            src: url('..//Fonts/OpenSans-Light.ttf') format('truetype');
+}
+@font-face {
+            font-family: "pagefont";
+            src: url('..//Fonts/OpenSans-Bold.ttf') format('truetype');
+}
 
 
+h1  {font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif;
+        }
+h2  {font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif;
+        }
+h3  {font: 6px 'mainFont', Arial, Helvetica, Geneva, Sans-serif;
+        }
+h4  {font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif;
+        }
+h5  {font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif;
+        }
+h6  {font: 7px 'footerFont', Arial, Helvetica, Geneva, Sans-serif;
+        }
+        
+        
 @mixin boxSizing() {
     box-sizing:border-box;
     -moz-box-sizing:border-box;

@@ -5,12 +5,12 @@ $(document).ready(function() {
     var autoHighlight = $('#outputColumn input:text, #matrix input:text');
 
     autoHighlight
-        .focus(function() {
-            $(this).select();
-        })
-        .mouseup(function(e) {
-            return false;
-        });
+            .focus(function() {
+                $(this).select();
+            })
+            .mouseup(function(e) {
+                return false;
+            });
 
     //get matrix rows
     function getRows($table) {
@@ -122,16 +122,16 @@ $(document).ready(function() {
         return out;
 
     }
-    function invalidWolfram(array){
+    function invalidWolfram(array) {
         var rows = array.length;
         var cols = array[0].length;
-        var invalid=false;
-        
+        var invalid = false;
+
         for (var r = 0; r < rows; r++) {
             for (var c = 0; c < cols; c++) {
-                var current= array[r][c];
-                if (current==="") {
-                    invalid=true;
+                var current = array[r][c];
+                if (current === "") {
+                    invalid = true;
                 }
             }
         }
@@ -182,11 +182,11 @@ $(document).ready(function() {
         var array = tableToArray(table);
         $("#matLabOutput").val(generateMatlab(array));
         $("#wolframOutput").val(generateWolfram(array));
-        
-        if(invalidWolfram(array)){
+
+        if (invalidWolfram(array)) {
             $("#wolframWarning").show();
             $("#wolframOutput").addClass("warning");
-        }else{
+        } else {
             $("#wolframWarning").hide();
             $("#wolframOutput").removeClass("warning");
         }
@@ -201,23 +201,23 @@ $(document).ready(function() {
     function enableMatrixFieldEffects() {
         var matrixFieldWidth = $("#matrix input:text").outerWidth();
         $("#matrix input:text")
-            .focus(function() {
-                var coordinates = $(this).offset();
-                $(this)
-                    .css({position: "absolute"})
-                    .css("z-index", "5")
-                    .offset(coordinates)
-                    .animate({width: "150px"}, 150);
-            })
-            .focusout(function() {
-                generateOutput(matrixTable);
-                $(this)
-                    .animate({width: matrixFieldWidth + "px"}, 150, function() {
-                        $(this)
-                            .css({position: "static"})
-                            .css("z-index", "0");
-                    });
-            });
+                .focus(function() {
+                    var coordinates = $(this).offset();
+                    $(this)
+                            .css({position: "absolute"})
+                            .css("z-index", "5")
+                            .offset(coordinates)
+                            .animate({width: "150px"}, 150);
+                })
+                .focusout(function() {
+                    generateOutput(matrixTable);
+                    $(this)
+                            .animate({width: matrixFieldWidth + "px"}, 150, function() {
+                                $(this)
+                                        .css({position: "static"})
+                                        .css("z-index", "0");
+                            });
+                });
     }
     enableMatrixFieldEffects(); //run once when document starts
 
@@ -253,4 +253,15 @@ $(document).ready(function() {
         generateOutput(matrixTable);
     });
 
+    $("#wolframWarning").qtip({
+        content: {
+            text: 'Wolfrma requires all cells to be filled'
+        },
+        position: {
+            my: 'top right',  // Position my top left...
+            at: 'bottom right' // at the bottom right of...
+        }
+    });
 });
+
+//alt shift f

@@ -1,3 +1,3 @@
 <footer class="dropShadow">
-    <span>copyright Mike Qin and Brian Gioia</span>
+    <span> <h6>copyright Mike Qin and Brian Gioia</h6></span>
 </footer>
