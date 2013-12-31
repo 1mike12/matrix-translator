@@ -1,16 +1,16 @@
 <header>
     <a href="index.php">
-        <img id="logo" src="images/shitty%20logo.png" alt="logo"/>
-        <div id="logoText">
-            Matrix Translator
-            <div id="logoSubTitle">making matrices a little less shitty</div>
+        <img id="logo" src="images/shitLogo.png" alt="logo"/>
+    
+          
+            <div id="logoSubTitle"></div>
         </div>
     </a>
 
 
     <ul>
-        <li><a href="index.php">Matrix</a></li>
-        <li><a href="about.php">About</a></li>
+        <h4><li><a href="index.php">Matrix</a></li>
+            <li><a href="about.php">About</a></li></h4>
     </ul>
     <div style="clear:both"></div>
 </header>

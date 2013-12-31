@@ -9,12 +9,14 @@
                     <div id="matrixWrapper">
 
                         <div id="matrixOptions" class="dropShadow">
-                            rows: <input id="rowField" type="text" /> columns: <input id="colField" type="text" />
+                            <h5>row: <input id="rowField" type="text" /> column: <input id="colField" type="text" />
+                            <input id="clearAll" type="button" value="clear all"/></h5>
+                            
                             <input id="colPlus" type="button" value="col+"/>
                             <input id="colMinus" type="button" value="col-"/>
                             <input id="rowPlus" type="button" value="row+"/>
                             <input id="rowMinus" type="button" value="row-"/>
-                            <input id="clearAll" type="button" value="clear all"/>
+                            
                         </div>
 
                         <div id="matrixCanvas" class="dropShadow">
@@ -44,20 +46,20 @@
                 <div id="outputColumn" class="col span_1_of_3">
                     <div class="dropShadow">
                         <div class="outputHeaderWrapper">
-                            <h3>WolframAlpha</h3>
+                            <h4>WolframAlpha</h4>
                             <span id="wolframWarning" class="warning"> <img style="width:16px;" src="images/yield.gif" /> </span>
                         </div>
                         <div class="outputFieldWrapper">
                             <input id="wolframOutput" type="text" value="">
                         </div>
 
-                        <h3>MAT Lab</h3>
+                        <h4>MAT Lab</h4>
                         <input id="matLabOutput" type="text" value="">
 
-                        <h3>Google</h3>
+                        <h4>Google</h4>
                         <input type="text">
-
-                        <h3>LateX</h3>
+                        
+                        <h4>LateX</h4>
                         <input id="latexOutput" type="text" value="">
                     </div>
                 </div>

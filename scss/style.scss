@@ -4,33 +4,27 @@ $bodyBackground:#fafafa;
 $hoverBorder:#C9C9C9;
 $orange:#fcc822;
 $warningBackground:#EFC2C2;
-$fontcolor:#090909;
+$fontcolor:#0F0F0F;
 
 @font-face {
             font-family: "mainFont";
             src: url('..//Fonts/OpenSans-Bold.ttf') format('truetype');
 }
-@font-face {
-            font-family: "footerFont";
-            src: url('..//Fonts/OpenSans-Light.ttf') format('truetype');
-}
-@font-face {
-            font-family: "pagefont";
-            src: url('..//Fonts/OpenSans-Bold.ttf') format('truetype');
-}
 
 
-h1  {font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif;
+
+
+h1  {color: $fontcolor; font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif;
         }
-h2  {font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif;
+h2  {color: $fontcolor; font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif;
         }
-h3  {font: 6px 'mainFont', Arial, Helvetica, Geneva, Sans-serif;
+h3  {color: $fontcolor; font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif;
         }
-h4  {font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif;
+h4  {color: $fontcolor; font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif;
         }
-h5  {font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif;
+h5  {color: $fontcolor; font: 10px 'mainFont', Arial, Helvetica, Geneva, Sans-serif;
         }
-h6  {font: 7px 'footerFont', Arial, Helvetica, Geneva, Sans-serif;
+h6  {color: $fontcolor; font: 7px 'mainfFont', Arial, Helvetica, Geneva, Sans-serif;
         }
         
         
@@ -41,9 +35,9 @@ h6  {font: 7px 'footerFont', Arial, Helvetica, Geneva, Sans-serif;
 }
 
 @mixin dropShadow(){
-    -webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
-    -moz-box-shadow:    0px 1px 2px rgba(50, 50, 50, 0.3);
-    box-shadow:         0px 1px 2px rgba(50, 50, 50, 0.3);
+    -webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow:    0px 1px 2px rgba(50, 50, 50, 0.2);
+    box-shadow:         0px 0px 2px rgba(50, 50, 50, 0.1);
 }
 
 $textShadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
@@ -78,7 +72,7 @@ header{
     background: $orange;
     #logo{float:left; margin-left:5%;}
     #logoText{
-        text-shadow:$textShadow;
+        text-shadow:0;
         color:white;
         float:left;
         font-size:1.2em;
@@ -103,7 +97,7 @@ header{
         li:last-child{border-right:none;}
         a, a:visited{
             color:#fdfdfd;
-            text-shadow: $textShadow;
+            text-shadow:0;
             display:block;
             text-decoration:none;
             font-weight: 800;
@@ -157,7 +151,11 @@ header{
     padding:1em;
 }
 /*footer*/
-footer{font-size:.6em;
+footer{ position:absolute;
+        bottom:0;
+        width:100%;
+        height:10px;   /* Height of the footer */
+        
 }
 
 /*input boxes */

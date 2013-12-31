@@ -3,31 +3,29 @@
   font-family: "mainFont";
   src: url("..//Fonts/OpenSans-Bold.ttf") format("truetype"); }
 
-@font-face {
-  font-family: "footerFont";
-  src: url("..//Fonts/OpenSans-Light.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "pagefont";
-  src: url("..//Fonts/OpenSans-Bold.ttf") format("truetype"); }
-
 h1 {
+  color: #0f0f0f;
   font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif; }
 
 h2 {
+  color: #0f0f0f;
   font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif; }
 
 h3 {
-  font: 6px 'mainFont', Arial, Helvetica, Geneva, Sans-serif; }
+  color: #0f0f0f;
+  font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif; }
 
 h4 {
+  color: #0f0f0f;
   font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif; }
 
 h5 {
-  font: 12px 'mainFont', Arial, Helvetica, Geneva, Sans-serif; }
+  color: #0f0f0f;
+  font: 10px 'mainFont', Arial, Helvetica, Geneva, Sans-serif; }
 
 h6 {
-  font: 7px 'footerFont', Arial, Helvetica, Geneva, Sans-serif; }
+  color: #0f0f0f;
+  font: 7px 'mainfFont', Arial, Helvetica, Geneva, Sans-serif; }
 
 /*clean slate*/
 #wrapper {
@@ -53,18 +51,18 @@ h3 {
 
 /*temporary background colors */
 .dropShadow {
-  -webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
-  -moz-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
-  box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
+  -webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.2);
+  box-shadow: 0px 0px 2px rgba(50, 50, 50, 0.1);
   background-color: #f7f7f7;
   padding: 10px; }
 
 /*==============================*/
 /*header*/
 header {
-  -webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
-  -moz-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
-  box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
+  -webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.2);
+  box-shadow: 0px 0px 2px rgba(50, 50, 50, 0.1);
   padding: 2px 0px 2px 0px;
   width: 100%;
   background: #fcc822; }
@@ -72,7 +70,7 @@ header {
     float: left;
     margin-left: 5%; }
   header #logoText {
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 0;
     color: white;
     float: left;
     font-size: 1.2em;
@@ -94,7 +92,7 @@ header {
       border-right: none; }
     header ul a, header ul a:visited {
       color: #fdfdfd;
-      text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+      text-shadow: 0;
       display: block;
       text-decoration: none;
       font-weight: 800;
@@ -137,7 +135,11 @@ header {
 
 /*footer*/
 footer {
-  font-size: .6em; }
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  /* Height of the footer */ }
 
 /*input boxes */
 input, textarea {
