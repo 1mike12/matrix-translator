@@ -79,7 +79,8 @@ header {
     background: #fcc822; }
 #matrixWrapper #matrixCanvas {
   /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/
-  overflow: auto; }
+  overflow: auto;
+  background: #fcc822; }
 
 /*output column stuff*/
 #outputColumn .outputHeaderWrapper {

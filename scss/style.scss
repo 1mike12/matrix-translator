@@ -5,6 +5,7 @@ $hoverBorder:#C9C9C9;
 $orange:#fcc822;
 $warningBackground:#ffd0d0;
 
+
 @mixin boxSizing() {
     box-sizing:border-box;
     -moz-box-sizing:border-box;
@@ -94,6 +95,7 @@ header{
     #matrixCanvas{
         /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/
         overflow: auto;
+        background: $orange;
     }
 }
 
