@@ -45,7 +45,7 @@
                     <div class="dropShadow">
                         <div class="outputHeaderWrapper">
                             <h3>WolframAlpha</h3>
-                            <span id="wolframWarning" class="warning">!!</span>
+                            <span id="wolframWarning" class="warning"><img src="images/yield.gif"/></span>
                         </div>
                         <div class="outputFieldWrapper">
                             <input id="wolframOutput" type="text" value="">
