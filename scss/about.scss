@@ -1,9 +1,19 @@
 #banner{
+    text-align:center;
+    height:200px;
+    display: table-cell;
+    vertical-align: middle;
     #bannerTitle{
-        display:inline-block;
-        margin:auto;
+
     }
 }
 .content{
 
+}
+.h-Center{
+    text-align:center;
+}
+.v-Center{
+    display:table-cell;
+    vertical-align:middle;
 }

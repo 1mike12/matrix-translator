@@ -1,3 +1,12 @@
-#banner #bannerTitle {
-  display: inline-block;
-  margin: auto; }
+#banner {
+  text-align: center;
+  height: 200px;
+  display: table-cell;
+  vertical-align: middle; }
+
+.h-Center {
+  text-align: center; }
+
+.v-Center {
+  display: table-cell;
+  vertical-align: middle; }
