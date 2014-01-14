@@ -29,7 +29,7 @@
                                     <td><input id="r2c2" type="text" class=""/></td>
                                     <td><input id="r2c3" type="text" class=""/></td>
                                 </tr>
-                                <tr id="r3" style="display: table-row;">
+                                <tr id="r3">
                                     <td><input id="r3c1" type="text" class=""></td>
                                     <td><input id="r3c2" type="text" class=""></td>
                                     <td><input id="r3c3" type="text" class=""></td>
