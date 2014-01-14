@@ -5,6 +5,9 @@ $hoverBorder:#C9C9C9;
 $orange:#fcc822;
 $warningBackground:#ffd0d0;
 
+/*global padding, margin settings */
+$globalPadding:15px;
+
 @mixin boxSizing() {
     box-sizing:border-box;
     -moz-box-sizing:border-box;
@@ -20,11 +23,30 @@ $warningBackground:#ffd0d0;
 $textShadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
 
 /*clean slate*/
-#wrapper{margin:0 5% 0 5%;}
+html,body{
+    height:100%;
+    margin:0;
+    padding:0;
+}
 body{background:$bodyBackground; 
-     margin:0;
      font-size:1em;
 }
+
+
+#globalWrapper{
+    position:relative;
+    min-height:100%;
+}
+.belt {
+    max-width:1000px;
+    margin:auto;
+}
+#wrapper{
+    @extend .belt;
+    padding-bottom:3em;
+}
+
+/*font resets*/
 h1, h2, h3, h4, h5 {padding:0; margin:0;}
 h1{font-size:2em;}
 h2{font-size:1.8em;}
@@ -34,12 +56,10 @@ h3{font-size:1.2em;}
 .dropShadow{
     @include dropShadow;
     background-color: $colBackground;
-    padding:10px;
-}
-.col{ 
-
+    padding:$globalPadding;
 }
 /*==============================*/
+
 
 /*header*/
 header{
@@ -47,7 +67,7 @@ header{
     padding: 2px 0px 2px 0px;
     width:100%;
     background: $orange;
-    #logo{float:left; margin-left:5%;}
+    #logo{float:left;}
     #logoText{
         text-shadow:$textShadow;
         color:white;
@@ -62,7 +82,6 @@ header{
         float:right;
         list-style-type:none;
         margin:0;
-        margin-right:5%;
         padding:0;
         li {
             display:inline; 
@@ -127,7 +146,15 @@ header{
     padding:1em;
 }
 /*footer*/
-footer{font-size:.6em;
+#footer{
+    font-size:.6em;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:0;
+    #footerPadding{
+        padding:$globalPadding;
+    }
 }
 
 /*input boxes */
