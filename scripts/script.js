@@ -4,14 +4,12 @@ $(document).ready(function() {
     //auto highlight fields when focused
     var autoHighlight = $('#outputColumn input:text, #matrix input:text');
 
-    autoHighlight
-        .focus(function() {
-            $(this).select();
-        })
-        .mouseup(function(e) {
-            return false;
-        });
-
+    $("#outputColumn, #matrix").on("focus", "input:text", function() {
+        $(this).select()
+            .mouseup(function(e) {
+                return false;
+            });
+    });
     //get matrix rows
     function getRows($table) {
         var rows = $table.find("tr").length;
@@ -122,16 +120,16 @@ $(document).ready(function() {
         return out;
 
     }
-    function invalidWolfram(array){
+    function invalidWolfram(array) {
         var rows = array.length;
         var cols = array[0].length;
-        var invalid=false;
-        
+        var invalid = false;
+
         for (var r = 0; r < rows; r++) {
             for (var c = 0; c < cols; c++) {
-                var current= array[r][c];
-                if (current==="") {
-                    invalid=true;
+                var current = array[r][c];
+                if (current === "") {
+                    invalid = true;
                 }
             }
         }
@@ -182,11 +180,11 @@ $(document).ready(function() {
         var array = tableToArray(table);
         $("#matLabOutput").val(generateMatlab(array));
         $("#wolframOutput").val(generateWolfram(array));
-        
-        if(invalidWolfram(array)){
+
+        if (invalidWolfram(array)) {
             $("#wolframWarning").show();
             $("#wolframOutput").addClass("warning");
-        }else{
+        } else {
             $("#wolframWarning").hide();
             $("#wolframOutput").removeClass("warning");
         }
