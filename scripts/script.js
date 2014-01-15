@@ -280,8 +280,18 @@ $(document).ready(function() {
 
                 prevRows = currentRows;
             }
-        }else{
-             //$()
+        } else {
+            $("#rowField").qtip({
+                content: {text: "enter a number between 1-50"},
+                position: {my: "top center", at: "bottom center"},
+                events: {
+                    hide: function(event, api) {
+                        api.destroy();
+                    }
+                },
+                show: { ready: true },
+                hide:{event: "focus focusout"}
+            });
         }
     }
 

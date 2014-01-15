@@ -9,8 +9,8 @@
     <script src="scripts/script.js"></script>
     
     <!--qtip2 shit-->
-    <link rel="stylesheet" href="scripts/jquery.qtip.css" />
-    <script src="scripts/jquery.qtip.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.1/jquery.qtip.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.1/jquery.qtip.js"></script>
     
     <meta charset="UTF-8">
     <title></title>
