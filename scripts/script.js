@@ -1,15 +1,13 @@
 $(document).ready(function() {
     var matrixTable = $("#matrix");
-    var $matrixFields = $("#matrix input:text");
     //auto highlight fields when focused
-    var autoHighlight = $('#outputColumn input:text, #matrix input:text');
-
     $("#outputColumn, #matrix").on("focus", "input:text", function() {
         $(this).select()
             .mouseup(function(e) {
                 return false;
             });
     });
+
     //get matrix rows
     function getRows($table) {
         var rows = $table.find("tr").length;
@@ -191,17 +189,15 @@ $(document).ready(function() {
         //!!!!!!!!!!!!!!NEED to get latex bracket-type settings
         $("#latexOutput").val(generateLatex(array, "|"));
     }
-    //generate matrix array for each focus out when inside a matrix field
-    //focus: autoexpand matrix field
-    //focusout:
-    //  unexpand matrix field
-    //  generate output
-    function enableMatrixFieldEffects() {
-        var matrixFieldWidth = $("#matrix input:text").outerWidth();
-        $("#matrix input:text")
+
+    //trigger field expansion
+    $("#matrix").on("focus", "input:text", function() {
+        var $this = $(this);
+        var matrixFieldWidth = $this.outerWidth();
+        $this
             .focus(function() {
-                var coordinates = $(this).offset();
-                $(this)
+                var coordinates = $this.offset();
+                $this
                     .css({position: "absolute"})
                     .css("z-index", "5")
                     .offset(coordinates)
@@ -209,46 +205,84 @@ $(document).ready(function() {
             })
             .focusout(function() {
                 generateOutput(matrixTable);
-                $(this)
+                $this
                     .animate({width: matrixFieldWidth + "px"}, 150, function() {
-                        $(this)
+                        $this
                             .css({position: "static"})
                             .css("z-index", "0");
                     });
             });
-    }
-    enableMatrixFieldEffects(); //run once when document starts
+    });
 
     $("#colPlus").click(function() {
         colPlus(matrixTable);
         updateFields();
-        enableMatrixFieldEffects();
         generateOutput(matrixTable);
     });
 
     $("#colMinus").click(function() {
         colMinus(matrixTable);
         updateFields();
-        enableMatrixFieldEffects();
         generateOutput(matrixTable);
     });
 
     $("#rowPlus").click(function() {
         rowPlus(matrixTable);
         updateFields();
-        enableMatrixFieldEffects();
         generateOutput(matrixTable);
     });
     $("#rowMinus").click(function() {
         rowMinus(matrixTable);
         updateFields();
-        enableMatrixFieldEffects();
         generateOutput(matrixTable);
     });
 
     $("#clearAll").click(function() {
-        $matrixFields.val("");
+        $("#matrix input:text ,#outputColumn input:text").val("");
         generateOutput(matrixTable);
     });
+
+    prevRows = 3;
+    prevCols = 3;
+    //triggering redrawRows on leaving focus || enter key down
+    $("#matrixOptions").on("focusout keypress", "#rowField", function(e) {
+        var rows = $(this).val();
+        if (e.which === 13) {
+            redrawRows(rows);
+        } else if (e.type === "focusout") {
+            redrawRows(rows);
+        }
+    });
+
+    function isValidInput(n) {
+        // number type, check that isInt when % by 1
+        if (n <= 50 && n > 0 && n % 1 === 0) {
+            return true;
+        } else {
+            return false;
+            //must be between 1-50
+        }
+    }
+
+    function redrawRows(currentRows) {
+        if (isValidInput(currentRows)) {
+            if (currentRows !== prevRows) {
+                var diff = currentRows - prevRows;
+                if (diff > 0) {
+                    for (var i = 0; i < diff; i++) {
+                        rowPlus(matrixTable);
+                    }
+                } else {
+                    for (var i = 0; i > diff; i--) {
+                        rowMinus(matrixTable);
+                    }
+                }
+
+                prevRows = currentRows;
+            }
+        }else{
+             //$()
+        }
+    }
 
 });

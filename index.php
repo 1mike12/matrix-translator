@@ -10,7 +10,9 @@
                         <div id="matrixWrapper">
 
                             <div id="matrixOptions" class="dropShadow">
-                                rows: <input id="rowField" type="text" /> columns: <input id="colField" type="text" />
+                                rows: <input id="rowField" type="text" /> 
+                                columns: <input id="colField" type="text" />
+                                
                                 <input id="colPlus" type="button" value="col+"/>
                                 <input id="colMinus" type="button" value="col-"/>
                                 <input id="rowPlus" type="button" value="row+"/>
@@ -54,9 +56,6 @@
 
                             <h3>MAT Lab</h3>
                             <input id="matLabOutput" type="text" value="">
-
-                            <h3>Google</h3>
-                            <input type="text">
 
                             <h3>LateX</h3>
                             <input id="latexOutput" type="text" value="">
