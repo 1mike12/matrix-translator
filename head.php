@@ -10,9 +10,15 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
 
+    <!-- html 5 shiv for IE backwards compatability-->
+    <!--[if lt IE 9]>
+        <script src="scripts/html5shiv.js"></script>
+    <![endif]-->
     <!--styles-->
+    
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/matrix.css" />
+
     <title>Matrix Translator</title>
 </head>

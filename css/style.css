@@ -11,6 +11,9 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em; }
 
+a, img {
+  border: none; }
+
 #globalWrapper {
   position: relative;
   min-height: 100%; }
@@ -123,7 +126,7 @@ header {
     #outputColumn .outputHeaderWrapper #latexButtons {
       /* how to make select buttons http://viralpatel.net/blogs/css-radio-button-checkbox-background/*/
       margin-left: 10px;
-      float: left; }
+      float: right; }
       #outputColumn .outputHeaderWrapper #latexButtons input[type=radio] {
         display: none; }
       #outputColumn .outputHeaderWrapper #latexButtons label {
