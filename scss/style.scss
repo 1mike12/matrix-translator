@@ -52,9 +52,12 @@ a, img {
 
 /*font resets*/
 h1, h2, h3, h4, h5 {padding:0; margin:0;}
-h1{font-size:2em;}
-h2{font-size:1.8em;}
-h3{font-size:1.2em;}
+#wrapper{
+    p{margin-top:0;}
+    h1{font-size:2em;}
+    h2{font-size:1.8em;}
+    h3{font-size:1.2em;}
+}
 
 /*temporary background colors */
 .dropShadow{
@@ -101,30 +104,33 @@ header{
             color:#333;
             display:block;
             text-decoration:none;
-            font-size:100%;
+            font-size:16px;
         }
     } 
 }
 
 /*matrix */
-#matrixWrapper{
-    width:100%;
-    float:left;
-    margin-right:-315px;
-    #matrixWrapperInner{
-        margin-right:315px;
-        #matrixOptions{
-            margin-bottom:$globalPadding;
-            input[type="text"]{width:3em;}
-            input[type="button"]{background:$orange;}
+#wrapper{
+    #matrixWrapper{
+        width:100%;
+        float:left;
+        margin-right:-315px;
+        #matrixWrapperInner{
+            margin-right:315px;
+            #matrixOptions{
+                margin-bottom:$globalPadding;
+                input[type="text"]{width:3em;}
+                input[type="button"]{background:$orange;}
 
-        }
-        #matrixCanvas{
-            /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/
-            overflow: auto;
+            }
+            #matrixCanvas{
+                /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/
+                overflow: auto;
+            }
         }
     }
 }
+
 
 /*output column stuff*/
 

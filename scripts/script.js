@@ -193,6 +193,10 @@ $(document).ready(function() {
         var currentBracketType= $("#latexButtons input:checked").val();
         $("#latexOutput").val(generateLatex(array, currentBracketType));
     }
+    
+    $("#latexButtons").on("click","input", function(){
+        generateOutput(matrixTable);
+    });
 
     //trigger field expansion
     $("#matrix").on("focus", "input:text", function() {

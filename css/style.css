@@ -30,13 +30,13 @@ h1, h2, h3, h4, h5 {
   padding: 0;
   margin: 0; }
 
-h1 {
+#wrapper p {
+  margin-top: 0; }
+#wrapper h1 {
   font-size: 2em; }
-
-h2 {
+#wrapper h2 {
   font-size: 1.8em; }
-
-h3 {
+#wrapper h3 {
   font-size: 1.2em; }
 
 /*temporary background colors */
@@ -83,24 +83,24 @@ header {
       color: #333;
       display: block;
       text-decoration: none;
-      font-size: 100%; }
+      font-size: 16px; }
       header ul a:hover, header ul a:visited:hover {
         color: #FFF; }
 
 /*matrix */
-#matrixWrapper {
+#wrapper #matrixWrapper {
   width: 100%;
   float: left;
   margin-right: -315px; }
-  #matrixWrapper #matrixWrapperInner {
+  #wrapper #matrixWrapper #matrixWrapperInner {
     margin-right: 315px; }
-    #matrixWrapper #matrixWrapperInner #matrixOptions {
+    #wrapper #matrixWrapper #matrixWrapperInner #matrixOptions {
       margin-bottom: 15px; }
-      #matrixWrapper #matrixWrapperInner #matrixOptions input[type="text"] {
+      #wrapper #matrixWrapper #matrixWrapperInner #matrixOptions input[type="text"] {
         width: 3em; }
-      #matrixWrapper #matrixWrapperInner #matrixOptions input[type="button"] {
+      #wrapper #matrixWrapper #matrixWrapperInner #matrixOptions input[type="button"] {
         background: #fcc822; }
-    #matrixWrapper #matrixWrapperInner #matrixCanvas {
+    #wrapper #matrixWrapper #matrixWrapperInner #matrixCanvas {
       /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/
       overflow: auto; }
 
