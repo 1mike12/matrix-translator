@@ -10,8 +10,8 @@
                         <div id="matrixWrapper">
 
                             <div id="matrixOptions" class="dropShadow">
-                                rows: <input id="rowField" type="text" /> 
-                                columns: <input id="colField" type="text" />
+                                rows: <input id="rowField" type="text" value="3"/> 
+                                columns: <input id="colField" type="text" value="3"/>
                                 
                                 <input id="colPlus" type="button" value="col+"/>
                                 <input id="colMinus" type="button" value="col-"/>

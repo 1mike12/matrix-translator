@@ -215,31 +215,51 @@ $(document).ready(function() {
     });
 
     $("#colPlus").click(function() {
-        colPlus(matrixTable);
-        updateFields();
-        generateOutput(matrixTable);
+        var currentCols = parseInt($("#colField").val()) + 1;
+        if (isValidInput(currentCols)) {
+            $("#colField").val(currentCols);
+            redrawCols(currentCols);
+            prevCols = currentCols;
+            generateOutput(matrixTable);
+        }else{
+            colError();
+        }
     });
 
     $("#colMinus").click(function() {
-        colMinus(matrixTable);
-        updateFields();
-        generateOutput(matrixTable);
+        var currentCols = parseInt($("#colField").val()) - 1;
+        if (isValidInput(currentCols)) {
+            $("#colField").val(currentCols);
+            redrawCols(currentCols);
+            prevCols = currentCols;
+            generateOutput(matrixTable);
+        } else {
+            colError();
+        }
     });
-
+    
     $("#rowPlus").click(function() {
-        rowPlus(matrixTable);
-        updateFields();
-        generateOutput(matrixTable);
+        var currentRows = parseInt($("#rowField").val()) + 1;
+        if (isValidInput(currentRows)) {
+            $("#rowField").val(currentRows);
+            redrawRows(currentRows);
+            prevRows = currentRows;
+            generateOutput(matrixTable);
+        }else{
+            rowError();
+        }
     });
+    
     $("#rowMinus").click(function() {
-        rowMinus(matrixTable);
-        updateFields();
-        generateOutput(matrixTable);
-    });
-
-    $("#clearAll").click(function() {
-        $("#matrix input:text ,#outputColumn input:text").val("");
-        generateOutput(matrixTable);
+        var currentRows = parseInt($("#rowField").val()) - 1;
+        if (isValidInput(currentRows)) {
+            $("#rowField").val(currentRows);
+            redrawRows(currentRows);
+            prevRows = currentRows;
+            generateOutput(matrixTable);
+        }else{
+            rowError();
+        }
     });
 
     prevRows = 3;
@@ -251,6 +271,16 @@ $(document).ready(function() {
             redrawRows(rows);
         } else if (e.type === "focusout") {
             redrawRows(rows);
+        }
+    });
+
+    //triggering redrawCols on leaving focus || enter key down
+    $("#matrixOptions").on("focusout keypress", "#colField", function(e) {
+        var cols = $(this).val();
+        if (e.which === 13) {
+            redrawCols(cols);
+        } else if (e.type === "focusout") {
+            redrawCols(cols);
         }
     });
 
@@ -281,18 +311,56 @@ $(document).ready(function() {
                 prevRows = currentRows;
             }
         } else {
-            $("#rowField").qtip({
-                content: {text: "enter a number between 1-50"},
-                position: {my: "top center", at: "bottom center"},
-                events: {
-                    hide: function(event, api) {
-                        api.destroy();
-                    }
-                },
-                show: { ready: true },
-                hide:{event: "focus focusout"}
-            });
+            rowError();
         }
+    }
+    function rowError() {
+        $("#rowField").qtip({
+            content: {text: "enter a number between 1-50"},
+            position: {my: "top center", at: "bottom center"},
+            events: {
+                hide: function(event, api) {
+                    api.destroy();
+                }
+            },
+            show: {ready: true},
+            hide: {event: "focus focusout unfocus"}
+        });
+    }
+
+    function redrawCols(currentCols) {
+        if (isValidInput(currentCols)) {
+            if (currentCols !== prevCols) {
+                var diff = currentCols - prevCols;
+                if (diff > 0) {
+                    for (var i = 0; i < diff; i++) {
+                        colPlus(matrixTable);
+                    }
+                } else {
+                    for (var i = 0; i > diff; i--) {
+                        colMinus(matrixTable);
+                    }
+                }
+
+                prevCols = currentCols;
+            }
+        } else {
+            colError();
+        }
+    }
+
+    function colError() {
+        $("#colField").qtip({
+            content: {text: "enter a number between 1-50"},
+            position: {my: "top center", at: "bottom center"},
+            events: {
+                hide: function(event, api) {
+                    api.destroy();
+                }
+            },
+            show: {ready: true},
+            hide: {event: "focus focusout unfocus"}
+        });
     }
 
 });
