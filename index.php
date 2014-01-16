@@ -4,9 +4,9 @@
     <body>
         <div id="globalWrapper">
             <?php include 'header.php' ?>
-            <div id="wrapper" class="group">
+            <div id="wrapper" class="selfClear">
 
-                <div id="matrixWrapper">
+                <div id="matrixWrapper" class="responsive">
                     <div id="matrixWrapperInner">
                         <div id="matrixOptions" class="dropShadow">
                             rows: <input id="rowField" type="text" value="3"/> 
@@ -40,10 +40,10 @@
                     </div>
                 </div>
 
-                <div id="outputColumn">
+                <div id="outputColumn" class="responsive">
                     <div class="dropShadow">
 
-                        <div class="outputHeaderWrapper group">
+                        <div class="outputHeaderWrapper selfClear">
                             <h3><a href="http://www.wolframalpha.com/" target="_blank">WolframAlpha</a></h3>
                             <span id="wolframWarning" class="warning"><img src="images/yield.gif"/></span>
                         </div>
@@ -51,14 +51,14 @@
                             <input id="wolframOutput" type="text" value="">
                         </div>
 
-                        <div class="outputHeaderWrapper group">
+                        <div class="outputHeaderWrapper selfClear">
                             <h3>MAT Lab</h3>
                         </div>
                         <div class="outputFieldWrapper">
                             <input id="matLabOutput" type="text" value=""> 
                         </div>
 
-                        <div class="outputHeaderWrapper group">
+                        <div class="outputHeaderWrapper selfClear">
                             <h3>LateX</h3>
                             <div id="latexButtons">
                                 <input type="radio" id="parantheses" name="radio" checked="checked">

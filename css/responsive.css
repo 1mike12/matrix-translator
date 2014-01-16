@@ -17,12 +17,12 @@
 
 
 /*  GROUPING  */
-.group:before,
-.group:after {
+.selfClear:before,
+.selfClear:after {
 	content:"";
 	display:table;
 }
-.group:after {
+.selfClear:after {
 	clear:both;
 }
                                                

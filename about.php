@@ -4,7 +4,7 @@
     <body>
         <?php include 'header.php'?>
         <div id="wrapper">
-            <div class="section group">
+            <div class="section selfClear">
                 <div class="col span_3_of_3">
                     <div id="banner">
                         <span class="h-Center">About Matrix Translator</span>

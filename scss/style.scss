@@ -1,5 +1,5 @@
 /*color declarations*/
-$colBackground:#f1f1f1;
+$colBackground:#EEE;
 $bodyBackground:#fafafa;
 $hoverBorder:#C9C9C9;
 $orange:#fcc822;
@@ -209,31 +209,23 @@ input, textarea {
 }
 
 /*  autoclearing  */
-.group:before,
-.group:after {
+.selfClear:before,
+.selfClear:after {
     content:"";
     display:table;
 }
-.group:after {
+.selfClear:after {
     clear:both;
 }
 
 /*responsive stuff*/
-@media only screen and (max-width: 480px) {
-    .col { 
-        margin: 1% 0 1% 0%;
+@media only screen and (max-width: 580px) {
+    #matrixWrapper{
+        width:100%;margin-right:0;float:none;
+        margin-bottom:$globalPadding;
+        #matrixWrapperInner{margin-right:0px;}
     }
-    #wrapper{margin:0;}
-}
-
-@media only screen and (max-width: 480px) {
-    .span_3_of_3 {
-        width: 100%; 
-    }
-    .span_2_of_3 {
-        width: 100%; 
-    }
-    .span_1_of_3 {
-        width: 100%;
+    #outputColumn{
+        width:100%;float:none;
     }
 }
