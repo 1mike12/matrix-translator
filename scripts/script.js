@@ -138,14 +138,14 @@ $(document).ready(function() {
         var cols = array[0].length;
         var delimiter = "";
         switch (bracketType) {
-            case "{":
-                delimiter = "Bmatrix";
-                break;
             case "[":
                 delimiter = "bmatrix";
                 break;
             case "(":
                 delimiter = "pmatrix";
+                break;
+            case "{":
+                delimiter = "Bmatrix";
                 break;
             case "|":
                 delimiter = "vmatrix";
@@ -221,7 +221,7 @@ $(document).ready(function() {
             redrawCols(currentCols);
             prevCols = currentCols;
             generateOutput(matrixTable);
-        }else{
+        } else {
             colError();
         }
     });
@@ -237,7 +237,7 @@ $(document).ready(function() {
             colError();
         }
     });
-    
+
     $("#rowPlus").click(function() {
         var currentRows = parseInt($("#rowField").val()) + 1;
         if (isValidInput(currentRows)) {
@@ -245,11 +245,11 @@ $(document).ready(function() {
             redrawRows(currentRows);
             prevRows = currentRows;
             generateOutput(matrixTable);
-        }else{
+        } else {
             rowError();
         }
     });
-    
+
     $("#rowMinus").click(function() {
         var currentRows = parseInt($("#rowField").val()) - 1;
         if (isValidInput(currentRows)) {
@@ -257,9 +257,14 @@ $(document).ready(function() {
             redrawRows(currentRows);
             prevRows = currentRows;
             generateOutput(matrixTable);
-        }else{
+        } else {
             rowError();
         }
+    });
+    
+    $("#clearAll").click(function(){
+        $("#matrix input:text").val("");
+        generateOutput(matrixTable);
     });
 
     prevRows = 3;

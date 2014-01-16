@@ -2,10 +2,9 @@
     <div class="belt">
         <a href="index.php">
             <img id="logo" src="images/shitty%20logo.png" alt="logo"/>
-            <div id="logoText">
+            <span id="logoText">
                 Matrix Translator
-                <div id="logoSubTitle">making matrices a little less shitty</div>
-            </div>
+            </span>
         </a>
 
 

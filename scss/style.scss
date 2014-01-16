@@ -3,7 +3,9 @@ $colBackground:#f1f1f1;
 $bodyBackground:#fafafa;
 $hoverBorder:#C9C9C9;
 $orange:#fcc822;
+$darkOrange: darken($orange, 15);
 $warningBackground:#ffd0d0;
+$fontColor:#000;
 
 /*global padding, margin settings */
 $globalPadding:15px;
@@ -28,7 +30,8 @@ html,body{
     margin:0;
     padding:0;
 }
-body{background:$bodyBackground; 
+body{background:$bodyBackground;
+     font-family: 'Open Sans', sans-serif;
      font-size:1em;
 }
 
@@ -67,16 +70,17 @@ header{
     padding: 2px 0px 2px 0px;
     width:100%;
     background: $orange;
-    #logo{float:left;}
-    #logoText{
-        text-shadow:$textShadow;
-        color:white;
+    margin-bottom:$globalPadding;
+    #logo{
         float:left;
-        font-size:1.2em;
+        margin-left:$globalPadding;
+    }
+    #logoText{
+        &:hover{ color: #FFF;}
+        color:#333;
+        float:left;
+        font-size:30px;
         margin-left:20px;
-        #logoSubTitle{
-            font-size:.5em;
-        }
     }
     ul {
         float:right;
@@ -92,11 +96,10 @@ header{
         }
         li:last-child{border-right:none;}
         a, a:visited{
-            color:#fdfdfd;
-            text-shadow: $textShadow;
+            &:hover{ color: #FFF;}
+            color:#333;
             display:block;
             text-decoration:none;
-            font-weight: 800;
             font-size:100%;
         }
     } 
@@ -104,24 +107,51 @@ header{
 
 /*matrix */
 #matrixWrapper{
-    #matrixOptions{
-        margin-bottom:2%;
-        input[type="text"]{width:3em;}
-        input[type="button"]{background:$orange;}
+    width:100%;
+    float:left;
+    margin-right:-315px;
+    #matrixWrapperInner{
+        margin-right:315px;
+        #matrixOptions{
+            margin-bottom:$globalPadding;
+            input[type="text"]{width:3em;}
+            input[type="button"]{background:$orange;}
 
-    }
-    #matrixCanvas{
-        /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/
-        overflow: auto;
+        }
+        #matrixCanvas{
+            /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/
+            overflow: auto;
+        }
     }
 }
 
 /*output column stuff*/
 
 #outputColumn {
+    float:right;
+    width:300px;
+    .dropShadow .outputHeaderWrapper:first-child{margin-top:0;}
     .outputHeaderWrapper{
+        margin-top:15px;
         position:relative;
-        h3{margin:0 0 0 0; display:inline;}
+        h3{margin:0 0 0 0; display:inline; float:left;
+           a{
+               text-decoration:none;
+               &:visited{color: $fontColor;}
+               &:hover{color:$orange;}
+           }
+        }
+        #latexButtons{
+            margin-left:10px;
+            float:left;
+            input[type=radio]{display:none;}
+            label{
+                display:inline-block; 
+                padding:2px 5px; 
+                border: solid #DDD; 
+                border-width: 0px 1px;
+            }
+        }
         span.warning{
             background:$warningBackground; 
             font-style:italic;
@@ -136,16 +166,17 @@ header{
             background:$warningBackground;
         }
     }
+
     input{display:block; width: 100%;}
 
 }
 
 
-/*history column*/
+/*history column*========================*/
 .historyColumnWrapper{
     padding:1em;
 }
-/*footer*/
+/*footer*=====================*/
 #footer{
     font-size:.6em;
     position:absolute;
@@ -175,4 +206,34 @@ input, textarea {
     box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
     -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
     -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+}
+
+/*  autoclearing  */
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+
+/*responsive stuff*/
+@media only screen and (max-width: 480px) {
+    .col { 
+        margin: 1% 0 1% 0%;
+    }
+    #wrapper{margin:0;}
+}
+
+@media only screen and (max-width: 480px) {
+    .span_3_of_3 {
+        width: 100%; 
+    }
+    .span_2_of_3 {
+        width: 100%; 
+    }
+    .span_1_of_3 {
+        width: 100%;
+    }
 }
