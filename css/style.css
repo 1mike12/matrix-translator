@@ -121,6 +121,7 @@ header {
         #outputColumn .outputHeaderWrapper h3 a:hover {
           color: #fcc822; }
     #outputColumn .outputHeaderWrapper #latexButtons {
+      /* how to make select buttons http://viralpatel.net/blogs/css-radio-button-checkbox-background/*/
       margin-left: 10px;
       float: left; }
       #outputColumn .outputHeaderWrapper #latexButtons input[type=radio] {
@@ -128,8 +129,13 @@ header {
       #outputColumn .outputHeaderWrapper #latexButtons label {
         display: inline-block;
         padding: 2px 5px;
-        border: solid #DDD;
-        border-width: 0px 1px; }
+        margin: -2px;
+        border-right: 1px solid #EEE;
+        background: #DDD; }
+      #outputColumn .outputHeaderWrapper #latexButtons label:last-child {
+        border: none; }
+      #outputColumn .outputHeaderWrapper #latexButtons input[type=radio]:checked + label {
+        background-color: #fcc822; }
     #outputColumn .outputHeaderWrapper span.warning {
       font-style: italic;
       padding: 2px;

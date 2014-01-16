@@ -11,6 +11,7 @@
         <ul>
             <li><a href="index.php">Matrix</a></li>
             <li><a href="about.php">About</a></li>
+            <li><a href="about.php">Making of</a></li>
         </ul>
         <div style="clear:both"></div>
     </div>

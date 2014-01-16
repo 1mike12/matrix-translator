@@ -61,20 +61,20 @@
                         <div class="outputHeaderWrapper selfClear">
                             <h3>LateX</h3>
                             <div id="latexButtons">
-                                <input type="radio" id="parantheses" name="radio" checked="checked">
+                                <input type="radio" id="parantheses" value="(" name="latexBracketType" checked="checked">
                                 <label for="parantheses">( )</label>
 
-                                <input type="radio" id="bracket" name="radio">
+                                <input type="radio" id="bracket" value="[" name="latexBracketType">
                                 <label for="bracket">[ ]</label>
 
-                                <input type="radio" id="curlyBrace" name="radio">
+                                <input type="radio" id="curlyBrace" value="{" name="latexBracketType">
                                 <label for="curlyBrace">{ }</label>
 
-                                <input type="radio" id="polon" name="radio">
+                                <input type="radio" id="polon" value="|" name="latexBracketType">
                                 <label for="polon">| |</label>
 
-                                <input type="radio" id="doublePolon" name="radio">
-                                <label for="doublePolon">|| ||</label>
+                                <input type="radio" id="doublePolon" value="||" name="latexBracketType">
+                                <label for="doublePolon">‖ ‖</label>
                             </div>
                         </div>
                         <div class="outputFieldWrapper">

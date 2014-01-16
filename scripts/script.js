@@ -190,7 +190,8 @@ $(document).ready(function() {
             $("#wolframWarning").hide();
         }
         //!!!!!!!!!!!!!!NEED to get latex bracket-type settings
-        $("#latexOutput").val(generateLatex(array, "|"));
+        var currentBracketType= $("#latexButtons input:checked").val();
+        $("#latexOutput").val(generateLatex(array, currentBracketType));
     }
 
     //trigger field expansion
