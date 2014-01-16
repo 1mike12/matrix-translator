@@ -45,7 +45,7 @@
 
                         <div class="outputHeaderWrapper selfClear">
                             <h3><a href="http://www.wolframalpha.com/" target="_blank">WolframAlpha</a></h3>
-                            <span id="wolframWarning" class="warning"><img src="images/yield.gif"/></span>
+                            <span id="wolframWarning" class="warning"><img src="images/warning_sign.png"/></span>
                         </div>
                         <div class="outputFieldWrapper">
                             <input id="wolframOutput" type="text" value="">

@@ -180,11 +180,14 @@ $(document).ready(function() {
         $("#wolframOutput").val(generateWolfram(array));
 
         if (invalidWolfram(array)) {
-            $("#wolframWarning").show();
-            $("#wolframOutput").addClass("warning");
+            $("#wolframWarning").show()
+                .qtip({
+                    content: {text: "Wolfram Alpha does not allow empty fields"},
+                    style: {classes: 'matrix_qtip'},
+                    position: {my: "top right", at: "bottom center"}
+                });
         } else {
             $("#wolframWarning").hide();
-            $("#wolframOutput").removeClass("warning");
         }
         //!!!!!!!!!!!!!!NEED to get latex bracket-type settings
         $("#latexOutput").val(generateLatex(array, "|"));
@@ -261,8 +264,8 @@ $(document).ready(function() {
             rowError();
         }
     });
-    
-    $("#clearAll").click(function(){
+
+    $("#clearAll").click(function() {
         $("#matrix input:text").val("");
         generateOutput(matrixTable);
     });
@@ -321,8 +324,8 @@ $(document).ready(function() {
     }
     function rowError() {
         $("#rowField").qtip({
-            content: {text: "enter a number between 1-50"},
-            style:{ classes: 'matrix_qtip'},
+            content: {text: "must be between 1-50"},
+            style: {classes: 'matrix_qtip'},
             position: {my: "top center", at: "bottom center"},
             events: {
                 hide: function(event, api) {
@@ -357,7 +360,8 @@ $(document).ready(function() {
 
     function colError() {
         $("#colField").qtip({
-            content: {text: "enter a number between 1-50"},
+            content: {text: "must be between 1-50"},
+            style: {classes: 'matrix_qtip'},
             position: {my: "top center", at: "bottom center"},
             events: {
                 hide: function(event, api) {

@@ -4,7 +4,6 @@ $bodyBackground:#fafafa;
 $hoverBorder:#C9C9C9;
 $orange:#fcc822;
 $darkOrange: darken($orange, 15);
-$warningBackground:#ffd0d0;
 $fontColor:#000;
 
 /*global padding, margin settings */
@@ -153,7 +152,6 @@ header{
             }
         }
         span.warning{
-            background:$warningBackground; 
             font-style:italic;
             padding:2px;
             display:none;
@@ -162,9 +160,6 @@ header{
         }
     }
     .outputFieldWrapper{
-        input.warning{
-            background:$warningBackground;
-        }
     }
 
     input{display:block; width: 100%;}
