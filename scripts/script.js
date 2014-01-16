@@ -322,6 +322,7 @@ $(document).ready(function() {
     function rowError() {
         $("#rowField").qtip({
             content: {text: "enter a number between 1-50"},
+            style:{ classes: 'matrix_qtip'},
             position: {my: "top center", at: "bottom center"},
             events: {
                 hide: function(event, api) {

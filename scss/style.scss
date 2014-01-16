@@ -220,6 +220,9 @@ input, textarea {
 
 /*responsive stuff*/
 @media only screen and (max-width: 580px) {
+    header{
+        img{max-width:100%;}
+    }
     #matrixWrapper{
         width:100%;margin-right:0;float:none;
         margin-bottom:$globalPadding;
@@ -229,3 +232,6 @@ input, textarea {
         width:100%;float:none;
     }
 }
+
+/*qtip2 styling*/
+.matrix_qtip{background-color:$orange;}
