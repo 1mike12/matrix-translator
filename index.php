@@ -9,13 +9,23 @@
                 <div id="matrixWrapper" class="responsive">
                     <div id="matrixWrapperInner">
                         <div id="matrixOptions" class="dropShadow">
-                            rows: <input id="rowField" type="text" value="3"/> 
-                            columns: <input id="colField" type="text" value="3"/>
-                            <input id="rowPlus" type="button" value="row+"/>
-                            <input id="rowMinus" type="button" value="row-"/>
-                            <input id="colPlus" type="button" value="col+"/>
-                            <input id="colMinus" type="button" value="col-"/>
-                            <input id="clearAll" type="button" value="clear all"/>
+                            <div class="comboWrapper responsive">
+                                <div class="comboLabel">rows:</div>
+                                <input id="rowField" type="text" value="3"/>
+                                <div class="plusMinusWrapper">
+                                    <input id="rowPlus" class="buttonPlus" type="button" value=""/>
+                                    <input id="rowMinus" class="buttonMinus" type="button" value=""/>
+                                </div>
+                            </div>
+                            <div class="comboWrapper">
+                                <div class="comboLabel">columns:</div>
+                                <input id="colField" type="text" value="3"/>
+                                <div class="plusMinusWrapper">
+                                    <input id="colPlus" class="buttonPlus" type="button" value=""/>
+                                    <input id="colMinus" class="buttonMinus" type="button" value=""/>
+                                </div>
+                            </div>
+                            <input id="clearAll" type="button" value=""/>
                         </div>
 
                         <div id="matrixCanvas" class="dropShadow">

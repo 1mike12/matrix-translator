@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/matrix.css" />
-    <link rel="stylesheet" href="css/makingof.css" />
 
     <title>Matrix Translator</title>
 </head>

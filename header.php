@@ -1,6 +1,6 @@
 <header>
-    <div class="belt">
-        <a href="index.php">
+    <div class="belt selfClear">
+        <a id="logoWrapper" href="index.php" class="selfClear">
             <img id="logo" src="images/shitty%20logo.png" alt="logo"/>
             <span id="logoText">
                 Matrix Translator
@@ -12,8 +12,7 @@
             <li><a href="index.php">Matrix</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="comments.php">Comments</a></li>
-            <li><a href="makingof.php">Making of</a></li>
+            <li><a href="comments.php">Donate</a></li>
         </ul>
-        <div style="clear:both"></div>
     </div>
 </header>

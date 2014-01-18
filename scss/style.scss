@@ -71,20 +71,23 @@ h1, h2, h3, h4, h5 {padding:0; margin:0;}
 /*header*/
 header{
     @include dropShadow;
-    padding: 2px 0px 2px 0px;
     width:100%;
-    background: $orange;
+    background: #333;
     margin-bottom:$globalPadding;
-    #logo{
+    a#logoWrapper{
+        display:block;
         float:left;
-        margin-left:$globalPadding;
-    }
-    #logoText{
-        &:hover{ color: #FFF;}
-        color:#333;
-        float:left;
-        font-size:30px;
-        margin-left:20px;
+        #logo{
+            float:left;
+            margin-left:$globalPadding;
+        }
+        #logoText{
+            &:hover{ color: $orange;}
+            color:#fff;
+            float:left;
+            font-size:30px;
+            margin-left:20px;
+        }
     }
     ul {
         float:right;
@@ -92,44 +95,70 @@ header{
         margin:0;
         padding:0;
         li {
-            display:inline; 
+            display:inline-block; 
             float:left;
             padding: 0 5px 0 5px;
-            border-right:#FFE0B2 solid 1px; 
+            border-right:#555 solid 1px;
+            &:hover{background:#444;}
 
         }
         li:last-child{border-right:none;}
         a, a:visited{
-            &:hover{ color: #FFF;}
-            color:#333;
+            line-height:50px;
+            height:50px;
+            color:#ddd;
             display:block;
             text-decoration:none;
             font-size:16px;
+            padding:0px 20px;
+            &:hover{color:#fff;}
         }
     } 
 }
 
 /*matrix */
-#wrapper{
-    #matrixWrapper{
-        width:100%;
-        float:left;
-        margin-right:-315px;
-        #matrixWrapperInner{
-            margin-right:315px;
-            #matrixOptions{
-                margin-bottom:$globalPadding;
-                input[type="text"]{width:3em;}
-                input[type="button"]{background:$orange;}
 
+#matrixWrapper{
+    width:100%;
+    float:left;
+    margin-right:-315px;
+    #matrixWrapperInner{
+        margin-right:315px;
+        #matrixOptions{
+            margin-bottom:$globalPadding;
+            input[type="text"]{width:3em;}
+            .comboWrapper{
+                .comboLabel{margin-right:15px;margin-left:20px;}
+                >input{height:24px;}
+                >*{float:left;} /*float elements directly inside to the left*/
+                .plusMinusWrapper{
+                    input{height:50%; display:block; width:15px;height:12px; border:none;
+                          cursor: pointer; margin:0; padding:0;
+                    }
+                    input.buttonPlus{background-image:url('../images/button_plus.png');}
+                    input.buttonPlus:active{background-position: right;}
+                    input.buttonMinus{background-image:url('../images/button_minus.png');}
+                    input.buttonMinus:active{background-position: right;}
+                }
             }
-            #matrixCanvas{
-                /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/
-                overflow: auto;
+            input#clearAll{
+                margin-left:$globalPadding;
+                border:none;
+                background-image:url('../images/clear.png');
+                width:49px;
+                height:24px;
+                background-position:left;
+                &:active{background-position:right;}
             }
+        }
+        #matrixCanvas{
+            /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/
+            overflow: auto;
+            background-color:$orange;
         }
     }
 }
+
 
 
 /*output column stuff*/
@@ -154,15 +183,18 @@ header{
             float:right;
             input[type=radio]{display:none;}
             label{
+                cursor: pointer;
                 display:inline-block; 
                 padding:2px 5px; 
                 margin:-2px;
                 border-right:1px solid #EEE;
                 background:#DDD;
+                &:active{background:lighten($orange,25%);}
             }
             label:last-child{border:none;}
             input[type=radio]:checked + label { 
                 background-color:$orange;
+                &:active{background:lighten($orange,25%);}
             }
         }
         span.warning{
@@ -243,4 +275,9 @@ input, textarea {
 }
 
 /*qtip2 styling*/
-.matrix_qtip{background-color:$orange;}
+.qtipShadow{
+    box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+    -moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+    -webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+}
+.matrix_qtip{border:none;background-color:$orange; @extend .qtipShadow}
