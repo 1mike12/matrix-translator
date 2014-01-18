@@ -1,3 +1,5 @@
+@import "_variables";
+
 #banner{
     text-align:center;
     height:200px;
@@ -8,12 +10,11 @@
     }
 }
 .content{
-
-}
-.h-Center{
-    text-align:center;
-}
-.v-Center{
-    display:table-cell;
-    vertical-align:middle;
+    .aboutSection{
+        
+        background:lighten($orange,25%);
+        padding:$globalPadding;
+        @include dropShadow;
+        margin-bottom:$globalPadding;
+    }
 }

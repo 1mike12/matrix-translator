@@ -1,2 +1,17 @@
-.accordionHeader{padding:5px;}
-.accordionContent{}
+@import "_variables";
+
+.accordionHeader{
+    color:#444;
+    cursor: pointer;
+    padding:5px $globalPadding;
+    @include dropShadow;
+    background:$grey3;
+    
+    border-bottom:1px solid darken($grey2,5%);
+}
+.accordionContent{
+    margin-top:5px;
+    padding:$globalPadding;
+    background:#FAFAFA;
+    *:last-child{margin-bottom:0;}
+}

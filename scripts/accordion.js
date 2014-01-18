@@ -9,9 +9,9 @@ $(document).ready(function() {
     headers.click(function() {
         var adjacent = $(this).next();
         if (adjacent.is(":hidden")) {
-            adjacent.show("fast");
+            adjacent.slideDown("fast");
         } else {
-            $(this).next().hide("fast");
+            $(this).next().slideUp("fast");
         }
     });
 });

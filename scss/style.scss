@@ -9,6 +9,7 @@ html,body{
 body{background:$bodyBackground;
      font-family: 'Open Sans', sans-serif;
      font-size:1em;
+     color:$fontColor;
 }
 a, img {
     border:none;
@@ -39,7 +40,7 @@ h1, h2, h3, h4, h5 {padding:0; margin:0;}
 /*temporary background colors */
 .dropShadow{
     @include dropShadow;
-    background-color: $colBackground;
+    background-color: $grey3;
     padding:$globalPadding;
 }
 /*==============================*/
@@ -49,14 +50,13 @@ h1, h2, h3, h4, h5 {padding:0; margin:0;}
 header{
     @include dropShadow;
     width:100%;
-    background: #333;
+    background: $dark1;
     margin-bottom:$globalPadding;
     a#logoWrapper{
         display:block;
         float:left;
         #logo{
             float:left;
-            margin-left:$globalPadding;
         }
         #logoText{
             &:hover{ color: $orange;}
@@ -79,12 +79,12 @@ header{
             &:last-child{border-right:none;}
             border-left:#444 solid 1px;
             &:first-child{border-left:none;}
-            &:hover{background:#444;}
+            &:hover{background:$dark2;}
         }
         a, a:visited{
             line-height:50px;
             height:50px;
-            color:#ddd;
+            color:$grey2;
             display:block;
             text-decoration:none;
             font-size:16px;
@@ -153,7 +153,7 @@ header{
         h3{margin:0 0 0 0; display:inline; float:left;
            a{
                text-decoration:none;
-               &:visited{color: $fontColor;}
+               &:visited{color:$fontColor}
                &:hover{color:$orange;}
            }
         }
@@ -168,7 +168,7 @@ header{
                 padding:2px 5px; 
                 margin:-2px;
                 border-right:1px solid #EEE;
-                background:#DDD;
+                background:$grey2;
                 &:active{background:#fff;}
             }
             label:last-child{border:none;}
