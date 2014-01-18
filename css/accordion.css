@@ -5,12 +5,18 @@
   -webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
   -moz-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
   box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
-  background: #eeeeee;
+  background: #dddddd;
   border-bottom: 1px solid #d0d0d0; }
 
 .accordionContent {
   margin-top: 5px;
   padding: 15px;
-  background: #FAFAFA; }
+  background: #eeeeee; }
   .accordionContent *:last-child {
     margin-bottom: 0; }
+  .accordionContent a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #cf9e03; }
+    .accordionContent a:hover {
+      color: #fcc822; }

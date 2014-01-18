@@ -1,20 +1,8 @@
 @import "_variables";
 
-#banner{
-    text-align:center;
-    height:200px;
-    display: table-cell;
-    vertical-align: middle;
-    #bannerTitle{
-
-    }
-}
-.content{
-    .aboutSection{
-        
+.aboutSection{
         background:lighten($orange,25%);
         padding:$globalPadding;
         @include dropShadow;
         margin-bottom:$globalPadding;
     }
-}
