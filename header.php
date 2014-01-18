@@ -1,7 +1,7 @@
 <header>
     <div class="belt selfClear">
         <a id="logoWrapper" href="index.php" class="selfClear">
-            <img id="logo" src="images/shitty%20logo.png" alt="logo"/>
+            <img id="logo" src="images/logo_code.png" alt="logo"/>
             <span id="logoText">
                 Matrix Translator
             </span>
