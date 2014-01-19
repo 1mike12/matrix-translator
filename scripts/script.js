@@ -1,11 +1,16 @@
 $(document).ready(function() {
     var matrixTable = $("#matrix");
+
     //auto highlight fields when focused
-    $("#outputColumn, #matrix").on("focus", "input:text", function() {
-        $(this).select()
-            .mouseup(function(e) {
-                return false;
-            });
+    $("#outputColumn").on("focus", "input:text", function() {
+        $(this).select().mouseup(function(e) {
+            return false;
+        });
+    });
+
+    //trigger output generation when focus on matrix fields
+    $("#matrix").on("focusout", "input:text", function() {
+        generateOutput(matrixTable);
     });
 
     //get matrix rows
@@ -190,37 +195,14 @@ $(document).ready(function() {
             $("#wolframWarning").hide();
         }
         //!!!!!!!!!!!!!!NEED to get latex bracket-type settings
-        var currentBracketType= $("#latexButtons input:checked").val();
+        var currentBracketType = $("#latexButtons input:checked").val();
         $("#latexOutput").val(generateLatex(array, currentBracketType));
     }
-    
-    $("#latexButtons").on("click","input", function(){
+
+    $("#latexButtons").on("click", "input", function() {
         generateOutput(matrixTable);
     });
 
-    //trigger field expansion
-    $("#matrix").on("focus", "input:text", function() {
-        var $this = $(this);
-        var matrixFieldWidth = $this.outerWidth();
-        $this
-            .focus(function() {
-                var coordinates = $this.offset();
-                $this
-                    .css({position: "absolute"})
-                    .css("z-index", "5")
-                    .offset(coordinates)
-                    .animate({width: "150px"}, 150);
-            })
-            .focusout(function() {
-                generateOutput(matrixTable);
-                $this
-                    .animate({width: matrixFieldWidth + "px"}, 150, function() {
-                        $this
-                            .css({position: "static"})
-                            .css("z-index", "0");
-                    });
-            });
-    });
 
     $("#colPlus").click(function() {
         var currentCols = parseInt($("#colField").val()) + 1;
