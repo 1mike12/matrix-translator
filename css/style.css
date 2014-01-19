@@ -5,7 +5,7 @@ html, body {
   padding: 0; }
 
 body {
-  background: c;
+  background: #f4f4f4;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: black; }
@@ -40,18 +40,18 @@ h1, h2, h3, h4, h5 {
 
 /*temporary background colors */
 .dropShadow {
-  -webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
-  -moz-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
-  box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
+  -webkit-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.2);
+  box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.2);
   background-color: #eeeeee;
   padding: 15px; }
 
 /*==============================*/
 /*header*/
 header {
-  -webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
-  -moz-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
-  box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
+  -webkit-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.2);
+  box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.2);
   width: 100%;
   background: #333333;
   margin-bottom: 15px; }
@@ -66,7 +66,7 @@ header {
       font-size: 30px;
       margin-left: 20px; }
       header a#logoWrapper #logoText:hover {
-        color: #fcc822; }
+        color: #f7c36f; }
   header ul {
     float: right;
     list-style-type: none;
@@ -146,7 +146,7 @@ header {
     #matrixWrapper #matrixWrapperInner #matrixCanvas {
       /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/
       overflow: auto;
-      background-color: #fcc822; }
+      background-color: #f7c36f; }
 
 /*output column stuff*/
 #outputColumn {
@@ -166,7 +166,7 @@ header {
         #outputColumn .outputHeaderWrapper h3 a:visited {
           color: black; }
         #outputColumn .outputHeaderWrapper h3 a:hover {
-          color: #fcc822; }
+          color: #f7c36f; }
     #outputColumn .outputHeaderWrapper #latexButtons {
       /* how to make select buttons http://viralpatel.net/blogs/css-radio-button-checkbox-background/*/
       margin-left: 10px;
@@ -179,13 +179,13 @@ header {
         padding: 2px 5px;
         margin: -2px;
         border-right: 1px solid #EEE;
-        background: #dddddd; }
+        background: #EEE; }
         #outputColumn .outputHeaderWrapper #latexButtons label:active {
           background: #fff; }
       #outputColumn .outputHeaderWrapper #latexButtons label:last-child {
         border: none; }
       #outputColumn .outputHeaderWrapper #latexButtons input[type=radio]:checked + label {
-        background-color: #fff; }
+        background-color: #F7f7f7; }
         #outputColumn .outputHeaderWrapper #latexButtons input[type=radio]:checked + label:active {
           background: #fff; }
     #outputColumn .outputHeaderWrapper span.warning {
@@ -204,7 +204,7 @@ header {
 
 /*footer*=====================*/
 #footer {
-  font-size: .6em;
+  font-size: .7em;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -227,9 +227,9 @@ input:focus, textarea:focus {
   border-color: #c9c9c9; }
 
 input, textarea {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px; }
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0.1px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0.1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0.1px; }
 
 /*  autoclearing  */
 .selfClear:before,
@@ -242,12 +242,11 @@ input, textarea {
 
 /*comments*/
 .commentsWrapper {
-  margin-top: 15px;
-  background: #fee7a0;
+  background: #eeeeee;
   padding: 15px;
-  -webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
-  -moz-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3);
-  box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.3); }
+  -webkit-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.2);
+  box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.2); }
 
 /*responsive stuff*/
 @media only screen and (max-width: 580px) {
@@ -267,10 +266,10 @@ input, textarea {
     float: none; } }
 /*qtip2 styling*/
 .qtipShadow, .matrix_qtip {
-  box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
-  -moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
-  -webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75); }
+  box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.75);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.75); }
 
 .matrix_qtip {
   border: none;
-  background-color: #fcc822; }
+  background-color: #f7c36f; }

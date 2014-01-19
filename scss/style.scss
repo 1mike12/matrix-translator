@@ -168,12 +168,12 @@ header{
                 padding:2px 5px; 
                 margin:-2px;
                 border-right:1px solid #EEE;
-                background:$grey2;
+                background:#EEE;
                 &:active{background:#fff;}
             }
             label:last-child{border:none;}
             input[type=radio]:checked + label { 
-                background-color:#fff;
+                background-color:#F7f7f7;
                 &:active{background:#fff;}
             }
         }
@@ -199,7 +199,7 @@ header{
 }
 /*footer*=====================*/
 #footer{
-    font-size:.6em;
+    font-size:.7em;
     position:absolute;
     bottom:0;
     width:100%;
@@ -224,9 +224,9 @@ input:focus, textarea:focus {
 }
 
 input, textarea {
-    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
-    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
-    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    box-shadow: rgba(0,0,0, 0.06) 0px 0px .1px;
+    -moz-box-shadow: rgba(0,0,0, 0.06) 0px 0px .1px;
+    -webkit-box-shadow: rgba(0,0,0, 0.06) 0px 0px .1px;
 }
 
 /*  autoclearing  */
@@ -241,8 +241,7 @@ input, textarea {
 
 /*comments*/
 .commentsWrapper{
-    margin-top:$globalPadding;
-    background:lighten($orange,25%);
+    background:$grey3;
     padding:$globalPadding;
     @include dropShadow;
 }
@@ -264,8 +263,8 @@ input, textarea {
 
 /*qtip2 styling*/
 .qtipShadow{
-    box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
-    -moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
-    -webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+    box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.75);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.75);
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.75);
 }
 .matrix_qtip{border:none;background-color:$orange; @extend .qtipShadow}

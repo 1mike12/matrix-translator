@@ -1,20 +1,20 @@
 @import "_variables";
 
 .accordionHeader{
-    color:#444;
+    color:$dark1;
+    background:$lightOrange;
     cursor: pointer;
     padding:5px $globalPadding;
     @include dropShadow;
-    background:$grey2;
-
-    border-bottom:1px solid darken($grey2,5%);
+    &:hover{background:lighten($lightOrange,10%);}
+    border-bottom:1px solid $dark3;
 }
 .accordionContent{
     margin-top:5px;
     padding:$globalPadding;
-    background:$grey3;
+    background:$grey4;
     *:last-child{margin-bottom:0;}
-    a{text-decoration:none; font-weight:bold; color:$darkOrange;
+    a{text-decoration:none; font-weight:bold; color:$orange;
       &:hover{color:$orange;}
     }
 

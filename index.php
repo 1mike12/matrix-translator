@@ -10,7 +10,7 @@
                     <div id="matrixWrapperInner">
                         <div id="matrixOptions" class="dropShadow">
                             <div class="comboWrapper responsive">
-                                <div class="comboLabel">rows:</div>
+                                <div class="comboLabel">row</div>
                                 <input id="rowField" type="text" value="3"/>
                                 <div class="plusMinusWrapper">
                                     <input id="rowPlus" class="buttonPlus" type="button" value=""/>
@@ -18,7 +18,7 @@
                                 </div>
                             </div>
                             <div class="comboWrapper">
-                                <div class="comboLabel">columns:</div>
+                                <div class="comboLabel">column</div>
                                 <input id="colField" type="text" value="3"/>
                                 <div class="plusMinusWrapper">
                                     <input id="colPlus" class="buttonPlus" type="button" value=""/>

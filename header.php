@@ -11,7 +11,7 @@
             <li><a href="index.php">Matrix</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="comments.php">Comments</a></li>
-            <li><a href="comments.php">Donate</a></li>
+            <li><a href="donate.php">Donate</a></li>
         </ul>
     </div>
 </header>
