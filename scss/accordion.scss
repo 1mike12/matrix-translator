@@ -7,7 +7,7 @@
     padding:5px $globalPadding;
     @include dropShadow;
     &:hover{background:lighten($lightOrange,10%);}
-    border-bottom:1px solid $dark3;
+    border-bottom:1px $grey4;
 }
 .accordionContent{
     margin-top:5px;

@@ -1,14 +1,14 @@
 .accordionHeader {
   color: #333333;
-  background: #f7dbad;
+  background: #f2e3d3;
   cursor: pointer;
   padding: 5px 15px;
-  -webkit-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.2);
-  -moz-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.2);
-  box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.2);
-  border-bottom: 1px solid #777777; }
+  -webkit-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
+  -moz-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
+  box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
+  border-bottom: 1px #f4f4f4; }
   .accordionHeader:hover {
-    background: #fcefdb; }
+    background: #fefcfa; }
 
 .accordionContent {
   margin-top: 5px;
@@ -19,6 +19,6 @@
   .accordionContent a {
     text-decoration: none;
     font-weight: bold;
-    color: #f7c36f; }
+    color: #f4bd73; }
     .accordionContent a:hover {
-      color: #f7c36f; }
+      color: #f4bd73; }
