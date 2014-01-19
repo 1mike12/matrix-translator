@@ -10,7 +10,7 @@
                     <div id="matrixWrapperInner">
                         <div id="matrixOptions" class="dropShadow">
                             <div class="comboWrapper responsive">
-                                <div class="comboLabel">row</div>
+                                <div class="comboLabel">rows:</div>
                                 <input id="rowField" type="text" value="3"/>
                                 <div class="plusMinusWrapper">
                                     <input id="rowPlus" class="buttonPlus" type="button" value=""/>
@@ -18,7 +18,7 @@
                                 </div>
                             </div>
                             <div class="comboWrapper">
-                                <div class="comboLabel">column</div>
+                                <div class="comboLabel">columns:</div>
                                 <input id="colField" type="text" value="3"/>
                                 <div class="plusMinusWrapper">
                                     <input id="colPlus" class="buttonPlus" type="button" value=""/>
@@ -51,7 +51,7 @@
                 </div>
 
                 <div id="outputColumn" class="responsive">
-                    <div class="dropShadow">
+                    <div class="dropShadow selfClear">
 
                         <div class="outputHeaderWrapper selfClear">
                             <h3><a href="http://www.wolframalpha.com/" target="_blank">WolframAlpha</a></h3>
@@ -62,7 +62,7 @@
                         </div>
 
                         <div class="outputHeaderWrapper selfClear">
-                            <h3>MATLAB</h3>
+                            <h3>MATLab</h3>
                         </div>
                         <div class="outputFieldWrapper">
                             <input id="matLabOutput" type="text" value=""> 
@@ -70,25 +70,25 @@
 
                         <div class="outputHeaderWrapper selfClear">
                             <h3>LaTeX</h3>
-                            <div id="latexButtons">
-                                <input type="radio" id="parantheses" value="(" name="latexBracketType" checked="checked">
-                                <label for="parantheses">( )</label>
-
-                                <input type="radio" id="bracket" value="[" name="latexBracketType">
-                                <label for="bracket">[ ]</label>
-
-                                <input type="radio" id="curlyBrace" value="{" name="latexBracketType">
-                                <label for="curlyBrace">{ }</label>
-
-                                <input type="radio" id="polon" value="|" name="latexBracketType">
-                                <label for="polon">| |</label>
-
-                                <input type="radio" id="doublePolon" value="||" name="latexBracketType">
-                                <label for="doublePolon">‖ ‖</label>
-                            </div>
                         </div>
                         <div class="outputFieldWrapper">
                             <input id="latexOutput" type="text" value="">
+                        </div>
+                        <div id="latexButtons">
+                            <input type="radio" id="parantheses" value="(" name="latexBracketType" checked="checked">
+                            <label for="parantheses">( )</label>
+
+                            <input type="radio" id="bracket" value="[" name="latexBracketType">
+                            <label for="bracket">[ ]</label>
+
+                            <input type="radio" id="curlyBrace" value="{" name="latexBracketType">
+                            <label for="curlyBrace">{ }</label>
+
+                            <input type="radio" id="polon" value="|" name="latexBracketType">
+                            <label for="polon">| |</label>
+
+                            <input type="radio" id="doublePolon" value="||" name="latexBracketType">
+                            <label for="doublePolon">‖ ‖</label>
                         </div>
                     </div>
                 </div>

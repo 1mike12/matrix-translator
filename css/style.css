@@ -111,7 +111,8 @@ header {
         /*float elements directly inside to the left*/ }
         #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper .comboLabel {
           margin-right: 15px;
-          margin-left: 20px; }
+          margin-left: 20px;
+          font-weight: 900; }
         #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper > input {
           height: 24px; }
         #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper > * {
@@ -139,7 +140,7 @@ header {
         background-image: url("../images/clear.png");
         width: 49px;
         height: 24px;
-        background-position: left; }
+        background-position: right; }
         #matrixWrapper #matrixWrapperInner #matrixOptions input#clearAll:active {
           background-position: right; }
     #matrixWrapper #matrixWrapperInner #matrixCanvas {
@@ -166,33 +167,36 @@ header {
           color: black; }
         #outputColumn .outputHeaderWrapper h3 a:hover {
           color: #f4bd73; }
-    #outputColumn .outputHeaderWrapper #latexButtons {
-      /* how to make select buttons http://viralpatel.net/blogs/css-radio-button-checkbox-background/*/
-      margin-left: 10px;
-      float: right; }
-      #outputColumn .outputHeaderWrapper #latexButtons input[type=radio] {
-        display: none; }
-      #outputColumn .outputHeaderWrapper #latexButtons label {
-        cursor: pointer;
-        display: inline-block;
-        padding: 2px 5px;
-        margin: -2px;
-        border-right: 1px solid #EEE;
-        background: #EEE; }
-        #outputColumn .outputHeaderWrapper #latexButtons label:active {
-          background: #fff; }
-      #outputColumn .outputHeaderWrapper #latexButtons label:last-child {
-        border: none; }
-      #outputColumn .outputHeaderWrapper #latexButtons input[type=radio]:checked + label {
-        background-color: #F7f7f7; }
-        #outputColumn .outputHeaderWrapper #latexButtons input[type=radio]:checked + label:active {
-          background: #fff; }
     #outputColumn .outputHeaderWrapper span.warning {
       font-style: italic;
       padding: 2px;
       display: none;
       position: absolute;
       right: 0; }
+  #outputColumn #latexButtons {
+    /* how to make select buttons http://viralpatel.net/blogs/css-radio-button-checkbox-background/*/
+    margin-left: 10px;
+    float: right; }
+    #outputColumn #latexButtons input[type=radio] {
+      display: none; }
+    #outputColumn #latexButtons label {
+      cursor: pointer;
+      font-size: 10px;
+      display: inline-block;
+      padding: 0px 4px;
+      vertical-align: middle;
+      line-height: 160%;
+      margin: 0px;
+      border-right: 1px solid #EEE;
+      background: #EEE; }
+      #outputColumn #latexButtons label:active {
+        background: #fff; }
+    #outputColumn #latexButtons label:last-child {
+      border: none; }
+    #outputColumn #latexButtons input[type=radio]:checked + label {
+      background-color: #F7f7f7; }
+      #outputColumn #latexButtons input[type=radio]:checked + label:active {
+        background: #fff; }
   #outputColumn input {
     display: block;
     width: 100%; }
@@ -210,7 +214,8 @@ header {
   width: 100%;
   padding: 0;
   background: #333333;
-  text-align: center; }
+  text-align: center;
+  color: #aaaaaa; }
   #footer #footerPadding {
     padding: 3px; }
 
