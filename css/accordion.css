@@ -31,6 +31,12 @@
     width: 24px;
     height: 24px;
     background: url("../images/dropHor.png"); }
+  .accordionHeaderWrapper .accordionHeaderIcon.accordion-hover {
+    background-position: right; }
+  .accordionHeaderWrapper .accordionHeaderIcon.accordion-down {
+    background: url("../images/dropVer.png"); }
+  .accordionHeaderWrapper .accordionHeaderIcon.accordion-down.accordion-hover {
+    background-position: right; }
 
 .accordionContent {
   margin-top: 5px;
