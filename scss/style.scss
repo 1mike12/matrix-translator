@@ -1,6 +1,4 @@
-/*color declarations*/
 @import "_variables";
-
 html,body{
     height:100%;
     margin:0;
@@ -28,7 +26,7 @@ a, img {
     padding-bottom:3em;
 }
 
-/*font resets*/
+/*font-size resets*/
 h1, h2, h3, h4, h5 {padding:0; margin:0;}
 #wrapper{
     p{margin-top:0;}

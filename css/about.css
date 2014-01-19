@@ -20,10 +20,11 @@
 /*==============================
 Donation Page*/
 #donationWrapper {
-  float: left; }
+  float: left;
+  margin-right: -215px; }
   #donationWrapper #donationLeft {
-    float: left;
-    width: 500px; }
-  #donationWrapper #paypal {
-    float: right;
-    width: 200px; }
+    margin-right: 215px; }
+
+#paypal {
+  float: right;
+  width: 200px; }
