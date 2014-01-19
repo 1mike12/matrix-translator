@@ -25,7 +25,11 @@ a, img {
     @extend .belt;
     padding-bottom:3em;
 }
-
+a{
+    color:$darkOrange;
+    &:hover{text-decoration:underline;}
+    text-decoration:none;
+}
 /*font-size resets*/
 h1, h2, h3, h4, h5 {padding:0; margin:0;}
 #wrapper{
@@ -72,13 +76,6 @@ header{
         #logo{
             float:left;
         }
-        #logoText{
-            &:hover{ color: $orange;}
-            color:#fff;
-            float:left;
-            font-size:30px;
-            margin-left:20px;
-        }
     }
     ul {
         float:right;
@@ -104,7 +101,7 @@ header{
             font-size:16px;
 
             padding:0px 20px;
-            &:hover{color:#fff;}
+            &:hover{color:#fff; text-decoration:none;}
         }
     } 
 }

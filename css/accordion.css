@@ -44,9 +44,3 @@
   background: #eeeeee; }
   .accordionContent *:last-child {
     margin-bottom: 0; }
-  .accordionContent a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #f4bd73; }
-    .accordionContent a:hover {
-      color: #f4bd73; }
