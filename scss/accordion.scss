@@ -1,14 +1,26 @@
 @import "_variables";
 
-.accordionHeader{
+.accordionHeaderWrapper{
     color:$dark1;
     background:$lightOrange;
     cursor: pointer;
     padding:5px $globalPadding;
     @include dropShadow;
+    @extend .selfClear;
     &:hover{background:lighten($lightOrange,10%);}
     border-bottom:1px $grey4;
+    .accordionHeader{
+        float:left;
+    }
+    .accordionHeaderIcon{
+        float:left;
+        margin-right:$globalPadding;
+        width:24px;
+        height:24px;
+        background:url("../images/dropHor.png");
+    }
 }
+
 .accordionContent{
     margin-top:5px;
     padding:$globalPadding;

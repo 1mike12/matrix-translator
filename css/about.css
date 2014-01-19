@@ -3,6 +3,14 @@
   -moz-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.75); }
 
+.selfClear:before,
+.selfClear:after {
+  content: "";
+  display: table; }
+
+.selfClear:after {
+  clear: both; }
+
 .content h1 {
   -webkit-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
   -moz-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);

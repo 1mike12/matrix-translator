@@ -259,14 +259,7 @@ input, textarea {
 }
 
 /*  autoclearing  */
-.selfClear:before,
-.selfClear:after {
-    content:"";
-    display:table;
-}
-.selfClear:after {
-    clear:both;
-}
+
 
 /*comments*/
 .commentsWrapper{

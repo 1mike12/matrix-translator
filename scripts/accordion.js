@@ -1,17 +1,19 @@
 $(document).ready(function() {
-    var wrappers = $(".accordionWrapper");
     var contents = $(".accordionContent");
-    var headers = $(".accordionHeader");
+    var headerWrapper = $(".accordionHeaderWrapper");
     contents.hide();
-    for (var i = 0; i < wrappers.length; i++) {
-        wrappers.eq(i).addClass("_aw-" + i);
-    }
-    headers.click(function() {
+    
+    headerWrapper.click(function() {
         var adjacent = $(this).next();
         if (adjacent.is(":hidden")) {
             adjacent.slideDown("fast");
         } else {
             $(this).next().slideUp("fast");
         }
+    });
+    
+    headerWrapper.hover(function(){
+        $(this).toggleClass("accordion-hover");
+        $(this).children().toggleClass("accordion-hover");
     });
 });

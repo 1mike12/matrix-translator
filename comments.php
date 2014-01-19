@@ -7,13 +7,19 @@
             <div class="belt">
                 <div class="content">
                     <h1>FAQ</h1>
-                    <h3 class="accordionHeader">Who made this?</h3>
+                    <div class="accordionHeaderWrapper">
+                        <div class="accordionHeaderIcon"></div>
+                        <h3 class="accordionHeader">Who made this?</h3>
+                    </div>
                     <div class="accordionContent">
                         <p>
                             This site was hand crafted from scratch by the dynamic duo Mike Qin and Brian Gioia. For more info, check out the <a href='about.php'>about page</a>.
                         </p>
                     </div>
-                    <h3 class="accordionHeader">Can't you generate the WolframAlpha link automatically so I don't have to copy and paste?</h3>
+                    <div class="accordionHeaderWrapper">
+                        <div class="accordionHeaderIcon"></div>
+                        <h3 class="accordionHeader">Can't you generate the WolframAlpha link automatically so I don't have to copy and paste?</h3>
+                    </div>
                     <div class="accordionContent">
                         <p>Mike: I actually wanted to implement this so there's one less step involved if you use WA. Unfortunately, it's actually against the WA terms of use:</p>
                         <p>
@@ -21,7 +27,10 @@
                             </i>
                         </p>
                     </div>
-                    <h3 class="accordionHeader">What is Latex?</h3>
+                    <div class="accordionHeaderWrapper">
+                        <div class="accordionHeaderIcon"></div>
+                        <h3 class="accordionHeader">What is Latex?</h3>
+                    </div>
                     <div class="accordionContent">
                         <p><a href="http://latex-project.org/intro.html" >Latex </a>is a special language that let's you write math. Normally, it's very hard to write things like matrices or integral signs for instance. </p>
                     </div>
