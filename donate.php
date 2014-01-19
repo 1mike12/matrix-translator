@@ -25,6 +25,7 @@
                     <h1>Spread the Word</h1>
                     <div class="aboutSection">
                         <p>We appriciate you letting others know of this new tool!</p>
+                        <div class="fb-like" data-href="https://matrixtranslator.com" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
                     </div>
                 </div>
             </div>
