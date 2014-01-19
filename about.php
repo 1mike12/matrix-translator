@@ -7,7 +7,10 @@
             <div class="content">
                 <h1>What is Matrix Translator?</h1>
                 <div class="section">
-                    <h2>Matrix Translator automatically formats a matrix to be copied and pasted into 3rd party websites and programs.</h2>
+                    <h2 class="quotation">
+                        <div class="quotationRight">Matrix Translator automatically formats a matrix to be copied and pasted into 3rd party websites and programs.
+                        </div>
+                    </h2>
                     <p></p>
                     <p>The inspiration for developing Matrix Translator came when Mike took a linear algebra class. He wasted a lot of time remembering the complex syntax between each of the programs and websites out there. Thus, the original idea for Matrix Translator was born!</p>
                 </div>
