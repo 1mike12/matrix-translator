@@ -2,12 +2,12 @@
 
 .accordionHeaderWrapper{
     color:$dark1;
-    background:$lightOrange;
+    background:$orange;
     cursor: pointer;
     padding:5px $globalPadding;
     @include dropShadow;
     @extend .selfClear;
-    &:hover{background:lighten($lightOrange,10%);}
+    &:hover{background:lighten($orange,10%);}
     border-bottom:1px $grey4;
     .accordionHeader{
         float:left;
@@ -33,7 +33,7 @@
 .accordionContent{
     margin-top:5px;
     padding:$globalPadding;
-    background:$grey4;
+    background:$grey3;
     *:last-child{margin-bottom:0;}
     a{text-decoration:none; font-weight:bold; color:$orange;
       &:hover{color:$orange;}
