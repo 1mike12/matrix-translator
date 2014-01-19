@@ -62,14 +62,14 @@
                         </div>
 
                         <div class="outputHeaderWrapper selfClear">
-                            <h3>MAT Lab</h3>
+                            <h3>MATLAB</h3>
                         </div>
                         <div class="outputFieldWrapper">
                             <input id="matLabOutput" type="text" value=""> 
                         </div>
 
                         <div class="outputHeaderWrapper selfClear">
-                            <h3>LateX</h3>
+                            <h3>LaTeX</h3>
                             <div id="latexButtons">
                                 <input type="radio" id="parantheses" value="(" name="latexBracketType" checked="checked">
                                 <label for="parantheses">( )</label>

@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5 {padding:0; margin:0;}
 /*temporary background colors */
 .dropShadow{
     @include dropShadow;
-    background-color: $grey3;
+    background-color:$grey3;
     padding:$globalPadding;
 }
 /*==============================*/
@@ -200,10 +200,13 @@ header{
     font-size:.7em;
     position:absolute;
     bottom:0;
+    height:20px;
     width:100%;
     padding:0;
+    background:$dark1;
+    text-align:center;
     #footerPadding{
-        padding:$globalPadding;
+        padding:3px;
     }
 }
 
@@ -222,9 +225,9 @@ input:focus, textarea:focus {
 }
 
 input, textarea {
-    box-shadow: rgba(0,0,0, 0.06) 0px 0px .1px;
-    -moz-box-shadow: rgba(0,0,0, 0.06) 0px 0px .1px;
-    -webkit-box-shadow: rgba(0,0,0, 0.06) 0px 0px .1px;
+    box-shadow: rgba(0,0,0, 0.4) 0px 0px .1px;
+    -moz-box-shadow: rgba(0,0,0, 0.4) 0px 0px .1px;
+    -webkit-box-shadow: rgba(0,0,0, 0.4) 0px 0px .1px;
 }
 
 /*  autoclearing  */
@@ -261,8 +264,8 @@ input, textarea {
 
 /*qtip2 styling*/
 .qtipShadow{
-    box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.75);
-    -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.75);
-    -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.75);
+    box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.4);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.4);
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.4);
 }
 .matrix_qtip{border:none;background-color:$orange; @extend .qtipShadow}
