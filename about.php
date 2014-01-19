@@ -10,12 +10,12 @@
                     <div class="aboutSection">
                         <div>Inspiration in developing Matrix Translator came when Mike took a linear algebra class. He couldn't stand the waste of time trying to remember the finicky syntax between each of the programs and websites out there and their Matrix Translator was born!</div>
                     </div>
-                    <h1 class="">Mike Qin</h1>
+                    <h1 class="">Mike Qin | Programming</h1>
                     <div class="aboutSection">
                         <div>Portfolio | Resume | Linkedin</div>
                         <p> </p>
                         <p>"My reasoning behind created this tool was to as much to solve the translation problem as to improve my own web development skills. I went from not knowing what jQuery was to being able to create a whole application (with a lot of hair pulling)."</p>
-                        <h3>Project Highlights</h3>
+                        <h2>Things I learned making Matrix Translator //click to expand</h2>
                         <h3 class="accordionHeader">jQuery</h3>
                         <div class="accordionContent">
                             <p>asdfasdfasdfasdfasdf</p>

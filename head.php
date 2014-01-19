@@ -11,7 +11,7 @@
     <script src="scripts/accordion.js"></script>
 
     <!-- fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
 
     <!-- html 5 shiv for IE backwards compatability-->

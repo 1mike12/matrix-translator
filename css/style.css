@@ -31,19 +31,42 @@ h1, h2, h3, h4, h5 {
 #wrapper p {
   margin-top: 0; }
 #wrapper h1 {
-  font-size: 2em; }
+  font-size: 2em;
+  font-weight: 300; }
 #wrapper h2 {
-  font-size: 1.8em; }
+  font-size: 1.8em;
+  font-weight: 300; }
 #wrapper h3 {
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  font-weight: 400; }
 
-/*temporary background colors */
+/*reusable cross site styles */
 .dropShadow {
   -webkit-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
   -moz-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
   box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
   background-color: #eeeeee;
   padding: 15px; }
+
+.fadedLine {
+  display: block;
+  border: none;
+  height: 1px;
+  background: #777777;
+  background: -moz-radial-gradient(center, ellipse cover, rgba(119, 119, 119, 0.65) 0%, rgba(119, 119, 119, 0.65) 70%, rgba(119, 119, 119, 0) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(119, 119, 119, 0.65)), color-stop(70%, rgba(119, 119, 119, 0.65)), color-stop(100%, rgba(119, 119, 119, 0)));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(119, 119, 119, 0.65) 0%, rgba(119, 119, 119, 0.65) 70%, rgba(119, 119, 119, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, rgba(119, 119, 119, 0.65) 0%, rgba(119, 119, 119, 0.65) 70%, rgba(119, 119, 119, 0) 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, rgba(119, 119, 119, 0.65) 0%, rgba(119, 119, 119, 0.65) 70%, rgba(119, 119, 119, 0) 100%);
+  /* IE10+ */
+  background: radial-gradient(ellipse at center, rgba(119, 119, 119, 0.65) 0%, rgba(119, 119, 119, 0.65) 70%, rgba(119, 119, 119, 0) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6777777', endColorstr='#00777777',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
 
 /*==============================*/
 /*header*/
@@ -104,7 +127,8 @@ header {
     #matrixWrapper #matrixWrapperInner #matrixOptions {
       padding-top: 5px;
       padding-bottom: 5px;
-      margin-bottom: 15px; }
+      background-color: #f4bd73;
+      border-bottom: 1px solid #777777; }
       #matrixWrapper #matrixWrapperInner #matrixOptions input[type="text"] {
         width: 3em; }
       #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper {
