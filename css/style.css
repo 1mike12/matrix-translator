@@ -260,6 +260,13 @@ header {
   #outputColumn input {
     display: block;
     width: 100%; }
+  #outputColumn #paypalButton {
+    background-image: url("../images/donateIcon1.png");
+    background-position: left;
+    width: 270px;
+    height: 54px; }
+    #outputColumn #paypalButton:hover {
+      background-position: right; }
 
 /*history column*========================*/
 .historyColumnWrapper {

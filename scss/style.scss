@@ -211,6 +211,15 @@ header{
         }
     }
     input{display:block; width: 100%;}
+    
+    
+    #paypalButton{
+        background-image: url("../images/donateIcon1.png");
+        background-position:left;
+        width:270px;
+        height:54px;
+        &:hover{background-position:right;}
+    }
 
 }
 

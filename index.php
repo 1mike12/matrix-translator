@@ -52,8 +52,7 @@
                 </div>
 
                 <div id="outputColumn" class="responsive">
-                    <div class="dropShadow selfClear">
-
+                    <div class="section selfClear">
                         <div class="outputHeaderWrapper selfClear">
                             <h3><a href="http://www.wolframalpha.com/" target="_blank">WolframAlpha</a></h3>
                             <span id="wolframWarning" class="warning"><img src="images/warning_sign.png"/></span>
@@ -91,6 +90,13 @@
                             <input type="radio" id="doublePolon" value="||" name="latexBracketType">
                             <label for="doublePolon">‖ ‖</label>
                         </div>
+                    </div>
+                    <div class="section">
+                        <p>We want to pay for hosting without using ads. If you find this tool useful, consider leaving a donation.</p>
+                        <a href="donate.php">
+                            <div id="paypalButton">
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
