@@ -1,3 +1,8 @@
+.qtipShadow, .matrix_qtip {
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.75); }
+
 html, body {
   height: 100%;
   margin: 0;
@@ -49,24 +54,42 @@ h1, h2, h3, h4, h5 {
   padding: 15px; }
 
 .fadedLine {
-  display: block;
   border: none;
   height: 1px;
-  background: #777777;
-  margin-bottom: 15px;
-  background: -moz-radial-gradient(center, ellipse cover, #777777 0%, #777777 64%, rgba(119, 119, 119, 0) 71%, rgba(119, 119, 119, 0) 100%);
+  background: #f2e3d3;
+  background: -moz-radial-gradient(center, ellipse cover, #edd4b4 0%, #edd4b4 64%, rgba(237, 212, 180, 0) 71%, rgba(237, 212, 180, 0) 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #777777), color-stop(64%, #777777), color-stop(71%, rgba(119, 119, 119, 0)), color-stop(100%, rgba(119, 119, 119, 0)));
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #edd4b4), color-stop(64%, #edd4b4), color-stop(71%, rgba(237, 212, 180, 0)), color-stop(100%, rgba(237, 212, 180, 0)));
   /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover, #777777 0%, #777777 64%, rgba(119, 119, 119, 0) 71%, rgba(119, 119, 119, 0) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #edd4b4 0%, #edd4b4 64%, rgba(237, 212, 180, 0) 71%, rgba(237, 212, 180, 0) 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover, #777777 0%, #777777 64%, rgba(119, 119, 119, 0) 71%, rgba(119, 119, 119, 0) 100%);
+  background: -o-radial-gradient(center, ellipse cover, #edd4b4 0%, #edd4b4 64%, rgba(237, 212, 180, 0) 71%, rgba(237, 212, 180, 0) 100%);
   /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover, #777777 0%, #777777 64%, rgba(119, 119, 119, 0) 71%, rgba(119, 119, 119, 0) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #edd4b4 0%, #edd4b4 64%, rgba(237, 212, 180, 0) 71%, rgba(237, 212, 180, 0) 100%);
   /* IE10+ */
-  background: radial-gradient(ellipse at center, #777777 0%, #777777 64%, rgba(119, 119, 119, 0) 71%, rgba(119, 119, 119, 0) 100%);
+  background: radial-gradient(ellipse at center, #edd4b4 0%, #edd4b4 64%, rgba(237, 212, 180, 0) 71%, rgba(237, 212, 180, 0) 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#777777', endColorstr='#00777777',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#edd4b4', endColorstr='#00edd4b4',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
+
+.fadedLineDarker {
+  border: none;
+  height: 1px;
+  background: #f2e3d3;
+  margin-bottom: 15px;
+  background: -moz-radial-gradient(center, ellipse cover, #d8ad68 0%, #d8ad68 64%, rgba(216, 173, 104, 0) 71%, rgba(216, 173, 104, 0) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #d8ad68), color-stop(64%, #d8ad68), color-stop(71%, rgba(216, 173, 104, 0)), color-stop(100%, rgba(216, 173, 104, 0)));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, #d8ad68 0%, #d8ad68 64%, rgba(216, 173, 104, 0) 71%, rgba(216, 173, 104, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, #d8ad68 0%, #d8ad68 64%, rgba(216, 173, 104, 0) 71%, rgba(216, 173, 104, 0) 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, #d8ad68 0%, #d8ad68 64%, rgba(216, 173, 104, 0) 71%, rgba(216, 173, 104, 0) 100%);
+  /* IE10+ */
+  background: radial-gradient(ellipse at center, #d8ad68 0%, #d8ad68 64%, rgba(216, 173, 104, 0) 71%, rgba(216, 173, 104, 0) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d8ad68', endColorstr='#00d8ad68',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */ }
 
 /*==============================*/
@@ -127,19 +150,21 @@ header {
     margin-right: 315px; }
     #matrixWrapper #matrixWrapperInner #matrixOptions {
       padding-top: 5px;
-      padding-bottom: 5px; }
+      padding-bottom: 5px;
+      margin-bottom: 15px; }
       #matrixWrapper #matrixWrapperInner #matrixOptions input[type="text"] {
+        padding: 10px;
         width: 3em; }
       #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper {
         /*float elements directly inside to the left*/ }
         #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper .comboLabel {
-          margin-right: 15px;
-          margin-left: 20px;
-          font-weight: 600; }
-        #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper .comboLabel:first-child {
-          margin-left: 0; }
+          margin-right: 4px;
+          margin-left: 0px;
+          font-weight: 300;
+          font-size: 20px;
+          color: #333333; }
         #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper > input {
-          height: 24px; }
+          height: 32px; }
         #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper > * {
           float: left; }
         #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper .plusMinusWrapper input {
@@ -165,7 +190,8 @@ header {
         background-image: url("../images/clear.png");
         width: 62px;
         height: 24px;
-        background-position: left; }
+        background-position: left;
+        float: right; }
         #matrixWrapper #matrixWrapperInner #matrixOptions input#clearAll:active {
           background-position: left; }
     #matrixWrapper #matrixWrapperInner #matrixCanvas {
@@ -207,7 +233,7 @@ header {
       display: none; }
     #outputColumn #latexButtons label {
       cursor: pointer;
-      font-size: 10px;
+      font-size: 14px;
       display: inline-block;
       padding: 0px 4px;
       vertical-align: middle;
@@ -298,11 +324,6 @@ input, textarea {
     width: 100%;
     float: none; } }
 /*qtip2 styling*/
-.qtipShadow, .matrix_qtip {
-  box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.4);
-  -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.4);
-  -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.4); }
-
 .matrix_qtip {
   border: none;
   background-color: #f4bd73; }

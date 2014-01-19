@@ -4,8 +4,8 @@
     <script src="scripts/google_analytics.js"></script>
 
     <!--qtip2 shtuff-->
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.1/jquery.qtip.css" />
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.1/jquery.qtip.js"></script>
+    <link rel="stylesheet" href="scripts/qtip.min.css" />
+    <script src="scripts/qtip.min.js"></script>
     <!--Accordion stuff-->
     <link rel="stylesheet" href="css/accordion.css" />
     <script src="scripts/accordion.js"></script>
