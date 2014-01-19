@@ -86,6 +86,7 @@ header{
             display:block;
             text-decoration:none;
             font-size:16px;
+            
             padding:0px 20px;
             &:hover{color:#fff;}
         }
@@ -102,11 +103,11 @@ header{
         margin-right:315px;
         #matrixOptions{
             padding-top:5px;
-            padding-bottom:5px;
+            padding-bottom:5px;F
             margin-bottom:$globalPadding;
             input[type="text"]{width:3em;}
             .comboWrapper{
-                .comboLabel{margin-right:15px;margin-left:20px;}
+                .comboLabel{margin-right:15px;margin-left:20px;font-weight:600;}
                 >input{height:24px;}
                 >*{float:left;} /*float elements directly inside to the left*/
                 .plusMinusWrapper{
@@ -126,7 +127,8 @@ header{
                 width:49px;
                 height:24px;
                 background-position:left;
-                &:active{background-position:right;}
+                                
+                &:active{background-position:left;}
             }
         }
         #matrixCanvas{
@@ -155,26 +157,6 @@ header{
                &:hover{color:$orange;}
            }
         }
-        #latexButtons{
-            /* how to make select buttons http://viralpatel.net/blogs/css-radio-button-checkbox-background/*/
-            margin-left:10px;
-            float:right;
-            input[type=radio]{display:none;}
-            label{
-                cursor: pointer;
-                display:inline-block; 
-                padding:2px 5px; 
-                margin:-2px;
-                border-right:1px solid #EEE;
-                background:#EEE;
-                &:active{background:#fff;}
-            }
-            label:last-child{border:none;}
-            input[type=radio]:checked + label { 
-                background-color:#F7f7f7;
-                &:active{background:#fff;}
-            }
-        }
         span.warning{
             font-style:italic;
             padding:2px;
@@ -185,7 +167,29 @@ header{
     }
     .outputFieldWrapper{
     }
-
+    #latexButtons{
+            /* how to make select buttons http://viralpatel.net/blogs/css-radio-button-checkbox-background/*/
+            margin-left:10px;
+            float:right;
+            input[type=radio]{display:none;}
+            label{
+                cursor: pointer;
+                font-size:10px;
+                display:inline-block; 
+                padding:0px 4px;
+                vertical-align: middle;
+                line-height:160%;
+                margin:0px;
+                border-right:1px solid #EEE;
+                background:#EEE;
+                &:active{background:#fff;}
+            }
+            label:last-child{border:none;}
+            input[type=radio]:checked + label { 
+                background-color:#F7f7f7;
+                &:active{background:#fff;}
+            }
+        }
     input{display:block; width: 100%;}
 
 }
@@ -205,6 +209,7 @@ header{
     padding:0;
     background:$dark1;
     text-align:center;
+    color:$grey1;
     #footerPadding{
         padding:3px;
     }
