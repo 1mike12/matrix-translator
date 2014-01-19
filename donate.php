@@ -17,8 +17,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div id='paypal'>paypal</div>
-
+                        <div id='paypal'>
+                            <h3>Donate</h3>
+                            <?php include 'paypal_button.php' ?>
+                        </div>
                     </div>
                     <h1>Spread the Word</h1>
                     <div class="aboutSection">

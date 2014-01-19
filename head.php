@@ -1,6 +1,7 @@
 <head>
     <script src="scripts/jquery-1.9.1.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/google_analytics.js"></script>
 
     <!--qtip2 shtuff-->
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.1/jquery.qtip.css" />

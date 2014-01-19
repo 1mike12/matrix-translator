@@ -20,6 +20,7 @@
 /*==============================
 Donation Page*/
 #donationWrapper {
+  width: 100%;
   float: left;
   margin-right: -215px; }
   #donationWrapper #donationLeft {
@@ -27,4 +28,7 @@ Donation Page*/
 
 #paypal {
   float: right;
-  width: 200px; }
+  width: 200px;
+  background: #f4bd73; }
+  #paypal #paypalActual {
+    background: #f4bd73; }
