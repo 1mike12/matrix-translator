@@ -7,33 +7,27 @@
             <div class="belt">
                 <div class="content">
                     <h1>FAQ</h1>
-                    <div class="accordionWrapper">
-                        <h3 class="accordionHeader">Who made this?</h3>
-                        <div class="accordionContent">
-                            <p>
-                                This site was hand crafted from scratch by the dynamic duo Mike Qin and Brian Gioia. For more info, check out the <a href='about.php'>about page</a>.
-                            </p>
-                        </div>
+                    <h3 class="accordionHeader">Who made this?</h3>
+                    <div class="accordionContent">
+                        <p>
+                            This site was hand crafted from scratch by the dynamic duo Mike Qin and Brian Gioia. For more info, check out the <a href='about.php'>about page</a>.
+                        </p>
                     </div>
-                    <div class="accordionWrapper">
-                        <h3 class="accordionHeader">Can't you generate the WolframAlpha link automatically so I don't have to copy and paste?</h3>
-                        <div class="accordionContent">
-                            <p>Mike: I actually wanted to implement this so there's one less step involved if you use WA. Unfortunately, it's actually against the WA terms of use:</p>
-                            <p>
-                                <i>It is not permitted to use Wolfram|Alpha indirectly through any user interface that has created a large number of deep links to Wolfram|Alpha, <strong>or that automatically constructs links based on input that you give to that interface rather than through Wolfram|Alpha.</strong>
-                                </i>
-                            </p>
-                        </div>
+                    <h3 class="accordionHeader">Can't you generate the WolframAlpha link automatically so I don't have to copy and paste?</h3>
+                    <div class="accordionContent">
+                        <p>Mike: I actually wanted to implement this so there's one less step involved if you use WA. Unfortunately, it's actually against the WA terms of use:</p>
+                        <p>
+                            <i>It is not permitted to use Wolfram|Alpha indirectly through any user interface that has created a large number of deep links to Wolfram|Alpha, <strong>or that automatically constructs links based on input that you give to that interface rather than through Wolfram|Alpha.</strong>
+                            </i>
+                        </p>
                     </div>
-                    <div class="accordionWrapper">
-                        <h3 class="accordionHeader">What is Latex?</h3>
-                        <div class="accordionContent">
-                            <p><a href="http://latex-project.org/intro.html" >Latex </a>is a special language that let's you write math. Normally, it's very hard to write things like matrices or integral signs for instance. </p>
-                        </div>
+                    <h3 class="accordionHeader">What is Latex?</h3>
+                    <div class="accordionContent">
+                        <p><a href="http://latex-project.org/intro.html" >Latex </a>is a special language that let's you write math. Normally, it's very hard to write things like matrices or integral signs for instance. </p>
                     </div>
 
                     <h1>Comments</h1>
-                    <div class="commentsWrapper">
+                    <div class="commentsWrapper"> 
                         <div id="diqusWrapper">
                             <span>  If there is anything at all that would make the "Translator" more of an effective tool please let us know!</span>
                             <p></p>
