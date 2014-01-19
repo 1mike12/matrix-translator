@@ -8,27 +8,27 @@
 
                 <div id="matrixWrapper" class="responsive">
                     <div id="matrixWrapperInner">
-                        <div id="matrixOptions" class="dropShadow">
-                            <div class="comboWrapper responsive">
-                                <div class="comboLabel">rows:</div>
-                                <input id="rowField" type="text" value="3"/>
-                                <div class="plusMinusWrapper">
-                                    <input id="rowPlus" class="buttonPlus" type="button" value=""/>
-                                    <input id="rowMinus" class="buttonMinus" type="button" value=""/>
-                                </div>
-                            </div>
-                            <div class="comboWrapper">
-                                <div class="comboLabel">columns:</div>
-                                <input id="colField" type="text" value="3"/>
-                                <div class="plusMinusWrapper">
-                                    <input id="colPlus" class="buttonPlus" type="button" value=""/>
-                                    <input id="colMinus" class="buttonMinus" type="button" value=""/>
-                                </div>
-                            </div>
-                            <input id="clearAll" type="button" value=""/>
-                        </div>
-
                         <div id="matrixCanvas" class="dropShadow">
+                            <div id="matrixOptions">
+                                <div class="comboWrapper responsive">
+                                    <div class="comboLabel">rows:</div>
+                                    <input id="rowField" type="text" value="3"/>
+                                    <div class="plusMinusWrapper">
+                                        <input id="rowPlus" class="buttonPlus" type="button" value=""/>
+                                        <input id="rowMinus" class="buttonMinus" type="button" value=""/>
+                                    </div>
+                                </div>
+                                <div class="comboWrapper">
+                                    <div class="comboLabel">columns:</div>
+                                    <input id="colField" type="text" value="3"/>
+                                    <div class="plusMinusWrapper">
+                                        <input id="colPlus" class="buttonPlus" type="button" value=""/>
+                                        <input id="colMinus" class="buttonMinus" type="button" value=""/>
+                                    </div>
+                                </div>
+                                <input id="clearAll" type="button" value=""/>
+                            </div>
+                            <div class="fadedLine"></div>
                             <table id="matrix">
                                 <tr id="r1">
                                     <td><input id="r1c1" type="text" class=""/></td>

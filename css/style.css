@@ -53,19 +53,20 @@ h1, h2, h3, h4, h5 {
   border: none;
   height: 1px;
   background: #777777;
-  background: -moz-radial-gradient(center, ellipse cover, rgba(119, 119, 119, 0.65) 0%, rgba(119, 119, 119, 0.65) 70%, rgba(119, 119, 119, 0) 100%);
+  margin-bottom: 15px;
+  background: -moz-radial-gradient(center, ellipse cover, #777777 0%, #777777 64%, rgba(119, 119, 119, 0) 71%, rgba(119, 119, 119, 0) 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(119, 119, 119, 0.65)), color-stop(70%, rgba(119, 119, 119, 0.65)), color-stop(100%, rgba(119, 119, 119, 0)));
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #777777), color-stop(64%, #777777), color-stop(71%, rgba(119, 119, 119, 0)), color-stop(100%, rgba(119, 119, 119, 0)));
   /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(119, 119, 119, 0.65) 0%, rgba(119, 119, 119, 0.65) 70%, rgba(119, 119, 119, 0) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #777777 0%, #777777 64%, rgba(119, 119, 119, 0) 71%, rgba(119, 119, 119, 0) 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover, rgba(119, 119, 119, 0.65) 0%, rgba(119, 119, 119, 0.65) 70%, rgba(119, 119, 119, 0) 100%);
+  background: -o-radial-gradient(center, ellipse cover, #777777 0%, #777777 64%, rgba(119, 119, 119, 0) 71%, rgba(119, 119, 119, 0) 100%);
   /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover, rgba(119, 119, 119, 0.65) 0%, rgba(119, 119, 119, 0.65) 70%, rgba(119, 119, 119, 0) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #777777 0%, #777777 64%, rgba(119, 119, 119, 0) 71%, rgba(119, 119, 119, 0) 100%);
   /* IE10+ */
-  background: radial-gradient(ellipse at center, rgba(119, 119, 119, 0.65) 0%, rgba(119, 119, 119, 0.65) 70%, rgba(119, 119, 119, 0) 100%);
+  background: radial-gradient(ellipse at center, #777777 0%, #777777 64%, rgba(119, 119, 119, 0) 71%, rgba(119, 119, 119, 0) 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6777777', endColorstr='#00777777',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#777777', endColorstr='#00777777',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */ }
 
 /*==============================*/
@@ -126,9 +127,7 @@ header {
     margin-right: 315px; }
     #matrixWrapper #matrixWrapperInner #matrixOptions {
       padding-top: 5px;
-      padding-bottom: 5px;
-      background-color: #f4bd73;
-      border-bottom: 1px solid #777777; }
+      padding-bottom: 5px; }
       #matrixWrapper #matrixWrapperInner #matrixOptions input[type="text"] {
         width: 3em; }
       #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper {
@@ -137,6 +136,8 @@ header {
           margin-right: 15px;
           margin-left: 20px;
           font-weight: 600; }
+        #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper .comboLabel:first-child {
+          margin-left: 0; }
         #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper > input {
           height: 24px; }
         #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper > * {
@@ -186,6 +187,7 @@ header {
       display: inline;
       float: left; }
       #outputColumn .outputHeaderWrapper h3 a {
+        color: black;
         text-decoration: none; }
         #outputColumn .outputHeaderWrapper h3 a:visited {
           color: black; }

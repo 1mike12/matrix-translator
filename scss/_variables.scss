@@ -32,14 +32,13 @@ $globalPadding:15px;
 }
 
 @mixin fadingRadial(){
-    background: -moz-radial-gradient(center, ellipse cover,  rgba(119,119,119,0.65) 0%, rgba(119,119,119,0.65) 70%, rgba(119,119,119,0) 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(119,119,119,0.65)), color-stop(70%,rgba(119,119,119,0.65)), color-stop(100%,rgba(119,119,119,0))); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  rgba(119,119,119,0.65) 0%,rgba(119,119,119,0.65) 70%,rgba(119,119,119,0) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  rgba(119,119,119,0.65) 0%,rgba(119,119,119,0.65) 70%,rgba(119,119,119,0) 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  rgba(119,119,119,0.65) 0%,rgba(119,119,119,0.65) 70%,rgba(119,119,119,0) 100%); /* IE10+ */
-    background: radial-gradient(ellipse at center,  rgba(119,119,119,0.65) 0%,rgba(119,119,119,0.65) 70%,rgba(119,119,119,0) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6777777', endColorstr='#00777777',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(119,119,119,1) 0%, rgba(119,119,119,1) 64%, rgba(119,119,119,0) 71%, rgba(119,119,119,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(119,119,119,1)), color-stop(64%,rgba(119,119,119,1)), color-stop(71%,rgba(119,119,119,0)), color-stop(100%,rgba(119,119,119,0))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(119,119,119,1) 0%,rgba(119,119,119,1) 64%,rgba(119,119,119,0) 71%,rgba(119,119,119,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(119,119,119,1) 0%,rgba(119,119,119,1) 64%,rgba(119,119,119,0) 71%,rgba(119,119,119,0) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(119,119,119,1) 0%,rgba(119,119,119,1) 64%,rgba(119,119,119,0) 71%,rgba(119,119,119,0) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(119,119,119,1) 0%,rgba(119,119,119,1) 64%,rgba(119,119,119,0) 71%,rgba(119,119,119,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777777', endColorstr='#00777777',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 $textShadow: 0px 0px 1px rgba(0, 0, 0, 0.5);

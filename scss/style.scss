@@ -49,6 +49,7 @@ h1, h2, h3, h4, h5 {padding:0; margin:0;}
     border:none;
     height:1px;
     background:$dark3;
+    margin-bottom:$globalPadding;
     @include fadingRadial;
 }
 /*==============================*/
@@ -114,11 +115,10 @@ header{
         #matrixOptions{
             padding-top:5px;
             padding-bottom:5px;
-            background-color:$orange;
-            border-bottom:1px solid $dark3;
             input[type="text"]{width:3em;}
             .comboWrapper{
                 .comboLabel{margin-right:15px;margin-left:20px;font-weight:600;}
+                .comboLabel:first-child{margin-left:0;}
                 >input{height:24px;}
                 >*{float:left;} /*float elements directly inside to the left*/
                 .plusMinusWrapper{
@@ -162,10 +162,10 @@ header{
         margin-top:15px;
         position:relative;
         h3{margin:0 0 0 0; display:inline; float:left;
-           a{
-               text-decoration:none;
-               &:visited{color:$fontColor}
-               &:hover{color:$orange;}
+           a{   color:$fontColor;
+                text-decoration:none;
+                &:visited{color:$fontColor}
+                &:hover{color:$orange;}
            }
         }
         span.warning{
