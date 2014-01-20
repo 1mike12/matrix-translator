@@ -21,7 +21,7 @@
                         <h3 class="accordionHeader">Can't you generate the WolframAlpha link automatically so I don't have to copy and paste?</h3>
                     </div>
                     <div class="accordionContent">
-                        <p>Mike: I actually wanted to implement this so there's one less step involved if you use WA. Unfortunately, it's actually against the WA terms of use:</p>
+                        <p>I actually wanted to implement this so there's one less step involved if you use WA. Unfortunately, it's actually against the WA terms of use:</p>
                         <p>
                             <i>It is not permitted to use Wolfram|Alpha indirectly through any user interface that has created a large number of deep links to Wolfram|Alpha, <strong>or that automatically constructs links based on input that you give to that interface rather than through Wolfram|Alpha.</strong>
                             </i>
