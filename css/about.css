@@ -11,6 +11,20 @@
 .selfClear:after {
   clear: both; }
 
+.quotation {
+  background: #ed9014;
+  color: #333333;
+  padding: 15px;
+  padding-left: 50px;
+  background-image: url("../images/quotation_left.png");
+  background-repeat: no-repeat;
+  background-position: 10px 10px; }
+  .quotation .quotationRight {
+    padding-right: 10px;
+    background-image: url("../images/quotation_right.png");
+    background-repeat: no-repeat;
+    background-position: bottom right; }
+
 .content h1 {
   -webkit-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
   -moz-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
@@ -22,7 +36,7 @@
 .content h1:first-child {
   margin-top: 0; }
 
-.aboutSection {
+.section {
   background: #eeeeee;
   padding: 15px;
   -webkit-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);

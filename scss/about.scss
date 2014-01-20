@@ -1,4 +1,19 @@
 @import "_variables";
+.quotation{
+    background:$darkOrange;
+    color:$dark1;
+    padding:$globalPadding;
+    padding-left:50px;
+    background-image:url("../images/quotation_left.png");
+    background-repeat:no-repeat;
+    background-position:10px 10px;
+    .quotationRight{
+        padding-right:10px;
+        background-image:url("../images/quotation_right.png");
+        background-repeat:no-repeat;
+        background-position:bottom right;
+    }
+}
 .content{
     h1{
         @include dropShadow;
@@ -9,7 +24,7 @@
     }
     h1:first-child{margin-top:0;}
 }
-.aboutSection{
+.section{
     background:$grey3;
     padding:$globalPadding;
     @include dropShadow;
@@ -25,7 +40,7 @@ Donation Page*/
     #donationLeft{
         margin-right:215px;
     }
-    
+
 }
 #paypal{
     float:right;
