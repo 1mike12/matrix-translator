@@ -19,6 +19,15 @@
         height:24px;
         background:url("../images/dropHor.png");
     }
+    .accordionHeaderIcon.accordion-hover{
+        background-position:right;
+    }
+    .accordionHeaderIcon.accordion-down{
+        background:url("../images/dropVer.png")
+    }
+    .accordionHeaderIcon.accordion-down.accordion-hover{
+        background-position:right;
+    }
 }
 
 .accordionContent{
