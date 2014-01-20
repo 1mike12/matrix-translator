@@ -133,7 +133,7 @@ header{
                 >input{height:32px;}
                 >*{float:left;} /*float elements directly inside to the left*/
                 .plusMinusWrapper{
-                    input{height:50%; display:block; width:15px;height:12px; border:none;
+                    input{height:50%; display:block; width:20px;height:16px; border:none;
                           cursor: pointer; margin:0; padding:0;
                     }
                     input.buttonPlus{background-image:url('../images/button_plus.png');}
@@ -147,8 +147,8 @@ header{
                 margin-left:$globalPadding;
                 border:none;
                 background-image:url('../images/clear.png');
-                width:62px;
-                height:24px;
+                width:78.5px;
+                height:32px;
                 background-position:left;
                 float:right;
                 &:active{background-position:left;}
