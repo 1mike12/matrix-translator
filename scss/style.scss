@@ -140,15 +140,17 @@ header{
                 }
 
             }
-            input#clearAll{
-                margin-left:$globalPadding;
+            #clearAll{
+                font-size:20px;
+                font-weight:200;
                 border:none;
-                background-image:url('../images/clear.png');
-                width:78.5px;
+                background:$lightOrange;
                 height:32px;
-                background-position:left;
                 float:right;
-                &:active{background-position:left;}
+                padding-left:$globalPadding;
+                padding-right:$globalPadding;
+                cursor: pointer;
+                &:active{background:lighten($lightOrange, 2%);}
             }
         }
         #matrixCanvas{
@@ -211,8 +213,8 @@ header{
         }
     }
     input{display:block; width: 100%;}
-    
-    
+
+
     #paypalButton{
         background-image: url("../images/donateIcon1.png");
         background-position:left;

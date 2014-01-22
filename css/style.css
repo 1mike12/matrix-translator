@@ -192,16 +192,18 @@ header {
           background-image: url("../images/button_minus.png"); }
         #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper .plusMinusWrapper input.buttonMinus:active {
           background-position: right; }
-      #matrixWrapper #matrixWrapperInner #matrixOptions input#clearAll {
-        margin-left: 15px;
+      #matrixWrapper #matrixWrapperInner #matrixOptions #clearAll {
+        font-size: 20px;
+        font-weight: 200;
         border: none;
-        background-image: url("../images/clear.png");
-        width: 78.5px;
+        background: #f2e3d3;
         height: 32px;
-        background-position: left;
-        float: right; }
-        #matrixWrapper #matrixWrapperInner #matrixOptions input#clearAll:active {
-          background-position: left; }
+        float: right;
+        padding-left: 15px;
+        padding-right: 15px;
+        cursor: pointer; }
+        #matrixWrapper #matrixWrapperInner #matrixOptions #clearAll:active {
+          background: #f4e8db; }
     #matrixWrapper #matrixWrapperInner #matrixCanvas {
       /*ACTUAL MATRIX TABLE INSIDE THIS CANVAS*/
       overflow: auto;

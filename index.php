@@ -26,7 +26,7 @@
                                         <input id="colMinus" class="buttonMinus" type="button" value=""/>
                                     </div>
                                 </div>
-                                <input id="clearAll" type="button" value=""/>
+                                <div id="clearAll">clear</div>
                             </div>
                             <div class="fadedLine"></div>
                             <div class="fadedLineDarker"></div>
