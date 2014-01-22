@@ -3,6 +3,7 @@
     <script src="scripts/script.js"></script>
     <script src="scripts/google_analytics.js"></script>
     <link href="images/favicon.ico" rel="shortcut icon" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
 
     <!--qtip2 shtuff-->
     <link rel="stylesheet" href="scripts/qtip.min.css" />
