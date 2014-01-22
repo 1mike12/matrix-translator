@@ -2,6 +2,7 @@
     <script src="scripts/jquery-1.9.1.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/google_analytics.js"></script>
+    <link href="images/favicon.ico" rel="shortcut icon" />
 
     <!--qtip2 shtuff-->
     <link rel="stylesheet" href="scripts/qtip.min.css" />
