@@ -12,6 +12,9 @@
   clear: both; }
 
 .quotation {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   background: #ed9014;
   color: #333333;
   padding: 15px;

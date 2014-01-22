@@ -92,11 +92,13 @@
                         </div>
                     </div>
                     <div class="section">
-                        <p>We want to pay for hosting without using ads. If you find this tool useful, consider leaving a donation.</p>
                         <a href="donate.php">
                             <div id="paypalButton">
                             </div>
                         </a>
+                        <p></p>
+                        <p>We want to pay for hosting without using ads. If you find this tool useful, consider leaving a donation.
+                        </p>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 @import "_variables";
 .quotation{
+    @include corner3;
     background:$darkOrange;
     color:$dark1;
     padding:$globalPadding;
