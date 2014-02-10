@@ -5,7 +5,6 @@
         <div id="globalWrapper">
             <?php include 'header.php' ?>
             <div id="wrapper" class="selfClear">
-
                 <div id="matrixWrapper" class="responsive">
                     <div id="matrixWrapperInner">
                         <div id="matrixCanvas" class="dropShadow">

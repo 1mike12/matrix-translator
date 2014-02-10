@@ -1,6 +1,5 @@
 @import "_variables";
 html,body{
-    height:100%;
     margin:0;
     padding:0;
 }
@@ -15,7 +14,6 @@ a, img {
 
 #globalWrapper{
     position:relative;
-    min-height:100%;
 }
 .belt {
     max-width:1000px;
@@ -233,8 +231,6 @@ header{
 /*footer*=====================*/
 #footer{
     font-size:.7em;
-    position:absolute;
-    bottom:0;
     height:20px;
     width:100%;
     padding:0;
@@ -274,6 +270,18 @@ input, textarea {
     background:$grey3;
     padding:$globalPadding;
     @include dropShadow;
+}
+
+/*sticky, responsive footer stuff*/
+html, body{height:100%;}
+#footer{
+    display:table-row;
+    height:1px;
+}
+#globalWrapper{
+    display: table;
+    height: 100%;
+    width: 100%;
 }
 
 /*responsive stuff*/

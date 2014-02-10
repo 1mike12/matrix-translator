@@ -12,7 +12,6 @@
   clear: both; }
 
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0; }
 
@@ -26,8 +25,7 @@ a, img {
   border: none; }
 
 #globalWrapper {
-  position: relative;
-  min-height: 100%; }
+  position: relative; }
 
 .belt, #wrapper {
   max-width: 1000px;
@@ -277,8 +275,6 @@ header {
 /*footer*=====================*/
 #footer {
   font-size: .7em;
-  position: absolute;
-  bottom: 0;
   height: 20px;
   width: 100%;
   padding: 0;
@@ -315,6 +311,19 @@ input, textarea {
   -webkit-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
   -moz-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
   box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4); }
+
+/*sticky, responsive footer stuff*/
+html, body {
+  height: 100%; }
+
+#footer {
+  display: table-row;
+  height: 1px; }
+
+#globalWrapper {
+  display: table;
+  height: 100%;
+  width: 100%; }
 
 /*responsive stuff*/
 @media only screen and (max-width: 580px) {
