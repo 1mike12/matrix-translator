@@ -30,13 +30,14 @@
     margin-right: 15px;
     width: 24px;
     height: 24px;
-    background: url("../images/dropHor.png"); }
+    background: url("../images/accordionSprites.png");
+    background-position: top left; }
   .accordionHeaderWrapper .accordionHeaderIcon.accordion-hover {
-    background-position: right; }
+    background-position: bottom left; }
   .accordionHeaderWrapper .accordionHeaderIcon.accordion-down {
-    background: url("../images/dropVer.png"); }
+    background-position: bottom right; }
   .accordionHeaderWrapper .accordionHeaderIcon.accordion-down.accordion-hover {
-    background-position: right; }
+    background-position: top right; }
 
 .accordionContent {
   margin-top: 5px;

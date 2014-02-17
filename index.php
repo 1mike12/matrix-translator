@@ -90,14 +90,10 @@
                             <label for="doublePolon">‖ ‖</label>
                         </div>
                     </div>
-                    <div class="section">
-                        <a href="donate.php">
-                            <div id="paypalButton">
-                            </div>
-                        </a>
-                        <p></p>
+                    <div class="section selfClear">
                         <p>We want to pay for hosting without using ads. If you find this tool useful, consider leaving a donation.
                         </p>
+                        <a id="paypalButton" href="donate.php">Ways to Help</a>
                     </div>
                 </div>
             </div>

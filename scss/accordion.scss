@@ -17,16 +17,17 @@
         margin-right:$globalPadding;
         width:24px;
         height:24px;
-        background:url("../images/dropHor.png");
+        background:url("../images/accordionSprites.png");
+        background-position:top left;
     }
     .accordionHeaderIcon.accordion-hover{
-        background-position:right;
+        background-position:bottom left;
     }
     .accordionHeaderIcon.accordion-down{
-        background:url("../images/dropVer.png")
+        background-position:bottom right;
     }
     .accordionHeaderIcon.accordion-down.accordion-hover{
-        background-position:right;
+        background-position:top right;
     }
 }
 

@@ -214,11 +214,17 @@ header{
 
 
     #paypalButton{
-        background-image: url("../images/donateIcon1.png");
-        background-position:left;
-        width:270px;
-        height:54px;
-        &:hover{background-position:right;}
+        display:block;
+        width:100px;
+        text-align:center;
+        padding:$globalPadding;
+        background:$orange;
+        color:$dark1;
+        text-decoration:none;
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom:$globalPadding;
+        &:hover{background:lighten($orange,10%);}
     }
 
 }
