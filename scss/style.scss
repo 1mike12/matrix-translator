@@ -49,13 +49,13 @@ h1, h2, h3, h4, h5 {padding:0; margin:0;}
 .fadedLine{
     border:none;
     height:1px;
-    background:$lightOrange;
+    background:$buttonOrange;
     @include fadingRadial;
 }
 .fadedLineDarker{
     border:none;
     height:1px;
-    background:$lightOrange;
+    background:$buttonOrange;
     margin-bottom:$globalPadding;
     @include fadingRadialDark;
 }
@@ -128,13 +128,17 @@ header{
                 >input{height:32px;}
                 >*{float:left;} /*float elements directly inside to the left*/
                 .plusMinusWrapper{
-                    input{height:50%; display:block; width:20px;height:16px; border:none;
-                          cursor: pointer; margin:0; padding:0;
+                    input{
+                        height:50%; 
+                        display:block; 
+                        width:20px;height:16px; border:none;
+                        cursor: pointer; 
+                        margin:0; padding:0;
+                        background:url('../images/upDownSprites.png') $buttonOrange;
                     }
-                    input.buttonPlus{background-image:url('../images/button_plus.png');}
-                    input.buttonPlus:active{background-position: right;}
-                    input.buttonMinus{background-image:url('../images/button_minus.png');}
-                    input.buttonMinus:active{background-position: right;}
+                    input:hover{background: url('../images/upDownSprites.png') $buttonHover;}
+                    input.buttonPlus{background-position:left;}
+                    input.buttonMinus{background-position:right;}
                 }
 
             }
@@ -142,13 +146,13 @@ header{
                 font-size:20px;
                 font-weight:200;
                 border:none;
-                background:$lightOrange;
+                background:$buttonOrange;
                 height:32px;
                 float:right;
                 padding-left:$globalPadding;
                 padding-right:$globalPadding;
                 cursor: pointer;
-                &:active{background:lighten($lightOrange, 2%);}
+                &:active{background:lighten($buttonOrange, 2%);}
             }
         }
         #matrixCanvas{
@@ -309,3 +313,8 @@ html, body{height:100%;}
 /*qtip2 styling*/
 
 .matrix_qtip{border:none;background-color:$orange; @extend .qtipShadow}
+
+/* load all other styles after main*/
+@import "accordion";
+@import "about";
+@import "matrix";

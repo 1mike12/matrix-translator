@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="scripts/qtip.min.css" />
     <script src="scripts/qtip.min.js"></script>
     <!--Accordion stuff-->
-    <link rel="stylesheet" href="css/accordion.css" />
     <script src="scripts/accordion.js"></script>
 
     <!-- fonts -->
@@ -23,8 +22,6 @@
 
     <!--styles-->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/matrix.css" />
 
     <title>Matrix Translator</title>
 </head>

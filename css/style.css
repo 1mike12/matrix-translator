@@ -3,12 +3,13 @@
   -moz-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.75); }
 
-.selfClear:before,
-.selfClear:after {
+.selfClear:before, .accordionHeaderWrapper:before,
+.selfClear:after,
+.accordionHeaderWrapper:after {
   content: "";
   display: table; }
 
-.selfClear:after {
+.selfClear:after, .accordionHeaderWrapper:after {
   clear: both; }
 
 html, body {
@@ -181,14 +182,13 @@ header {
           border: none;
           cursor: pointer;
           margin: 0;
-          padding: 0; }
+          padding: 0;
+          background: url("../images/upDownSprites.png") #f2e3d3; }
+        #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper .plusMinusWrapper input:hover {
+          background: url("../images/upDownSprites.png") #dddddd; }
         #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper .plusMinusWrapper input.buttonPlus {
-          background-image: url("../images/button_plus.png"); }
-        #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper .plusMinusWrapper input.buttonPlus:active {
-          background-position: right; }
+          background-position: left; }
         #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper .plusMinusWrapper input.buttonMinus {
-          background-image: url("../images/button_minus.png"); }
-        #matrixWrapper #matrixWrapperInner #matrixOptions .comboWrapper .plusMinusWrapper input.buttonMinus:active {
           background-position: right; }
       #matrixWrapper #matrixWrapperInner #matrixOptions #clearAll {
         font-size: 20px;
@@ -352,3 +352,144 @@ html, body {
 .matrix_qtip {
   border: none;
   background-color: #f4bd73; }
+
+/* load all other styles after main*/
+.qtipShadow, .matrix_qtip {
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.75); }
+
+.selfClear:before, .accordionHeaderWrapper:before,
+.selfClear:after,
+.accordionHeaderWrapper:after {
+  content: "";
+  display: table; }
+
+.selfClear:after, .accordionHeaderWrapper:after {
+  clear: both; }
+
+.accordionHeaderWrapper {
+  color: #333333;
+  background: #f4bd73;
+  cursor: pointer;
+  padding: 5px 15px;
+  -webkit-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
+  -moz-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
+  box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
+  border-bottom: 1px #f4f4f4; }
+  .accordionHeaderWrapper:hover {
+    background: #f8d3a2; }
+  .accordionHeaderWrapper .accordionHeader {
+    float: left; }
+  .accordionHeaderWrapper .accordionHeaderIcon {
+    float: left;
+    margin-right: 15px;
+    width: 24px;
+    height: 24px;
+    background: url("../images/accordionSprites.png");
+    background-position: top left; }
+  .accordionHeaderWrapper .accordionHeaderIcon.accordion-hover {
+    background-position: bottom left; }
+  .accordionHeaderWrapper .accordionHeaderIcon.accordion-down {
+    background-position: bottom right; }
+  .accordionHeaderWrapper .accordionHeaderIcon.accordion-down.accordion-hover {
+    background-position: top right; }
+
+.accordionContent {
+  margin-top: 5px;
+  padding: 15px;
+  background: #eeeeee; }
+  .accordionContent *:last-child {
+    margin-bottom: 0; }
+
+.qtipShadow, .matrix_qtip {
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.75); }
+
+.selfClear:before, .accordionHeaderWrapper:before,
+.selfClear:after,
+.accordionHeaderWrapper:after {
+  content: "";
+  display: table; }
+
+.selfClear:after, .accordionHeaderWrapper:after {
+  clear: both; }
+
+.quotation {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #ed9014;
+  color: #333333;
+  padding: 15px;
+  padding-left: 50px;
+  background-image: url("../images/quotation_left.png");
+  background-repeat: no-repeat;
+  background-position: 10px 10px; }
+  .quotation .quotationRight {
+    padding-right: 10px;
+    background-image: url("../images/quotation_right.png");
+    background-repeat: no-repeat;
+    background-position: bottom right; }
+
+.content h1 {
+  -webkit-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
+  -moz-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
+  box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
+  margin-top: 15px;
+  background: #333333;
+  color: #fff;
+  padding-left: 15px; }
+.content h1:first-child {
+  margin-top: 0; }
+
+.section {
+  background: #eeeeee;
+  padding: 15px;
+  -webkit-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
+  -moz-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
+  box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
+  margin-bottom: 15px; }
+
+/*==============================
+Donation Page*/
+#donationWrapper {
+  width: 100%;
+  float: left;
+  margin-right: -215px; }
+  #donationWrapper #donationLeft {
+    margin-right: 215px; }
+
+#paypal {
+  float: right;
+  width: 200px;
+  background: #f4bd73; }
+  #paypal #paypalActual {
+    background: #f4bd73; }
+
+#matrix {
+  position: relative;
+  /*to keep input boxes with table when popped out*/ }
+  #matrix tr td input[type="text"] {
+    border: none;
+    outline-width: 0;
+    width: 3em; }
+  #matrix tr td input[type="text"]:focus {
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+
+/*input boxes */
+.inputWrapper {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  outline: 0;
+  background: #FFF; }
+
+.inputWrapper:hover, .inputWrapper:focus {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: #faa71a 1px solid; }
