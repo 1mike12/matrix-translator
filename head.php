@@ -1,12 +1,4 @@
 <head>
-    <!--personal Scripts
-    #####################################################################-->
-    <script src="scripts/script.js"></script>
-    <script src="scripts/accordion.js"></script>
-    <link rel="stylesheet" href="css/style.css" />
-    <link href="images/favicon.ico" rel="shortcut icon" />
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
-
     <!--3rd party scripts
     ####################################################################-->
     <script src="scripts/google_analytics.js"></script>
@@ -16,7 +8,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>
         if (!window.jQuery) {
-            document.write('<script src="/scripts/jquery-1.11.0.js"><\/script>');
+            document.write('<script src="scripts/jquery-1.11.0.js"><\/script>');
         }
     </script>
     
@@ -25,7 +17,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/amplifyjs/1.1.0/amplify.js"></script>
     <script>
         if (!window.amplify) {
-            document.write('<script src="/scripts/amplify.js"><\/script>');
+            document.write('<script src="scripts/amplify.js"><\/script>');
         }
     </script>
     
@@ -33,17 +25,25 @@
     ...............................................-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.js"></script>
     <script>
-        if (!window.qtip2) {
-            document.write('<script src="/scripts/qtip.js"><\/script>');
+        if (!window.qtip) {
+            document.write('<script src="scripts/qtip.js"><\/script>');
         }
     </script>
     <link rel="stylesheet" href="scripts/qtip.min.css" />
     
-
-    <!-- fonts -->
+    <!-- fonts 
+    #####################################################################-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
-
+    
+    <!--personal Imports
+    #####################################################################-->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/accordion.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="images/favicon.ico" rel="shortcut icon" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    
     <!-- html 5 shiv for IE backwards compatability-->
     <!--[if lt IE 9]>
         <script src="scripts/html5shiv.js"></script>
