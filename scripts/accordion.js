@@ -1,66 +1,63 @@
-$(document).ready(function() {
-    var accordion = (function() {
-        //default header and content classes
-        var contentClass = ".accordionContent";
-        var headerClass = ".accordionHeaderWrapper";
+var accordion = (function() {
+    //pluggin specific settings, should not normally override 
+    var settings = {
+        downClass: "ac-down",
+        hoverClass: "ac-hover",
+        slideSpeed: 200 //400 = "fast" in jquery
+    };
+    
+    var contentClass;
+    var headerClass;
+    var $contents;
+    var $headers;
 
-        //pluggin specific settings, should not normally override 
-        var settings = {
-            downClass: "accordionizer-down",
-            hoverClass: "accordionizer-hover",
-            slideSpeed: 200 //400 = "fast" in jquery
-        };
-
-        var $contents;
-        var $headers;
-
-        // can be empty, or init({contentClass: "asd", headerClass: "qwer"})
-        function init(options) {
-            if (typeof options === typeof {}) {
-                try {
-                    contentClass = options.contentClass;
-                    headerClass = options.headerClass;
-                }
-                catch (error) {
-                    console.log("error within accordionizer. Error message: " + error);
-                }
+    // can be empty, or init({headerClass: ".qwer", contentClass: ".asd"})
+    function init(options) {
+        if (typeof options === typeof {}) {
+            try {
+                headerClass = options.headerClass;
+                contentClass = options.contentClass;
             }
-            generateObjects();
-            $contents.hide();
-            attachClick();
-            attachHover();
+            catch (error) {
+                console.log("error within accordionizer. Error message: " + error);
+            }
         }
-        function generateObjects() {
-            $contents = $(contentClass);
-            $headers = $(headerClass);
-        }
-        function attachClick() {
-            $headers.click(function() {
-                var adjacent = $(this).next();
-                if (adjacent.is(":hidden")) {
-                    adjacent.slideDown(settings.slideSpeed);
-                    $(this).children().toggleClass(settings.downClass);
-                } else {
-                    $(this).next().slideUp(settings.slideSpeed);
-                    $(this).children().toggleClass(settings.downClass);
-                }
-            });
-        }
-        function attachHover() {
-            $headers.hover(
-                function() {
-                    $(this).toggleClass(settings.hoverClass);
-                    $(this).children().toggleClass(settings.hoverClass);
-                },
-                function() {
-                    $(this).toggleClass(settings.hoverClass);
-                    $(this).children().toggleClass(settings.hoverClass);
-                });
-        }
-        return{
-            init: init
-        };
-    })();
-
-    accordion.init();
-});
+        generateObjects();
+        $contents.hide();
+        attachClick();
+        attachHeaderHover();
+    }
+    function generateObjects() {
+        $contents = $(contentClass);
+        $headers = $(headerClass);
+    }
+    function attachClick() {
+        $headers.click(function() {
+            var $this= $(this);
+            var adjacent = $this.next();
+            if (adjacent.is(":hidden")) {
+                $this.addClass(settings.downClass);
+                $this.children().addClass(settings.downClass);
+                adjacent.slideDown(settings.slideSpeed);
+                $this.children().addClass(settings.downClass);
+            } else {
+                $this.removeClass(settings.downClass);
+                $this.children().removeClass(settings.downClass);
+                $this.next().slideUp(settings.slideSpeed);
+                $this.children().removeClass(settings.downClass);
+            }
+        });
+    }
+    function attachHeaderHover() {
+        $headers.mouseenter(function() {
+            $(this).addClass(settings.hoverClass);
+            $(this).children().addClass(settings.hoverClass);
+        }).mouseleave(function() {
+            $(this).removeClass(settings.hoverClass);
+            $(this).children().removeClass(settings.hoverClass);
+        });
+    }
+    return{
+        init: init
+    };
+})();

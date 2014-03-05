@@ -163,10 +163,24 @@ header{
     }
 }
 
+#help{
+    margin-top:$globalPadding;
+    background:$blue1;
+    color:$grey4;
+    cursor: pointer;
+    @include dropShadow; 
+    &:hover{
+        background:lighten($blue1, 15%);
+    }
+}
+#helpContent{
+    background:$grey3;
+    padding:$globalPadding;
+    @include dropShadow; 
+}
 
 
 /*output column stuff*/
-
 #outputColumn {
     float:right;
     width:300px;
@@ -206,12 +220,11 @@ header{
             margin:0px;
             border-right:1px solid #EEE;
             background:#EEE;
-            &:active{background:#fff;}
+            &:hover{background:$buttonOrange;}
         }
         label:last-child{border:none;}
         input[type=radio]:checked + label { 
-            background-color:#F7f7f7;
-            &:active{background:#fff;}
+            background-color:$orange;
         }
     }
     input{display:block; width: 100%;}

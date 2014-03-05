@@ -20,14 +20,11 @@
         background:url("../images/accordionSprites.png");
         background-position:top left;
     }
-    .accordionHeaderIcon.accordion-hover{
+    .ac-hover.accordionHeaderIcon{
         background-position:bottom left;
     }
-    .accordionHeaderIcon.accordion-down{
+    .accordionHeaderIcon.ac-down {
         background-position:bottom right;
-    }
-    .accordionHeaderIcon.accordion-down.accordion-hover{
-        background-position:top right;
     }
 }
 

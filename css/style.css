@@ -1,3 +1,4 @@
+/*http://adobe.ly/1gaWpUM*/
 .selfClear:before, .accordionHeaderWrapper:before,
 .selfClear:after,
 .accordionHeaderWrapper:after {
@@ -202,6 +203,24 @@ header {
       overflow: auto;
       background-color: #f4bd73; }
 
+#help {
+  margin-top: 15px;
+  background: #3083b2;
+  color: #f4f4f4;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
+  -moz-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
+  box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4); }
+  #help:hover {
+    background: #5ca8d3; }
+
+#helpContent {
+  background: #eeeeee;
+  padding: 15px;
+  -webkit-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
+  -moz-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4);
+  box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.4); }
+
 /*output column stuff*/
 #outputColumn {
   float: right;
@@ -244,14 +263,12 @@ header {
       margin: 0px;
       border-right: 1px solid #EEE;
       background: #EEE; }
-      #outputColumn #latexButtons label:active {
-        background: #fff; }
+      #outputColumn #latexButtons label:hover {
+        background: #f2e3d3; }
     #outputColumn #latexButtons label:last-child {
       border: none; }
     #outputColumn #latexButtons input[type=radio]:checked + label {
-      background-color: #F7f7f7; }
-      #outputColumn #latexButtons input[type=radio]:checked + label:active {
-        background: #fff; }
+      background-color: #f4bd73; }
   #outputColumn input {
     display: block;
     width: 100%; }
@@ -359,6 +376,7 @@ html, body {
   box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.75); }
 
 /* load all other styles after main*/
+/*http://adobe.ly/1gaWpUM*/
 .selfClear:before, .accordionHeaderWrapper:before,
 .selfClear:after,
 .accordionHeaderWrapper:after {
@@ -388,12 +406,10 @@ html, body {
     height: 24px;
     background: url("../images/accordionSprites.png");
     background-position: top left; }
-  .accordionHeaderWrapper .accordionHeaderIcon.accordion-hover {
+  .accordionHeaderWrapper .ac-hover.accordionHeaderIcon {
     background-position: bottom left; }
-  .accordionHeaderWrapper .accordionHeaderIcon.accordion-down {
+  .accordionHeaderWrapper .accordionHeaderIcon.ac-down {
     background-position: bottom right; }
-  .accordionHeaderWrapper .accordionHeaderIcon.accordion-down.accordion-hover {
-    background-position: top right; }
 
 .accordionContent {
   margin-top: 5px;
@@ -402,6 +418,7 @@ html, body {
   .accordionContent *:last-child {
     margin-bottom: 0; }
 
+/*http://adobe.ly/1gaWpUM*/
 .selfClear:before, .accordionHeaderWrapper:before,
 .selfClear:after,
 .accordionHeaderWrapper:after {

@@ -1,3 +1,4 @@
+/*http://adobe.ly/1gaWpUM*/
 .selfClear:before, .accordionHeaderWrapper:before,
 .selfClear:after,
 .accordionHeaderWrapper:after {
@@ -27,12 +28,10 @@
     height: 24px;
     background: url("../images/accordionSprites.png");
     background-position: top left; }
-  .accordionHeaderWrapper .accordionHeaderIcon.accordion-hover {
+  .accordionHeaderWrapper .ac-hover.accordionHeaderIcon {
     background-position: bottom left; }
-  .accordionHeaderWrapper .accordionHeaderIcon.accordion-down {
+  .accordionHeaderWrapper .accordionHeaderIcon.ac-down {
     background-position: bottom right; }
-  .accordionHeaderWrapper .accordionHeaderIcon.accordion-down.accordion-hover {
-    background-position: top right; }
 
 .accordionContent {
   margin-top: 5px;

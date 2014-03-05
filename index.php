@@ -97,9 +97,11 @@
                                 </tr>
                             </table>
                         </div>
-                    </div>
-                    <div id="help">
-                        help
+                        <div id="help" class="dropShadow">
+                            <h3>How do I use this thing?</h3>
+                        </div>
+                        <div id="helpContent">
+                            The inspiration for developing Matrix Translator came when Mike took a linear algebra class. He wasted a lot of time remembering the complex syntax between each of the math tools out there. We created this tool to make working with matrices a little bit easier.                        </div>
                     </div>
                 </div>
 
@@ -152,9 +154,10 @@
             </div>
             <?php include 'footer.php' ?>
         </div>
-        <script src="scripts/main_model.js"></script>
-        <script src="scripts/buttons_view.js"></script>
-        <script src="scripts/output_view.js"></script>
-        <script src="scripts/accordion.js"></script>
-    </body>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/main_model.js"></script>
+    <script src="scripts/buttons_view.js"></script>
+    <script src="scripts/output_view.js"></script>
+    <script src="scripts/accordion.js"></script>
+</body>
 </html>
