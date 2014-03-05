@@ -55,11 +55,11 @@
         <div id="globalWrapper">
             <?php include 'header.php' ?>
             <div id="wrapper" class="selfClear">
-                <div id="matrixWrapper" class="responsive">
+                <div id="matrixWrapper">
                     <div id="matrixWrapperInner">
                         <div id="matrixCanvas" class="dropShadow">
                             <div id="matrixOptions" class="selfClear">
-                                <div class="comboWrapper responsive">
+                                <div class="comboWrapper">
                                     <div class="comboLabel">rows</div>
                                     <input id="rowField" type="text" value="3"/>
                                     <div class="plusMinusWrapper">
@@ -98,9 +98,12 @@
                             </table>
                         </div>
                     </div>
+                    <div id="help">
+                        help
+                    </div>
                 </div>
 
-                <div id="outputColumn" class="responsive">
+                <div id="outputColumn">
                     <div class="section selfClear">
                         <div class="outputHeaderWrapper selfClear">
                             <h3><a href="http://www.wolframalpha.com/" target="_blank">WolframAlpha</a></h3>
@@ -149,7 +152,7 @@
             </div>
             <?php include 'footer.php' ?>
         </div>
-        <script src="scripts/main.js"></script>
+        <script src="scripts/main_model.js"></script>
         <script src="scripts/buttons_view.js"></script>
         <script src="scripts/output_view.js"></script>
         <script src="scripts/accordion.js"></script>

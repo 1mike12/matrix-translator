@@ -10,8 +10,8 @@ Results = (function() {
     var latex;
     
     var $wolfram = $("#wolframOutput");
-    var $matlab = $("matLabOutput");
-    var $latex = $("latexOutput");
+    var $matlab = $("#matLabOutput");
+    var $latex = $("#latexOutput");
     
     function receive(payload) {
         wolfram = payload.wolfram;
@@ -65,3 +65,11 @@ $("#outputColumn").on("focus", "input:text", function() {
         return false;
     });
 });
+
+LatexButtons= (function(){
+    var currentBracket="(";
+    $("#latexButtons").on("click", "input", function() {
+        currentBracket= $("#latexButtons input:checked").val();
+        amplify.publish("bracketChanged", currentBracket);
+    });
+})();
