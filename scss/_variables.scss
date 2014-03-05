@@ -58,7 +58,7 @@ $globalPadding:15px;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cea563', endColorstr='#00cea563',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-.qtipShadow{
+@mixin qtipShadow(){
     -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow:    0px 3px 10px 0px rgba(50, 50, 50, 0.75);
     box-shadow:         0px 3px 10px 0px rgba(50, 50, 50, 0.75);

@@ -312,7 +312,8 @@ html, body{height:100%;}
 
 /*qtip2 styling*/
 
-.matrix_qtip{border:none;background-color:$orange; @extend .qtipShadow}
+.qtip_orange{border:none;background-color:$orange; @include qtipShadow}
+.qtip_light{border:none;background-color:$grey3; @include qtipShadow}
 
 /* load all other styles after main*/
 @import "accordion";

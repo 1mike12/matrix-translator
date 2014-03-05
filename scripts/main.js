@@ -1,9 +1,52 @@
-MatrixObject = (function() {
+Table = (function() {
+    amplify.subscribe("dimensionsChanged", function(payload) {
+        changeDimensions(payload.rows, payload.cols);
+    });
+    amplify.subscribe("clearAll", function() {
+        clearAll();
+    });
     var settings = {
         tableID: "#matrix"
     };
     var $table = $(settings.tableID);
+
+    $table.on("focusout", "input:text", function() {
+        publish();
+    });
     //getting table stats
+
+    function changeDimensions(newRows, newCols) {
+        var oldRows = numRows();
+        var oldCols = numCols();
+
+        var rowDiff = newRows - oldRows;
+        var colDiff = newCols - oldCols;
+
+        if (rowDiff !== 0) {
+            if (rowDiff > 0) {
+                for (var i = 0; i < rowDiff; i++) {
+                    rowPlus();
+                }
+            } else {
+                for (var i = 0; i > rowDiff; i--) {
+                    rowMinus();
+                }
+            }
+        }
+
+        if (colDiff !== 0) {
+            if (colDiff > 0) {
+                for (var i = 0; i < colDiff; i++) {
+                    colPlus();
+                }
+            } else {
+                for (var i = 0; i > colDiff; i--) {
+                    colMinus();
+                }
+            }
+        }
+
+    }
     function numRows() {
         var rows = $table.find("tr").length;
         return rows;
@@ -15,7 +58,7 @@ MatrixObject = (function() {
     }
     //HTMLgenesis functions
     function colPlus() {
-        var cols = getCols($table);
+        var cols = numCols($table);
         var $rowSet = $table.find("tr");
         for (var i = 0; i < $rowSet.length; i++) {
             var $td = $(printTD(i + 1, cols + 1));
@@ -52,40 +95,39 @@ MatrixObject = (function() {
         var completedTD = '<td><input id="' + idName + '" type="text" class=""/></td>';
         return completedTD;
     }
+    function clearAll() {
+        $table.find("input:text").val("");
+        publish();
+    }
     function publish() {
-        amplify.publish("matrixChanged", MatrixObject);
+        amplify.publish(
+            "tableChanged",
+            {$table: $table, rows: numRows(), cols: numCols()
+            });
     }
-
-    return{
-        colPlus: colPlus,
-        colMinus: colMinus,
-        rowPlus: rowPlus,
-        rowMinus: rowMinus,
-        getRows: numRows,
-        getCols: numCols,
-        tableID: settings.tableID
-    };
 })();
+
 Processor = (function() {
-    amplify.subscribe("matrixChanged", function(MatrixObject) {
-        update(MatrixObject);
-        amplify.publish("arrayGenerated", matrixArray);
+    amplify.subscribe("tableChanged", function(payload) {
+        receive(payload);
+        amplify.publish("arrayGenerated", array);
     });
-    var matrixArray;
-    //subscribe to update data event, then run the following:
-    function update(MatrixObject) {
-        matrixArray = tableToArray(MatrixObject);
+
+    var array;
+    function receive(payload) {
+        var $table = payload.$table;
+        var rows = payload.rows;
+        var cols = payload.cols;
+        array = tableToArray($table, rows, cols);
     }
 
-    function tableToArray(MatrixObject) {
-        var rows = MatrixObject.getRows();
-        var cols = MatrixObject.getCols();
+    function tableToArray($table, rows, cols) {
         var array = [];
         for (var r = 0; r < rows; r++) {
             array[r] = [];
             for (var c = 0; c < cols; c++) {
-                var currentField = MatrixObject.tableID + " #r" + (r + 1) + "c" + (c + 1);
-                array[r][c] = $(currentField).val();
+                var $currentField = $table.find("#r" + (r + 1) + "c" + (c + 1));
+                array[r][c] = $currentField.val();
             }
         }
         return array;
@@ -94,52 +136,63 @@ Processor = (function() {
 
 Model = (function() {
     amplify.subscribe("arrayGenerated", function(matrixArray) {
-        importer(matrixArray);
-        amplify.publish("modelChanged", Model);
+        receive(matrixArray);
+        amplify.publish("modelChanged", array);
     });
     var array;
-    function importer(matrixArray) {
+    function receive(matrixArray) {
         array = matrixArray;
     }
     return{
-        array:array
+        array: array
     };
 })();
 
 Translator = (function() {
+    amplify.subscribe("modelChanged", function(array) {
+        receive(array);
+        amplify.publish("translationChanged", outbound);
+    });
+    amplify.subscribe("bracketChanged", function(bracket) {
+        updateBracketType(bracket);
+        amplify.publish("translationChanged", outbound);
+    });
+
     var settings = {
         wolframMax: 200 //verified on WA forum http://community.wolframalpha.com/viewtopic.php?f=31&t=251939
     };
     var array;
     var rows;
     var cols;
+    var outbound = {};
     //===============
     var wolfram;
-    var wolframTooLong = false;
-    var wolframHasEmpty = false;
     var matlab;
     var latex;
-    var latexBracketType;
-    amplify.subscribe("modelChanged", function(Model) {
-        importer(Model);
-        amplify.publish("translationChanged", Translator);
-    });
-    amplify.subscribe("bracketChanged", function(bracket) {
-        updateBracketType(bracket);
-        amplify.publish("translationChanged", Translator);
-    });
-    function importer(a) {
+    var latexBracketType = "(";
+
+    function receive(a) {
         array = a;
         rows = array.length;
         cols = array[0].length;
         update();
     }
     function update() {
+        wolfram = generateWolfram();
         isWolframTooLong();
         isWolframHasEmpty();
-        wolfram = generateWolfram();
+
         matlab = generateMatlab();
         latex = generateLatex();
+        buildOutbound();
+    }
+
+    function buildOutbound() {
+        outbound = {
+            wolfram: wolfram,
+            matlab: matlab,
+            latex: latex
+        };
     }
     function generateWolfram() {
         var out = "{ ";
@@ -162,21 +215,25 @@ Translator = (function() {
     }
     function isWolframTooLong() {
         if (wolfram.length > settings.wolframMax) {
-            wolframTooLong = true;
+            amplify.publish("wolframTooLong");
         } else {
-            wolframTooLong = false;
+            amplify.publish("!wolframTooLong");
         }
     }
     function isWolframHasEmpty() {
-        wolframHasEmpty = false;
+        var empty = false;
         for (var r = 0; r < rows; r++) {
             for (var c = 0; c < cols; c++) {
                 if (array[r][c] === "") {
-                    wolframHasEmpty = true;
+                    empty = true;
                 }
             }
         }
-
+        if (empty) {
+            amplify.publish("wolframHasEmpty");
+        } else {
+            amplify.publish("!wolframHasEmpty");
+        }
     }
     function generateMatlab() {
         var rows = array.length;
@@ -246,71 +303,4 @@ Translator = (function() {
         out = opening + out + closing;
         return out;
     }
-    return{
-        wolfram: wolfram,
-        matlab: matlab,
-        latex: latex,
-        wolframTooLong: wolframTooLong,
-        wolframHasEmpty: wolframHasEmpty
-    };
-})();
-
-Results = (function() {
-    var settings = {
-        wolframID: "#wolframOutput",
-        matlabID: "matLabOutput",
-        latexID: "latexOutput"
-    };
-    amplify.subscribe("translationChanged", function(Translator) {
-        importer(Translator);
-    });
-    var wolfram;
-    var wolframTooLong;
-    var wolframHasEmpty;
-    var matlab;
-    var latex;
-    
-    var $wolfram= $(settings.wolframID);
-    var $matlab= $(settings.matlabID);
-    var $latex= $(settings.latexID);
-    
-    function importer(Translator) {
-        wolfram = Translator.wolfram;
-        matlab = Translator.wolfram;
-        latex = Translator.wolfram;
-        wolframTooLong= Translator.wolframTooLong;
-        wolframHasEmpty= Translator.wolframEmpty;
-        update();
-    }
-    function update() {
-        $wolfram.val(wolfram);
-        $matlab.val(matlab);
-        $latex.val(latex);
-        
-        if (wolframTooLong){
-            amplify.publish("wolframTooLong");
-        }
-        if (wolframHasEmpty){
-            amplify.publish("wolframHasEmpty");
-        }
-    }
-})();
-
-WolframError= (function(){
-    amplify.subscribe("wolframTooLong", function(){
-        
-    });
-    amplify.subscribe("wolframHasEmpty", function(){
-        
-    });
-})();
-
-colField = (function() {
-    var $field = $("#colField");
-    function update() {
-        $field.val(MatrixObject.getCols());
-    }
-    return{
-        update: update
-    };
 })();

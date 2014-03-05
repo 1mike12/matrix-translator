@@ -188,7 +188,7 @@ $(document).ready(function() {
             $("#wolframWarning").show()
                 .qtip({
                     content: {text: "Wolfram Alpha does not allow empty fields"},
-                    style: {classes: 'matrix_qtip'},
+                    style: {classes: 'qtip_orange'},
                     position: {my: "top right", at: "bottom center"}
                 });
         } else {
@@ -312,7 +312,7 @@ $(document).ready(function() {
     function rowError() {
         $("#rowField").qtip({
             content: {text: "must be between 1-50"},
-            style: {classes: 'matrix_qtip'},
+            style: {classes: 'qtip_orange'},
             position: {my: "top center", at: "bottom center"},
             events: {
                 hide: function(event, api) {
@@ -348,7 +348,7 @@ $(document).ready(function() {
     function colError() {
         $("#colField").qtip({
             content: {text: "must be between 1-50"},
-            style: {classes: 'matrix_qtip'},
+            style: {classes: 'qtip_orange'},
             position: {my: "top center", at: "bottom center"},
             events: {
                 hide: function(event, api) {
