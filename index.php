@@ -172,14 +172,14 @@
                 <h3>2. Enter values</h3>
                 <p>You can type letters, symbols, or even leave a field empty*</p>
             </li>
-            <li data-id="output" data-options="tipLocation:right">
+            <li data-id="output" data-options="tipLocation:left">
                 <h3>3. Use your output</h3>
                 <p>*Woflram Alpha gets mad if you have empty fields</p>
                 <p>
                     They also limit your input to 200 characters. Don't worry, a warning will show up if there's a problem
                 </p>
             </li>
-            <li data-id="latexButtons" data-button="All set!" data-options="tipLocation:right">
+            <li data-id="latexButtons" data-button="All set!" data-options="tipLocation:left">
                 <h3>3.5 Latex options</h3>
                 <p>With latex, you can pick the fashion of your matrix.</p>
                 <p>
