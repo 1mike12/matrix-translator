@@ -60,7 +60,7 @@ WolframError = (function() {
 })();
 
 //autohighlight
-$("#outputColumn").on("focus", "input:text", function() {
+$("#output").on("focus", "input:text", function() {
     $(this).select().mouseup(function(e) {
         return false;
     });

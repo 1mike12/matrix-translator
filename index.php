@@ -106,10 +106,13 @@
                             <h2>How do I use this thing?</h2>
                         </div>
                         <div id="helpContent">
+                            <h3>Matrix Translator automatically formats a matrix so you can use it in 3rd party websites and programs.</h3>
+                            <p></p>
+                            <img src="images/tour.png" alt="3 part drawing of site" style="display:block; margin:auto; max-width:100%; margin-bottom:15px;"/>
+                            <a id="launchTour" href="#">Launch a 5 Second Tour</a>
                             <p>
                                 Whether you're a student, or professional engineer, working with marices sucks. It's bad enough trying to remember eigenvalues, RREF's and whatever Markovs Chains are without the hassle of each and every tool using a completely different format. We made this tool to make it easier to use Wolfram Alpha, Matlab and Latex.
                             </p>
-                            <a id="launchTour" href="#">Launch a 5 Second Tour</a>
                         </div>
                     </div>
                 </div>

@@ -50,11 +50,11 @@ h1, h2, h3, h4, h5 {
   font-size: 2em;
   font-weight: 300; }
 #wrapper h2 {
-  font-size: 1.8em;
+  font-size: 1.7em;
   font-weight: 300; }
 #wrapper h3 {
-  font-size: 1.2em;
-  font-weight: 400; }
+  font-size: 1.4em;
+  font-weight: 300; }
 
 /*reusable cross site styles */
 .dropShadow {
@@ -271,7 +271,7 @@ header {
       display: none; }
     #sideBar #latexButtons label {
       cursor: pointer;
-      font-size: 14px;
+      font-size: 20px;
       display: inline-block;
       padding: 0px 4px;
       vertical-align: middle;
