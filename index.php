@@ -103,11 +103,11 @@
                             </table>
                         </div>
                         <div id="help" class="dropShadow">
-                            <h3>How do I use this thing?</h3>
+                            <h2>How do I use this thing?</h2>
                         </div>
                         <div id="helpContent">
                             <p>
-                                Make working with matrices a little less suck.
+                                Whether you're a student, or professional engineer, working with marices sucks. It's bad enough trying to remember eigenvalues, RREF's and whatever Markovs Chains are without the hassle of each and every tool using a completely different format. We made this tool to make it easier to use Wolfram Alpha, Matlab and Latex.
                             </p>
                             <a id="launchTour" href="#">Launch a 5 Second Tour</a>
                         </div>
