@@ -91,7 +91,13 @@ $(document).ready(function() {
             $("#rowField").qtip({
                 content: {text: "must be between 1-25"},
                 style: {classes: 'qtip_light'},
-                position: {my: "top center", at: "bottom center"},
+                position: {
+                    my: "top center",
+                    at: "bottom center",
+                    adjust: {
+                        y: 5
+                    }
+                },
                 events: {
                     hide: function(event, api) {
                         api.destroy();
@@ -105,7 +111,13 @@ $(document).ready(function() {
             $("#colField").qtip({
                 content: {text: "must be between 1-25"},
                 style: {classes: 'qtip_light'},
-                position: {my: "top center", at: "bottom center"},
+                position: {
+                    my: "top center",
+                    at: "bottom center",
+                    adjust: {
+                        y: 5
+                    }
+                },
                 events: {
                     hide: function(event, api) {
                         api.destroy();

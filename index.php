@@ -3,7 +3,7 @@
     <head>
         <!--3rd party scripts
         ####################################################################-->
-        <script src="scripts/google_analytics.js"></script>
+        <script src="plugins/google_analytics.js"></script>
 
         <!--Jquery version 1.xx supports IE 567 + 
         ...............................................-->
@@ -19,19 +19,24 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/amplifyjs/1.1.0/amplify.js"></script>
         <script>
             if (!window.amplify) {
-                document.write('<script src="scripts/amplify.js"><\/script>');
+                document.write('<script src="plugins/amplify.js"><\/script>');
             }
         </script>
 
         <!--QTIP2
         ...............................................-->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.js"></script>
+        <script src="//cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.js"></script>
         <script>
             if (!window.qtip) {
-                document.write('<script src="scripts/qtip.js"><\/script>');
+                document.write('<script src="plugins/qtip2/jquery.qtip.min.js"><\/script>');
             }
         </script>
-        <link rel="stylesheet" href="scripts/qtip.min.css" />
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.css" />
+
+        <!--Joyride 2
+        ...............................................-->
+        <link href="plugins/joyride/joyride-2.1.css" rel='stylesheet' type='text/css'>
+        <script src="plugins/joyride/jquery.joyride-2.1.js"></script>
 
         <!-- fonts 
         #####################################################################-->
@@ -46,7 +51,7 @@
 
         <!-- html 5 shiv for IE backwards compatability-->
         <!--[if lt IE 9]>
-            <script src="scripts/html5shiv.js"></script>
+            <script src="plugins/html5shiv.js"></script>
         <![endif]-->
 
         <title>Matrix Translator</title>
@@ -101,12 +106,16 @@
                             <h3>How do I use this thing?</h3>
                         </div>
                         <div id="helpContent">
-                            The inspiration for developing Matrix Translator came when Mike took a linear algebra class. He wasted a lot of time remembering the complex syntax between each of the math tools out there. We created this tool to make working with matrices a little bit easier.                        </div>
+                            <p>
+                                Make working with matrices a little less suck.
+                            </p>
+                            <a id="launchTour" href="#">Launch a 5 Second Tour</a>
+                        </div>
                     </div>
                 </div>
 
-                <div id="outputColumn">
-                    <div class="section selfClear">
+                <div id="sideBar">
+                    <div id="output" class="section selfClear">
                         <div class="outputHeaderWrapper selfClear">
                             <h3><a href="http://www.wolframalpha.com/" target="_blank">WolframAlpha</a></h3>
                             <span id="wolframWarning" class="warning"><img src="images/warning_sign.png"/></span>
@@ -154,10 +163,34 @@
             </div>
             <?php include 'footer.php' ?>
         </div>
-    <script src="scripts/script.js"></script>
-    <script src="scripts/main_model.js"></script>
-    <script src="scripts/buttons_view.js"></script>
-    <script src="scripts/output_view.js"></script>
-    <script src="scripts/accordion.js"></script>
-</body>
+        <ol id="joyRideTipContent">
+            <li data-class="comboWrapper">
+                <h3>1. Adjust the size of the matrix.</h3>
+                <p>You can also directly enter a number and hit enter</p>
+            </li>
+            <li data-id="matrix">
+                <h3>2. Enter values</h3>
+                <p>You can type letters, symbols, or even leave a field empty*</p>
+            </li>
+            <li data-id="output" data-options="tipLocation:right">
+                <h3>3. Use your output</h3>
+                <p>*Woflram Alpha gets mad if you have empty fields</p>
+                <p>
+                    They also limit your input to 200 characters. Don't worry, a warning will show up if there's a problem
+                </p>
+            </li>
+            <li data-id="latexButtons" data-button="All set!" data-options="tipLocation:right">
+                <h3>3.5 Latex options</h3>
+                <p>With latex, you can pick the fashion of your matrix.</p>
+                <p>
+                    The drab old ( ) is sooo 1350s. Our hired bracketologist agrees that not only is { } in vogue, but that it's especially appropriate considering the programming and mathematical roots of its conception.
+                </p>
+            </li>
+        </ol>
+        <script src="scripts/main_model.js"></script>
+        <script src="scripts/buttons_view.js"></script>
+        <script src="scripts/output_view.js"></script>
+        <script src="scripts/accordion.js"></script>
+        <script src="scripts/script.js"></script>
+    </body>
 </html>

@@ -118,6 +118,9 @@ header{
             margin-bottom:$globalPadding;
             input[type="text"]{padding:10px;width:3em;}
             .comboWrapper{
+                @extend .selfClear;
+                display:inline-block;
+                
                 .comboLabel{
                     margin-right:4px;
                     margin-left:0px;
@@ -177,11 +180,24 @@ header{
     background:$grey3;
     padding:$globalPadding;
     @include dropShadow; 
+    #launchTour{
+        display:block;
+        width:200px;
+        text-align:center;
+        padding:$globalPadding;
+        background:$blue1;
+        color:$grey3;
+        text-decoration:none;
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom:$globalPadding;
+        &:hover{background:lighten($blue1,10%);}
+    }
 }
 
 
 /*output column stuff*/
-#outputColumn {
+#sideBar {
     float:right;
     width:300px;
     .dropShadow .outputHeaderWrapper:first-child{margin-top:0;}
@@ -318,7 +334,7 @@ html, body{height:100%;}
         margin-bottom:$globalPadding;
         #matrixWrapperInner{margin-right:0px;}
     }
-    #outputColumn{
+    #sideBar{
         width:100%;float:none;
     }
 }
